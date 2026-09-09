@@ -151,6 +151,7 @@
   display: grid;
   place-items: center;
   aspect-ratio: 3 / 4;
+  max-height: 660px;
   border: 1px solid var(--c-line-soft);
   background:
     radial-gradient(60% 52% at 56% 40%, rgba(255,255,255,0.085), transparent 68%),
@@ -158,6 +159,8 @@
   padding-left: 78px;
   padding-right: var(--s-5);
 }
+/* Fewer callouts, shorter frame — keeps the two columns in balance. */
+.anat--compact .anat__frame { aspect-ratio: 1 / 1; max-height: 520px; }
 .anat__frame img { width: auto; max-width: 70%; max-height: 86%;
   filter: drop-shadow(0 30px 46px rgba(0,0,0,0.9)); }
 @media (max-width: 560px) { .anat__frame { padding-left: 62px; } }
@@ -226,7 +229,8 @@
   .spec-table .spec tbody,
   .spec-table .spec tr,
   .spec-table .spec th,
-  .spec-table .spec td { display: block; width: auto; min-width: 0; }
+  .spec-table .spec td,
+  .spec-table .spec caption { display: block; width: auto; min-width: 0; }
   .spec-table .spec tr { padding-block: var(--s-4); border-bottom: 1px solid var(--c-line-soft); }
   .spec-table .spec tr:last-child { border-bottom: 0; }
   .spec-table .spec th { border-bottom: 0; padding: 0 0 var(--s-2); }
@@ -292,33 +296,34 @@
   grid-template-columns: repeat(var(--n), minmax(0, 1fr));
   align-items: end;
   justify-items: center;
-  height: clamp(78px, 10vw, 124px);
-  padding-bottom: 24px;
+  height: clamp(72px, 9vw, 108px);
   border-bottom: 1px solid var(--c-line);
 }
 .clicks__bar {
-  position: relative;
   width: clamp(2px, 0.28vw, 4px);
   background: var(--c-ghost);
   height: calc(28% + 72% * var(--i) / var(--n));
   transition: background var(--dur-base) linear;
 }
 .clicks__bar--maj { background: var(--c-dim); }
-.clicks__bar--maj::after {
-  content: attr(data-n);
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
+.clicks__scale:hover .clicks__bar { background: var(--c-iron); }
+.clicks__scale:hover .clicks__bar--maj { background: var(--c-mute); }
+
+/* Scale numerals — a real grid row sharing the scale's column count, so a
+   numeral always lands under the tick it names. */
+.clicks__nums {
+  display: grid;
+  grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  align-items: start;
+  margin-top: var(--s-3);
   font-family: var(--ff-mono);
   font-size: var(--fs-micro);
   letter-spacing: 0.08em;
   color: var(--c-dim);
+  line-height: 1;
 }
-.clicks__bar--last::after { left: auto; right: 0; transform: none; }
-.clicks__scale:hover .clicks__bar { background: var(--c-iron); }
-.clicks__scale:hover .clicks__bar--maj { background: var(--c-dim); }
-.clicks__bar:hover, .clicks__scale:hover .clicks__bar:hover { background: var(--c-white); }
+.clicks__nums span { justify-self: center; white-space: nowrap; }
+.clicks__nums span:last-child { justify-self: end; }
 
 .clicks__ends {
   display: flex; align-items: center; justify-content: space-between;
@@ -390,7 +395,7 @@ a.range-strip__item:hover { background: var(--c-graphite); }
 .range-strip__d { font-size: var(--fs-xs); color: var(--c-dim); line-height: 1.5; margin-top: auto; }
 .range-strip__item--here { background: var(--c-graphite); }
 .range-strip__item--here .range-strip__idx { color: var(--c-white); }
-.range-strip__here { margin-top: var(--s-2); }
+.range-strip__here { margin-top: var(--s-2); align-self: start; }
 
 /* --------------------------------------------------------------------------
    ADFL band — flagship only

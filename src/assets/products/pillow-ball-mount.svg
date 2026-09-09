@@ -72,17 +72,17 @@
     </radialGradient>
     <radialGradient id="pbm-ball" cx="0.32" cy="0.25" r="0.84">
       <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="0.09" stop-color="#E6E6E6"/>
-      <stop offset="0.3" stop-color="#A2A2A2"/>
-      <stop offset="0.55" stop-color="#565656"/>
-      <stop offset="0.79" stop-color="#282828"/>
-      <stop offset="0.94" stop-color="#131313"/>
-      <stop offset="1" stop-color="#3E3E3E"/>
+      <stop offset="0.1" stop-color="#EAEAEA"/>
+      <stop offset="0.32" stop-color="#B0B0B0"/>
+      <stop offset="0.56" stop-color="#767676"/>
+      <stop offset="0.78" stop-color="#4A4A4A"/>
+      <stop offset="0.92" stop-color="#2E2E2E"/>
+      <stop offset="1" stop-color="#5A5A5A"/>
     </radialGradient>
     <radialGradient id="pbm-socket" cx="0.4" cy="0.28" r="0.8">
-      <stop offset="0" stop-color="#404040"/>
-      <stop offset="0.42" stop-color="#1D1D1D"/>
-      <stop offset="1" stop-color="#0A0A0A"/>
+      <stop offset="0" stop-color="#5A5A5A"/>
+      <stop offset="0.4" stop-color="#333333"/>
+      <stop offset="1" stop-color="#191919"/>
     </radialGradient>
   </defs>
   <g id="pbm-core">
@@ -94,18 +94,21 @@
     <ellipse cx="200" cy="210.6" rx="156.2" ry="83.7" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.6"/>
     <ellipse cx="200" cy="208" rx="132.7" ry="71.1" fill="none" stroke="#000000" stroke-opacity="0.4" stroke-width="2.4"/>
     <ellipse cx="200" cy="210.6" rx="132.7" ry="71.1" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.6"/>
-    <ellipse cx="200" cy="208" rx="107.5" ry="57.6" fill="none" stroke="#000000" stroke-opacity="0.36" stroke-width="2.4"/>
-    <ellipse cx="200" cy="210.6" rx="107.5" ry="57.6" fill="none" stroke="#FFFFFF" stroke-opacity="0.17" stroke-width="1.6"/>
+    <ellipse cx="200" cy="208" rx="110.9" ry="59.4" fill="none" stroke="#000000" stroke-opacity="0.36" stroke-width="2.4"/>
+    <ellipse cx="200" cy="210.6" rx="110.9" ry="59.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.17" stroke-width="1.6"/>
+    <ellipse cx="200" cy="208" rx="90.7" ry="48.6" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="2.4"/>
+    <ellipse cx="200" cy="210.6" rx="90.7" ry="48.6" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.6"/>
     <ellipse cx="200" cy="208" rx="168" ry="90" fill="none" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1.8"/>
-    <ellipse cx="200" cy="208" rx="86" ry="48" fill="url(#pbm-socket)"/>
-    <path d="M114 208A86 48 0 0 1 286 208" fill="none" stroke="#000000" stroke-opacity="0.72" stroke-width="3.2"/>
-    <path d="M118 214A86 48 0 0 0 282 214" fill="none" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="2.4"/>
-    <ellipse cx="200" cy="209" rx="68" ry="38" fill="#151515"/>
-    <circle cx="200" cy="207" r="43" fill="url(#pbm-ball)"/>
-    <ellipse cx="184" cy="187" rx="11" ry="7.4" fill="#FFFFFF" opacity="0.72" transform="rotate(-28 184 187)"/>
-    <path d="M167 233A43 43 0 0 0 228 237" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="2.6"/>
-    <ellipse cx="200" cy="203" rx="15" ry="11" fill="#0F0F0F"/>
-    <path d="M185 203A15 11 0 0 1 215 203" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.8"/>
+    <ellipse cx="200" cy="208" rx="84" ry="47" fill="url(#pbm-socket)"/>
+    <path d="M116 208A84 47 0 0 1 284 208" fill="none" stroke="#000000" stroke-opacity="0.72" stroke-width="3.2"/>
+    <path d="M121 214A84 47 0 0 0 279 214" fill="none" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="2.4"/>
+    <ellipse cx="200" cy="209" rx="70" ry="39" fill="#242424"/>
+    <ellipse cx="200" cy="209" rx="70" ry="39" fill="none" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.4"/>
+    <circle cx="200" cy="207" r="56" fill="url(#pbm-ball)"/>
+    <ellipse cx="179" cy="180" rx="14" ry="9.4" fill="#FFFFFF" opacity="0.72" transform="rotate(-28 179 180)"/>
+    <path d="M156 241A56 56 0 0 0 238 246" fill="none" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="3"/>
+    <ellipse cx="200" cy="200" rx="19" ry="14" fill="#0F0F0F"/>
+    <path d="M181 200A19 14 0 0 1 219 200" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.8"/>
     <ellipse cx="200" cy="141.4" rx="19" ry="6.5" fill="#0C0C0C" opacity="0.6"/>
     <ellipse cx="200" cy="140.4" rx="18" ry="6.1" fill="url(#pbm-collar)"/>
     <rect x="188" y="89.4" width="24" height="52" fill="url(#pbm-chrome)"/>

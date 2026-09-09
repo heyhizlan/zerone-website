@@ -1,0 +1,482 @@
+/* ==========================================================================
+   PAGE — TECHNOLOGY
+   A technical note. Datasheet register: hairline frames, balloon callouts,
+   sectioned drawings. Strictly monochrome — the figures carry no hue at all.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   A · HEADER
+   -------------------------------------------------------------------------- */
+.th {
+  position: relative;
+  overflow: hidden;
+  background: var(--c-black);
+  padding-top: calc(68px + var(--s-9));
+  padding-bottom: var(--s-9);
+  border-bottom: 1px solid var(--c-line);
+  isolation: isolate;
+}
+.th__field {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(62% 48% at 24% 26%, rgba(255,255,255,0.11), transparent 70%),
+    radial-gradient(80% 60% at 88% 96%, rgba(255,255,255,0.05), transparent 72%),
+    linear-gradient(180deg, #0B0B0B 0%, #000 66%);
+}
+.th__lines {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right, var(--c-line-faint) 0 1px, transparent 1px calc(100% / 6));
+}
+.th__inner { position: relative; z-index: 2; }
+
+.th__corner {
+  position: absolute; z-index: 3;
+  display: flex; align-items: center; gap: var(--s-3);
+}
+.th__corner--tl { top: calc(68px + var(--s-5)); left: var(--grid-gutter); }
+.th__corner--tr { top: calc(68px + var(--s-5)); right: var(--grid-gutter); }
+@media (max-width: 900px) { .th__corner--tr { display: none; } }
+
+.th__eyebrow { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-6); }
+.th__eyebrow .rule { flex: 0 0 clamp(28px, 6vw, 90px); }
+
+/* Michroma takes the short word; Saira's oblique takes the long one. */
+.th__head { margin-bottom: var(--s-7); }
+.th__l1 {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: clamp(3.1rem, 14vw, 11.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  color: var(--c-white);
+  text-transform: uppercase;
+}
+.th__l2 {
+  display: block;
+  margin-top: 0.14em;
+  max-width: 18ch;
+  font-family: var(--ff-head);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 4.5vw, 3.4rem);
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-line-hard);
+}
+.th__l2 em { font-style: inherit; color: var(--c-white); -webkit-text-stroke: 0; }
+
+.th__abstract { max-width: 56ch; }
+
+/* Glass readout — legitimate here: it sits over the graduated field. */
+.th__meta {
+  margin-top: var(--s-8);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--c-line-soft);
+  border: 1px solid var(--glass-edge);
+  max-width: 640px;
+}
+.th__meta > div {
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  padding: var(--s-4) var(--s-5);
+  display: flex; flex-direction: column; gap: var(--s-3);
+}
+.th__meta-v {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-sm);
+  color: var(--c-white);
+  line-height: 1.2;
+}
+
+/* Contents index */
+.th__toc { margin-top: var(--s-9); max-width: 900px; }
+.th__toc-h { margin-bottom: var(--s-4); }
+.th__toc-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--c-line); }
+.th__toc-list a {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr) auto;
+  gap: var(--s-4);
+  align-items: baseline;
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--c-line-soft);
+}
+.th__toc-n { font-family: var(--ff-display); font-size: 0.8rem; color: var(--c-white); }
+.th__toc-t {
+  display: flex; align-items: baseline; gap: var(--s-4);
+  font-family: var(--ff-head); font-weight: 700; font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.03em; color: var(--c-dim);
+  transition: color var(--dur-fast) linear;
+}
+.th__toc-t b { font-weight: inherit; }
+.th__toc-t::after {
+  content: ""; flex: 1 1 auto; min-width: 12px; height: 1px; opacity: 0.55;
+  background-image: repeating-linear-gradient(to right, var(--c-ghost) 0 1px, transparent 1px 5px);
+}
+.th__toc-r {
+  font-family: var(--ff-mono); font-size: var(--fs-micro);
+  letter-spacing: var(--ls-micro); text-transform: uppercase; color: var(--c-ghost);
+  white-space: nowrap;
+}
+.th__toc-list a:hover .th__toc-t { color: var(--c-white); }
+.th__toc-list a:hover .th__toc-r { color: var(--c-mute); }
+@media (max-width: 640px) {
+  .th__toc-list a { grid-template-columns: 2.2rem minmax(0, 1fr); }
+  .th__toc-r { display: none; }
+}
+
+/* ==========================================================================
+   DIAGRAM LANGUAGE
+   Every drawing on this page uses this vocabulary. Neutral greys only.
+   ========================================================================== */
+.dsvg { width: 100%; height: auto; display: block; }
+
+/* section-cut fills */
+.d-metalbg { fill: var(--c-steel); }
+.d-oilbg   { fill: var(--c-black); }
+.d-gasbg   { fill: var(--c-black); }
+.d-hatch   { stroke: rgba(255,255,255,0.16); stroke-width: 1; }
+.d-hatch-m { stroke: rgba(255,255,255,0.26); stroke-width: 1.1; }
+.d-dotfill { fill: rgba(255,255,255,0.26); }
+.d-field-a { stop-color: rgba(255,255,255,0.055); }
+.d-field-b { stop-color: rgba(255,255,255,0); }
+
+/* linework */
+.d-body    { stroke: var(--c-line-hard); stroke-width: 1.1; vector-effect: non-scaling-stroke; }
+.d-thin    { fill: none; stroke: var(--c-line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-edge    { fill: none; stroke: var(--c-mute); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-dash    { fill: none; stroke: var(--c-ghost); stroke-width: 1; stroke-dasharray: 5 5; vector-effect: non-scaling-stroke; }
+.d-solid   { fill: var(--c-iron); stroke: var(--c-line-hard); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-oilhole { fill: var(--c-black); stroke: var(--c-line-hard); stroke-width: 1; vector-effect: non-scaling-stroke; }
+
+/* the moving part — the brightest object in every drawing */
+.d-shim    { fill: var(--c-white); fill-opacity: 0.92; stroke: var(--c-white); stroke-width: 1; vector-effect: non-scaling-stroke; }
+
+/* flow */
+.d-flow        { fill: none; stroke: var(--c-white); stroke-width: 2.6; stroke-linecap: round; }
+.d-flow--thin  { stroke-width: 1.6; }
+.d-flow--fat   { stroke-width: 5; }
+.d-arrowhead   { fill: var(--c-white); }
+
+/* balloons + leaders */
+.d-lead    { fill: none; stroke: var(--c-mute); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-leaddot { fill: var(--c-white); }
+.d-disc    { fill: var(--c-black); stroke: var(--c-line-hard); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-disc-t  {
+  fill: var(--c-white); font-family: var(--ff-mono); font-size: 15px;
+  letter-spacing: 0.03em; text-anchor: middle; dominant-baseline: central;
+}
+.d-dim     { fill: none; stroke: var(--c-white); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-tag     {
+  fill: var(--c-mute); font-family: var(--ff-mono); font-size: 12px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+}
+.d-tag--lg { font-size: 18px; fill: var(--c-white); letter-spacing: 0; }
+
+/* hover link between the key list and the drawing */
+[data-hotspot] .d-disc,
+[data-hotspot] .d-lead { transition: fill var(--dur-fast) linear, stroke var(--dur-fast) linear; }
+[data-hotspot][data-active="true"] .d-disc   { fill: var(--c-white); stroke: var(--c-white); }
+[data-hotspot][data-active="true"] .d-disc-t { fill: var(--c-black); }
+[data-hotspot][data-active="true"] .d-lead   { stroke: var(--c-white); }
+
+/* the frame a drawing sits in */
+.dfig__plate {
+  position: relative;
+  border: 1px solid var(--c-line-soft);
+  background:
+    radial-gradient(70% 60% at 50% 40%, rgba(255,255,255,0.045), transparent 72%),
+    var(--c-black);
+  padding: clamp(0.5rem, 1.4vw, 1.25rem);
+}
+
+/* ==========================================================================
+   B · 01 ADFL
+   ========================================================================== */
+.adfl { position: relative; overflow: hidden; background: var(--c-black); }
+.adfl__glow {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(44% 46% at 16% 44%, rgba(255,255,255,0.09), transparent 72%);
+}
+.adfl__inner { position: relative; z-index: 1; }
+
+.adfl__intro { align-items: start; margin-bottom: var(--s-10); }
+.adfl__intro-a { grid-column: span 5; }
+.adfl__intro-b { grid-column: span 6 / -1; display: flex; flex-direction: column; gap: var(--s-5); }
+@media (max-width: 860px) {
+  .adfl__intro-a, .adfl__intro-b { grid-column: 1 / -1; }
+  .adfl__intro { gap: var(--s-7); }
+}
+
+.adfl__big {
+  font-family: var(--ff-head);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.6vw, 3rem);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: var(--c-dim);
+  max-width: 15ch;
+}
+.adfl__big b { font-weight: 900; font-style: italic; color: var(--c-white); }
+
+.adfl__attr {
+  border-left: 1px solid var(--c-line);
+  padding-left: var(--s-5);
+  display: flex; flex-direction: column; gap: var(--s-3);
+  max-width: 56ch;
+}
+
+/* figure : drawing + key */
+.dfig {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3.4vw, 3.5rem);
+  align-items: start;
+  margin: 0;
+}
+.dfig__key { display: flex; flex-direction: column; gap: var(--s-4); position: sticky; top: 96px; }
+.dfig__key-h { padding-bottom: var(--s-3); border-bottom: 1px solid var(--c-line); }
+.dfig__key .callouts { list-style: none; margin: 0; padding: 0; }
+.dfig__cap {
+  grid-column: 1 / -1;
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-line-soft);
+  line-height: 1.7;
+  max-width: 76ch;
+}
+@media (max-width: 980px) {
+  .dfig { grid-template-columns: minmax(0, 1fr); }
+  .dfig__key { position: static; }
+}
+
+/* Detail A */
+.valve { margin-top: var(--s-10); border-top: 1px solid var(--c-line); padding-top: var(--s-7); }
+.valve__head { display: flex; flex-direction: column; gap: var(--s-3); margin-bottom: var(--s-7); }
+.valve__h {
+  font-family: var(--ff-head); font-weight: 800; font-size: var(--fs-h3);
+  text-transform: uppercase; letter-spacing: 0.02em; color: var(--c-white); line-height: 1.1;
+}
+.valve__lead { max-width: 62ch; }
+.valve__pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.6vw, 2.5rem);
+}
+@media (max-width: 780px) { .valve__pair { grid-template-columns: minmax(0, 1fr); } }
+.valve__state { margin: 0; display: flex; flex-direction: column; gap: var(--s-5); }
+.valve__state figcaption { display: flex; flex-direction: column; gap: var(--s-3); }
+.valve__t {
+  font-family: var(--ff-mono); font-size: var(--fs-label); font-weight: 500;
+  letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--c-white);
+}
+.valve__key {
+  list-style: none; margin: var(--s-7) 0 0; padding: 0;
+  border-top: 1px solid var(--c-line);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(1.25rem, 2.6vw, 2.5rem);
+}
+@media (max-width: 780px) { .valve__key { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==========================================================================
+   C · 02 CONSTRUCTION
+   ========================================================================== */
+.cmp__inner { position: relative; z-index: 1; }
+.cmp__lead { margin-bottom: var(--s-8); }
+.cmp__pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3.4vw, 3.5rem);
+}
+@media (max-width: 820px) { .cmp__pair { grid-template-columns: minmax(0, 1fr); gap: var(--s-9); } }
+
+.cmp__col { display: flex; flex-direction: column; gap: var(--s-4); }
+.cmp__figwrap { display: flex; justify-content: center; }
+.cmp__fig { margin: 0; width: 100%; max-width: 340px; }
+.cmp__h {
+  font-family: var(--ff-head); font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  text-transform: uppercase; letter-spacing: -0.005em; color: var(--c-white); line-height: 1;
+  margin-top: var(--s-4);
+}
+.cmp__use { color: var(--c-white); }
+.cmp__body { color: var(--c-text); }
+.cmp__pts { list-style: none; margin: var(--s-2) 0 0; padding: 0; border-top: 1px solid var(--c-line-soft); }
+.cmp__pts li {
+  position: relative;
+  padding: var(--s-4) 0 var(--s-4) var(--s-6);
+  border-bottom: 1px solid var(--c-line-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--c-dim);
+}
+.cmp__pts li::before {
+  content: ""; position: absolute; left: 0; top: calc(var(--s-4) + 0.62em);
+  width: 10px; height: 1px; background: var(--c-mute);
+}
+.cmp__pts b { color: var(--c-white); font-weight: 600; }
+
+.cmp__map {
+  margin-top: var(--s-9);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line);
+  display: flex; flex-direction: column; gap: var(--s-4);
+  align-items: flex-start;
+}
+.cmp__map .t-body { max-width: 80ch; }
+.cmp__map b { color: var(--c-white); font-weight: 700; }
+.cmp__map-sep { color: var(--c-ghost); padding-inline: var(--s-2); }
+
+/* ==========================================================================
+   D · 03 ADJUSTMENT
+   ========================================================================== */
+.axes__list { display: flex; flex-direction: column; }
+.axis {
+  display: grid;
+  grid-template-columns: clamp(3.4rem, 8vw, 7rem) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 3rem);
+  padding-block: var(--s-8);
+  border-top: 1px solid var(--c-line);
+}
+.axis:last-child { border-bottom: 1px solid var(--c-line); }
+.axis__n {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 0.8;
+  color: var(--c-white);
+  letter-spacing: -0.02em;
+  padding-top: 0.18em;
+}
+.axis__body { display: flex; flex-direction: column; gap: var(--s-5); max-width: 82ch; }
+.axis__h {
+  font-family: var(--ff-head); font-weight: 800;
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  text-transform: uppercase; letter-spacing: -0.005em; color: var(--c-white); line-height: 1.05;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4);
+}
+.axis__sub {
+  font-family: var(--ff-mono); font-size: var(--fs-label); font-weight: 400;
+  letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--c-mute);
+}
+.axis--wide .axis__body { max-width: none; }
+.axis--wide .axis__body > .t-body { max-width: 82ch; }
+
+.axis__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--c-line-soft);
+  border: 1px solid var(--c-line);
+  margin-block: var(--s-2);
+}
+.axis__step {
+  background: var(--c-void);
+  padding: var(--s-5);
+  display: flex; flex-direction: column; gap: var(--s-3);
+}
+.axis__step b {
+  font-family: var(--ff-head); font-weight: 800; font-size: 1.35rem;
+  text-transform: uppercase; color: var(--c-white); line-height: 1;
+}
+.axis__step .t-sm { color: var(--c-dim); }
+@media (max-width: 760px) { .axis__steps { grid-template-columns: minmax(0, 1fr); } }
+
+.shift { margin: var(--s-4) 0 0; display: flex; flex-direction: column; gap: var(--s-5); }
+.shift__caps {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.4vw, 2.5rem);
+}
+.shift__caps > div { display: flex; flex-direction: column; gap: var(--s-2); }
+.shift__t {
+  font-family: var(--ff-mono); font-size: var(--fs-label); font-weight: 500;
+  letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--c-white);
+}
+@media (max-width: 620px) { .shift__caps { grid-template-columns: minmax(0, 1fr); gap: var(--s-5); } }
+
+/* ==========================================================================
+   E · 04 MATERIALS
+   ========================================================================== */
+.mat__inner { position: relative; z-index: 1; }
+.mat__stats {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  padding-bottom: var(--s-8);
+  margin-bottom: var(--s-8);
+  border-bottom: 1px solid var(--c-line);
+}
+@media (max-width: 720px) { .mat__stats { grid-template-columns: minmax(0, 1fr); gap: var(--s-6); } }
+
+.mat__grid { align-items: start; }
+.mat__table { grid-column: span 6; }
+.mat__notes { grid-column: span 6; display: flex; flex-direction: column; gap: var(--s-6); }
+@media (max-width: 980px) {
+  .mat__table, .mat__notes { grid-column: 1 / -1; }
+  .mat__notes { margin-top: var(--s-7); }
+}
+.mat__note { display: flex; flex-direction: column; gap: var(--s-3); }
+.mat__h {
+  font-family: var(--ff-mono); font-size: var(--fs-label); font-weight: 500;
+  letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--c-white);
+  padding-bottom: var(--s-3); border-bottom: 1px solid var(--c-line-soft);
+}
+.mat .spec caption { color: var(--c-mute); }
+
+/* ==========================================================================
+   F · 05 SETUP → DEALER
+   ========================================================================== */
+.close {
+  position: relative; overflow: hidden;
+  background: var(--c-black);
+}
+.close__glow {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(58% 70% at 76% 12%, rgba(255,255,255,0.09), transparent 70%);
+}
+.close__inner { position: relative; z-index: 1; }
+.close__grid { align-items: start; }
+.close__a { grid-column: span 6; }
+.close__b { grid-column: span 6; display: flex; flex-direction: column; gap: var(--s-5); }
+@media (max-width: 860px) {
+  .close__a, .close__b { grid-column: 1 / -1; }
+  .close__b { margin-top: var(--s-6); }
+}
+.close__big {
+  font-family: var(--ff-head);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.6vw, 3rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: var(--c-dim);
+  max-width: 16ch;
+}
+.close__big b { font-weight: 900; font-style: italic; color: var(--c-white); }
+.close__cta { gap: var(--s-4); margin-top: var(--s-3); }
+.close__states { gap: var(--s-3); }
+
+/* ==========================================================================
+   SMALL SCREENS — the drawings scale down, so their type and flow lines
+   scale up in user units to compensate. Nothing may overflow.
+   ========================================================================== */
+@media (max-width: 900px) {
+  .dsvg--section .d-disc-t { font-size: 22px; }
+  .dsvg--section .d-tag    { font-size: 17px; }
+  .dsvg--section .d-tag--lg{ font-size: 24px; }
+  .dsvg--section .d-flow   { stroke-width: 3.6px; }
+  .dsvg--section .d-flow--thin { stroke-width: 2.4px; }
+  .dsvg--shift .d-disc-t   { font-size: 22px; }
+  .dsvg--shift .d-tag      { font-size: 15px; }
+}
+@media (max-width: 560px) {
+  .dsvg--section .d-disc-t { font-size: 27px; }
+  .dsvg--section .d-tag    { font-size: 20px; }
+  .dsvg--valve .d-disc-t   { font-size: 19px; }
+  .dsvg--valve .d-tag      { font-size: 15px; }
+  .dsvg--shift .d-tag      { font-size: 17px; }
+  .th__meta { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Reduced motion / no JS: the counters and reveals already degrade globally.
+   Nothing on this page depends on motion to be readable.                    */
