@@ -1,0 +1,124 @@
+/* ==========================================================================
+   PAGE — DEALERS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PAGE HEADER
+   -------------------------------------------------------------------------- */
+.pagehead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(68px + var(--section-y));
+  padding-bottom: var(--s-8);
+  background: var(--c-black);
+}
+.pagehead__field {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 18% 0%, rgba(255,255,255,0.10), transparent 62%),
+    linear-gradient(180deg, #0A0A0A 0%, #000 74%);
+}
+.pagehead__lines {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right, var(--c-line-faint) 0 1px, transparent 1px calc(100% / 6));
+}
+.pagehead__inner { position: relative; z-index: 1; }
+.pagehead__eyebrow {
+  display: flex; align-items: center; gap: var(--s-4);
+  margin-bottom: var(--s-5);
+}
+.pagehead__eyebrow .rule { flex: 0 0 clamp(28px, 6vw, 64px); }
+.pagehead__title { margin-bottom: var(--s-5); display: flex; flex-direction: column; }
+.pagehead__l1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 7.4vw, 5rem);
+  line-height: 0.92; letter-spacing: -0.03em;
+  color: var(--c-white); text-transform: uppercase;
+}
+.pagehead__l2 {
+  font-family: var(--ff-head);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2rem, 6.6vw, 4.4rem);
+  line-height: 0.95; letter-spacing: -0.02em;
+  text-transform: uppercase; color: var(--c-white);
+  margin-top: 0.06em;
+}
+.pagehead__sub { max-width: 56ch; }
+
+/* --------------------------------------------------------------------------
+   HEAD OFFICE  ·  distinct from the dealer list
+   -------------------------------------------------------------------------- */
+.hq {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--s-7);
+  align-items: center;
+  padding: var(--s-6) var(--s-7);
+  border: 1px solid var(--c-line-hard);
+  background: var(--c-graphite);
+}
+@media (max-width: 860px) {
+  .hq { grid-template-columns: 1fr; }
+}
+.hq__mark {
+  display: flex; flex-direction: column; gap: var(--s-2);
+}
+.hq__body { display: flex; flex-wrap: wrap; gap: var(--s-8); }
+.hq__field { display: flex; flex-direction: column; gap: 6px; min-width: 12ch; }
+.hq__field .t-micro { color: var(--c-mute); }
+.hq__field address, .hq__field a, .hq__field span.t-sm {
+  font-style: normal; color: var(--c-text); font-size: var(--fs-sm); line-height: 1.5;
+}
+.hq__field a.t-mono { color: var(--c-white); }
+.hq__field a.t-mono:hover { opacity: 0.7; }
+.hq__cta { display: flex; }
+
+/* --------------------------------------------------------------------------
+   01 — DEALER GRID
+   -------------------------------------------------------------------------- */
+.dealer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+}
+@media (max-width: 1080px) { .dealer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px)  { .dealer-grid { grid-template-columns: 1fr; } }
+
+.dealer-grid .dealer { position: relative; }
+.dealer__idx {
+  position: absolute; top: var(--s-5); right: var(--s-6);
+  font-family: var(--ff-display); font-size: 0.85rem; color: var(--c-white); opacity: 0.45;
+}
+.dealer__more {
+  margin-top: var(--s-2);
+}
+
+.dealers-note {
+  margin-top: var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+  display: flex; align-items: baseline; gap: var(--s-3);
+}
+
+/* --------------------------------------------------------------------------
+   02 — WHAT TO ASK
+   -------------------------------------------------------------------------- */
+.ask-list { display: flex; flex-direction: column; gap: 0; margin-top: var(--s-6); }
+.ask-list__item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--s-5);
+  padding: var(--s-5) 0;
+  border-bottom: 1px solid var(--c-line-soft);
+}
+.ask-list__item:first-child { border-top: 1px solid var(--c-line-soft); }
+.ask-list__idx {
+  font-family: var(--ff-display); font-size: 1.1rem; color: var(--c-white); opacity: 0.5;
+}
+.ask-list__item h3 {
+  font-family: var(--ff-head); font-weight: 800; font-size: 1rem;
+  text-transform: uppercase; color: var(--c-white); letter-spacing: 0.01em; margin-bottom: 4px;
+}
+.ask-list__item p { font-size: var(--fs-sm); color: var(--c-dim); line-height: 1.55; max-width: 62ch; }

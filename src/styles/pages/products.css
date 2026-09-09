@@ -1,0 +1,199 @@
+/* ==========================================================================
+   PAGE — PRODUCTS  (catalogue index)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HEADER
+   Compact page header — not a full-viewport hero. Corner telemetry +
+   side-rail reuse the shared furniture; only the layout here is new.
+   -------------------------------------------------------------------------- */
+.prod-head {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(68px + var(--section-y));
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(56% 60% at 84% 0%, rgba(255,255,255,0.08), transparent 65%),
+    var(--c-void);
+  border-bottom: 1px solid var(--c-line);
+}
+
+.prod-head__corner {
+  position: absolute;
+  z-index: 2;
+  top: calc(68px + var(--s-6));
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+.prod-head__corner--tl { left: var(--grid-gutter); }
+.prod-head__corner--tr { right: var(--grid-gutter); text-align: right; }
+@media (max-width: 900px) { .prod-head__corner--tr { display: none; } }
+
+.prod-head__inner { position: relative; z-index: 1; }
+
+.prod-head__eyebrow { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-5); }
+.prod-head__eyebrow .rule { flex: 0 0 clamp(24px, 5vw, 70px); }
+
+.prod-head__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin-bottom: var(--s-6);
+}
+.prod-head__l1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--c-white);
+}
+.prod-head__l2 {
+  font-family: var(--ff-head);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 3.2vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--c-white);
+}
+
+.prod-head__lead { margin-bottom: 0; }
+
+.prod-head__count {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+}
+.prod-head__count .t-mono {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-dim);
+}
+.prod-head__count .counter { color: var(--c-white); font-weight: 500; }
+
+/* --------------------------------------------------------------------------
+   FILTER RAIL  ·  CSS-only, radios + sibling selectors, no JS
+   -------------------------------------------------------------------------- */
+.filter {
+  border: 0;
+  margin: 0 0 var(--s-8);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+
+.filter__chip {
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--dur-base) linear, color var(--dur-base) linear,
+              border-color var(--dur-base) linear;
+}
+.filter__chip:hover { border-color: var(--c-line-hard); color: var(--c-white); }
+
+/* Checked state — mirrors .tag--fill */
+.filter__input:checked + .filter__chip {
+  background: var(--c-white);
+  color: var(--c-black);
+  border-color: var(--c-white);
+}
+
+/* Focus ring lands on the visible chip, not the visually-hidden input */
+.filter__input:focus-visible + .filter__chip {
+  outline: 1px solid var(--c-white);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   PRODUCT GRID + FILTER LOGIC
+   Default: everything shows (also the no-JS / unsupported-CSS fallback).
+   A checked category radio hides only the cards that don't match it.
+   -------------------------------------------------------------------------- */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+@media (max-width: 1180px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px)  { .prod-grid { grid-template-columns: 1fr; } }
+
+#f-coilovers:checked   ~ .prod-grid > .pcard:not([data-cat="coilovers"])   { display: none; }
+#f-absorbers:checked   ~ .prod-grid > .pcard:not([data-cat="absorbers"])   { display: none; }
+#f-springs:checked     ~ .prod-grid > .pcard:not([data-cat="springs"])     { display: none; }
+#f-accessories:checked ~ .prod-grid > .pcard:not([data-cat="accessories"]) { display: none; }
+#f-chassis:checked     ~ .prod-grid > .pcard:not([data-cat="chassis"])     { display: none; }
+
+/* --------------------------------------------------------------------------
+   KNOWN APPLICATIONS
+   -------------------------------------------------------------------------- */
+.apps__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-6);
+  margin-bottom: var(--s-8);
+}
+.apps__notice .crosshair { flex: none; margin-top: 0.2rem; }
+
+.apps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--c-line);
+}
+.apps__row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--s-5);
+  align-items: start;
+  padding-block: var(--s-5);
+  border-bottom: 1px solid var(--c-line-soft);
+}
+.apps__make { color: var(--c-white); padding-top: 0.3rem; }
+.apps__tags { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+@media (max-width: 640px) {
+  .apps__row { grid-template-columns: 1fr; gap: var(--s-2); }
+}
+
+.apps__foot {
+  margin-top: var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+  flex-wrap: wrap;
+  gap: var(--s-4);
+}
+
+/* --------------------------------------------------------------------------
+   DEALER CTA
+   -------------------------------------------------------------------------- */
+.pcta {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(70% 120% at 50% 0%, rgba(255,255,255,0.08), transparent 62%),
+    var(--c-carbon);
+}
+.pcta__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-6);
+}
+.pcta__head {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: var(--c-white);
+}

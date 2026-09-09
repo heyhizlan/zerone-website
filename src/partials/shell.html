@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<meta name="theme-color" content="#050505">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:image" content="{{BASE}}assets/logo/zerone-lockup-white@4x.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="{{BASE}}assets/logo/favicon.svg" type="image/svg+xml">
+
+<link rel="preload" as="font" type="font/woff2" crossorigin
+      href="{{BASE}}assets/fonts/saira-latin-standard-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin
+      href="{{BASE}}assets/fonts/figtree-latin-wght-normal.woff2">
+<link rel="stylesheet" href="{{BASE}}styles/fonts.css">
+
+<link rel="stylesheet" href="{{BASE}}styles/tokens.css">
+<link rel="stylesheet" href="{{BASE}}styles/base.css">
+<link rel="stylesheet" href="{{BASE}}styles/components.css">
+<link rel="stylesheet" href="{{BASE}}styles/motion.css">
+{{PAGECSS}}
+</head>
+<body class="{{BODYCLASS}}">
+<div class="grain" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!--@include partials/nav.html-->
+
+<main id="main">
+{{BODY}}
+</main>
+
+<!--@include partials/footer.html-->
+
+<script src="{{BASE}}scripts/site.js" defer></script>
+</body>
+</html>

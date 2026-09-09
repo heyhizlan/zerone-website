@@ -1,0 +1,178 @@
+/* ==========================================================================
+   ZERONE — MOTION
+   Governing rule: BLUR IS THE TRANSITION, NEVER THE RESTING STATE.
+   Everything arrives out of a directional blur and settles razor-sharp.
+   ========================================================================== */
+
+/* Elements opt in with [data-anim]. JS flips [data-inview="true"] via
+   IntersectionObserver. Without JS everything stays visible (see the
+   no-js fallback at the foot of this file).                              */
+
+/* The hidden state is gated behind .anim-ready on <html>, which site.js adds
+   ONLY after the IntersectionObserver is successfully wired. If the script
+   fails, errors, or never runs, content is never hidden — it simply renders
+   static. Fail-visible, not fail-blank.                                    */
+.anim-ready [data-anim] {
+  opacity: 0;
+  will-change: opacity, transform, filter;
+}
+
+/* --- RISE : the default. Up, out of blur. ---------------------------------- */
+.anim-ready [data-anim="rise"] {
+  transform: translate3d(0, 34px, 0);
+  filter: blur(var(--blur-motion));
+  transition:
+    opacity   var(--dur-reveal) var(--ease-out-expo),
+    transform var(--dur-reveal) var(--ease-out-expo),
+    filter    var(--dur-slow)   var(--ease-out-quart);
+}
+
+/* --- SLIDE : lateral, for product plates entering frame ------------------- */
+.anim-ready [data-anim="slide-l"] { transform: translate3d(-56px, 0, 0); filter: blur(var(--blur-motion));
+  transition: opacity var(--dur-reveal) var(--ease-out-expo),
+              transform var(--dur-reveal) var(--ease-out-expo),
+              filter var(--dur-slow) var(--ease-out-quart); }
+.anim-ready [data-anim="slide-r"] { transform: translate3d(56px, 0, 0); filter: blur(var(--blur-motion));
+  transition: opacity var(--dur-reveal) var(--ease-out-expo),
+              transform var(--dur-reveal) var(--ease-out-expo),
+              filter var(--dur-slow) var(--ease-out-quart); }
+
+/* --- VELOCITY : heavy horizontal smear. The signature move — reserve it
+       for hero display type and the flagship product plate.               */
+.anim-ready [data-anim="velocity"] {
+  transform: translate3d(-90px, 0, 0) skewX(-7deg);
+  filter: blur(26px);
+  transition:
+    opacity   var(--dur-cine) var(--ease-out-expo),
+    transform var(--dur-cine) var(--ease-out-expo),
+    filter    var(--dur-reveal) var(--ease-out-quart);
+}
+
+/* --- FOCUS : pure blur-to-sharp, no travel. For imagery. ------------------ */
+.anim-ready [data-anim="focus"] {
+  transform: scale(1.045);
+  filter: blur(20px);
+  transition:
+    opacity   var(--dur-cine) var(--ease-out-quart),
+    transform var(--dur-cine) var(--ease-out-expo),
+    filter    var(--dur-cine) var(--ease-out-quart);
+}
+
+/* --- WIPE : hairline rules drawing themselves in --------------------------- */
+.anim-ready [data-anim="wipe"] {
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-slow) var(--ease-out-expo);
+}
+
+/* --- MASK : type revealed from behind a moving edge ------------------------ */
+.anim-ready [data-anim="mask"] {
+  opacity: 1;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--dur-cine) var(--ease-out-expo);
+}
+
+/* --- RESTING STATE : sharp, settled, still ---------------------------------- */
+[data-anim][data-inview="true"] {
+  opacity: 1;
+  transform: none;
+  filter: blur(var(--blur-settle));
+  clip-path: inset(0 0 0 0);
+}
+/* Release the compositor hint once settled */
+[data-anim][data-settled="true"] { will-change: auto; filter: none; }
+
+/* --- STAGGER : set --d on a child or use [data-stagger] on the parent ------ */
+.anim-ready [data-anim] { transition-delay: var(--d, 0ms); }
+
+/* --------------------------------------------------------------------------
+   HERO — cinematic entry, runs on load rather than on scroll
+   -------------------------------------------------------------------------- */
+@keyframes hero-in {
+  0%   { opacity: 0; transform: translate3d(0, 40px, 0) scale(1.02); filter: blur(24px); }
+  100% { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes hero-smear {
+  0%   { opacity: 0; transform: translate3d(-120px, 0, 0) skewX(-9deg); filter: blur(34px); }
+  60%  { opacity: 1; }
+  100% { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes hero-plate {
+  0%   { opacity: 0; transform: translate3d(0, 60px, 0) scale(1.09); filter: blur(30px); }
+  100% { opacity: 1; transform: none; filter: blur(0); }
+}
+.anim-hero  { animation: hero-in    1200ms var(--ease-out-expo) both; }
+.anim-smear { animation: hero-smear 1500ms var(--ease-out-expo) both; }
+.anim-plate { animation: hero-plate 1800ms var(--ease-out-expo) both; }
+
+/* --------------------------------------------------------------------------
+   AMBIENT — slow, always-on motion. Keeps the page feeling alive without
+   competing with content.
+   -------------------------------------------------------------------------- */
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(0, -18px, 0) scale(1.015); }
+}
+.anim-drift { animation: drift 11s var(--ease-in-out) infinite; }
+
+@keyframes sweep {
+  0%   { transform: translateX(-110%); }
+  100% { transform: translateX(110%); }
+}
+/* Light sweep across a glass surface */
+.sweep { position: relative; overflow: hidden; }
+.sweep::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,0.07) 50%, transparent 62%);
+  transform: translateX(-110%);
+  pointer-events: none;
+}
+.sweep:hover::after { animation: sweep 900ms var(--ease-out-quart); }
+
+@keyframes pulse-tick {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 0.85; }
+}
+.anim-pulse { animation: pulse-tick 2.6s var(--ease-in-out) infinite; }
+
+/* --------------------------------------------------------------------------
+   SCROLL-LINKED MOTION BLUR
+   JS writes --scroll-blur while the user is scrolling fast, then releases.
+   Applied only to opted-in media so text never smears.
+   -------------------------------------------------------------------------- */
+.blur-on-scroll {
+  filter: blur(var(--scroll-blur, 0px));
+  transition: filter 260ms var(--ease-out-quart);
+}
+
+/* Parallax layers — JS writes --py */
+.parallax { transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
+
+/* --------------------------------------------------------------------------
+   MICRO-INTERACTION
+   -------------------------------------------------------------------------- */
+.hover-lift { transition: transform var(--dur-base) var(--ease-out-expo); }
+.hover-lift:hover { transform: translateY(-3px); }
+
+/* Counter digits roll with tabular numerals so width never jitters */
+.counter { font-variant-numeric: tabular-nums; }
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY + NO-JS
+   -------------------------------------------------------------------------- */
+.no-js [data-anim] { opacity: 1 !important; transform: none !important;
+  filter: none !important; clip-path: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-anim] { opacity: 1 !important; transform: none !important;
+    filter: none !important; clip-path: none !important; }
+  .parallax { transform: none !important; }
+  .blur-on-scroll { filter: none !important; }
+}

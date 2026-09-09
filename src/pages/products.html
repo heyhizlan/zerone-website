@@ -1,0 +1,431 @@
+<!--@meta
+{
+  "title": "Products | ZerOne — Performance Adjustable",
+  "desc": "The full ZerOne catalogue — adjustable coilovers, sport absorbers, sport springs, mounts and chassis bracing. Engineered in Kuala Lumpur, fitted by ZerOne dealers.",
+  "nav": "products",
+  "css": "products.css"
+}
+-->
+
+<!-- ======================================================================
+     HEADER  ·  compact catalogue header, not a full-viewport hero
+     ====================================================================== -->
+<section class="prod-head" aria-labelledby="ph-h">
+  <div class="gridlines" aria-hidden="true"></div>
+
+  <div class="prod-head__corner prod-head__corner--tl">
+    <span class="crosshair" aria-hidden="true"></span>
+    <span class="t-micro">CATALOGUE — ALL PLATFORMS</span>
+  </div>
+  <div class="prod-head__corner prod-head__corner--tr">
+    <span class="t-micro" data-clock>—</span>
+    <span class="crosshair" aria-hidden="true"></span>
+  </div>
+
+  <div class="side-rail">
+    <span class="t-micro">ZERONE · PRODUCT CATALOGUE · EST. KUALA LUMPUR</span>
+  </div>
+
+  <div class="shell prod-head__inner">
+    <p class="prod-head__eyebrow" data-anim="rise">
+      <span class="rule" aria-hidden="true"></span>
+      <span class="t-label">Product catalogue</span>
+    </p>
+
+    <h1 class="prod-head__title" id="ph-h">
+      <span class="sr-only">The ZerOne range — the full catalogue.</span>
+      <span class="prod-head__l1" aria-hidden="true" data-anim="rise">Range</span>
+      <span class="prod-head__l2" aria-hidden="true" data-anim="rise" style="--d:80ms">The full catalogue</span>
+    </h1>
+
+    <p class="t-lead prod-head__lead" data-anim="rise" style="--d:140ms">
+      Adjustable coilovers, sport absorbers, sport springs, mounting hardware
+      and chassis bracing — nine product lines, engineered and assembled in
+      Kuala Lumpur. Filter the range below by category; every line ends the
+      same way, at a dealer who confirms fitment before it goes on the car.
+    </p>
+
+    <div class="prod-head__count" data-anim="rise" style="--d:200ms">
+      <span class="crosshair" aria-hidden="true"></span>
+      <span class="t-mono">
+        <span class="counter" data-count-to="9">9</span> product lines /
+        <span class="counter" data-count-to="5">5</span> categories
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     01 — FILTER + GRID
+     ====================================================================== -->
+<section class="section section--carbon" aria-labelledby="s01">
+  <div class="gridlines" aria-hidden="true"></div>
+  <div class="shell" style="position:relative;z-index:1">
+    <div class="sec-head">
+      <span class="sec-head__num">01</span>
+      <div class="sec-head__meta">
+        <h2 class="sec-head__title" id="s01">The range</h2>
+        <p class="t-sm sec-head__sub">
+          Nine lines across five categories. Filter to narrow the list —
+          nothing here is hidden by fitment, only by type.
+        </p>
+      </div>
+      <span class="t-micro sec-head__tag">SEC-01 / RANGE</span>
+    </div>
+
+    <!-- Pure CSS filter: hidden radios + sibling selectors. No JS. -->
+    <fieldset class="filter">
+      <legend class="sr-only">Filter products by category</legend>
+
+      <input class="sr-only filter__input" type="radio" name="filter" id="f-all" value="all" checked>
+      <label class="tag filter__chip" for="f-all">All</label>
+
+      <input class="sr-only filter__input" type="radio" name="filter" id="f-coilovers" value="coilovers">
+      <label class="tag filter__chip" for="f-coilovers">Coilovers</label>
+
+      <input class="sr-only filter__input" type="radio" name="filter" id="f-absorbers" value="absorbers">
+      <label class="tag filter__chip" for="f-absorbers">Absorbers</label>
+
+      <input class="sr-only filter__input" type="radio" name="filter" id="f-springs" value="springs">
+      <label class="tag filter__chip" for="f-springs">Springs</label>
+
+      <input class="sr-only filter__input" type="radio" name="filter" id="f-accessories" value="accessories">
+      <label class="tag filter__chip" for="f-accessories">Accessories</label>
+
+      <input class="sr-only filter__input" type="radio" name="filter" id="f-chassis" value="chassis">
+      <label class="tag filter__chip" for="f-chassis">Chassis</label>
+
+      <div class="prod-grid" data-stagger="60">
+
+        <article class="pcard" data-cat="coilovers" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/coilover-ssr700-plus.svg" alt="ZerOne SSR700 PLUS coilover" width="400" height="900" loading="lazy">
+            <span class="pcard__num">01</span>
+            <span class="pcard__flag tag tag--fill">Flagship</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">SSR700 <span class="t-oblique">Plus</span></h3>
+            <p class="pcard__sub">Mono-tube · ADFL</p>
+            <p class="pcard__desc">
+              The full-house kit. Larger piston, carbon thread casing and 32
+              discrete steps of compression and rebound, under an ADFL valve
+              that keeps adjusting once you've stopped turning the dial.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Steps</span><b>32</b></span>
+                <span class="pcard__spec"><span class="t-micro">Type</span><b>Mono</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}products/ssr700-plus.html">Spec <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="coilovers" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/coilover-ssr700.svg" alt="ZerOne SSR700 coilover" width="400" height="900" loading="lazy">
+            <span class="pcard__num">02</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">SSR700</h3>
+            <p class="pcard__sub">Mono-tube · ADFL</p>
+            <p class="pcard__desc">
+              Mono-tube construction with the same 32-step compression and
+              rebound range and ADFL valve as the PLUS, in the standard
+              casing.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Steps</span><b>32</b></span>
+                <span class="pcard__spec"><span class="t-micro">Type</span><b>Mono</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}products/ssr700.html">Spec <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="coilovers" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/coilover-ssr550.svg" alt="ZerOne SSR550 coilover" width="400" height="900" loading="lazy">
+            <span class="pcard__num">03</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">SSR550</h3>
+            <p class="pcard__sub">Twin-tube · Street + track</p>
+            <p class="pcard__desc">
+              Twenty-four clicks of damping and Hi/Lo body-shift height
+              adjustment in a twin-tube build set up for daily driving with
+              occasional track use.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Steps</span><b>24</b></span>
+                <span class="pcard__spec"><span class="t-micro">Type</span><b>Twin</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}products/ssr550.html">Spec <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="coilovers" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/coilover-ssr500-plus.svg" alt="ZerOne SSR500 PLUS coilover" width="400" height="900" loading="lazy">
+            <span class="pcard__num">04</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">SSR500 <span class="t-oblique">Plus</span></h3>
+            <p class="pcard__sub">Twin-tube · Street</p>
+            <p class="pcard__desc">
+              Independently adjustable rebound and compression, set to the
+              driver, the car and the road rather than fixed at the factory.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Adjust</span><b>Reb+Cmp</b></span>
+                <span class="pcard__spec"><span class="t-micro">Type</span><b>Twin</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}products/ssr500-plus.html">Spec <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="absorbers" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/sport-absorber.svg" alt="ZerOne Sport Absorber" width="400" height="900" loading="lazy">
+            <span class="pcard__num">05</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">Sport Absorber</h3>
+            <p class="pcard__sub">OE replacement · Fixed height</p>
+            <p class="pcard__desc">
+              Sharper damping without moving ride height — runs with stock,
+              sport or lowering springs.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Height</span><b>Stock</b></span>
+                <span class="pcard__spec"><span class="t-micro">Fit</span><b>Direct</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}products/sport-absorber.html">Spec <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="springs" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/sport-spring.svg" alt="ZerOne Type S sport spring" width="400" height="900" loading="lazy">
+            <span class="pcard__num">06</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">Type S <span class="t-oblique">Spring</span></h3>
+            <p class="pcard__sub">Sport spring · SAE9254</p>
+            <p class="pcard__desc">
+              Precision CNC-wound from high tensile SAE9254 steel and
+              finished with Anti-Corrosion Coating.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Alloy</span><b>SAE9254</b></span>
+                <span class="pcard__spec"><span class="t-micro">Coating</span><b>ACC</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}dealers.html">Ask a dealer <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="springs" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/sport-spring.svg" alt="ZerOne Premium by TS sport spring" width="400" height="900" loading="lazy">
+            <span class="pcard__num">07</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">Premium <span class="t-oblique">by TS</span></h3>
+            <p class="pcard__sub">Sport spring · SAE9254</p>
+            <p class="pcard__desc">
+              ZerOne's second sport spring line — the same CNC-wound SAE9254
+              construction and Anti-Corrosion Coating as Type S.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Alloy</span><b>SAE9254</b></span>
+                <span class="pcard__spec"><span class="t-micro">Coating</span><b>ACC</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}dealers.html">Ask a dealer <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="accessories" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/pillow-ball-mount.svg" alt="ZerOne Pillow Ball Upper Mount" width="400" height="900" loading="lazy">
+            <span class="pcard__num">08</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">Pillow Ball <span class="t-oblique">Mount</span></h3>
+            <p class="pcard__sub">Accessory · Upper mount</p>
+            <p class="pcard__desc">
+              Upper strut mount on a pillow ball bearing. A Suspension
+              Mounting Kit is also available.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Bearing</span><b>Pillow ball</b></span>
+                <span class="pcard__spec"><span class="t-micro">Also</span><b>Mount kit</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}dealers.html">Ask a dealer <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="chassis" data-anim="rise">
+          <div class="pcard__media">
+            <img src="{{BASE}}assets/products/safety-bar.svg" alt="ZerOne Safety Bar" width="400" height="900" loading="lazy">
+            <span class="pcard__num">09</span>
+          </div>
+          <div class="pcard__body">
+            <h3 class="pcard__name">Safety Bar</h3>
+            <p class="pcard__sub">Front strut + lower bars</p>
+            <p class="pcard__desc">
+              Bolted, plug-and-play chassis bracing that cuts body roll by up
+              to 40% and carries a lifetime warranty.
+            </p>
+            <div class="pcard__foot">
+              <div class="pcard__specs">
+                <span class="pcard__spec"><span class="t-micro">Roll</span><b>-40%</b></span>
+                <span class="pcard__spec"><span class="t-micro">Warranty</span><b>Lifetime</b></span>
+              </div>
+              <a class="link-u pcard__link" href="{{BASE}}dealers.html">Ask a dealer <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- /.prod-grid -->
+    </fieldset>
+  </div>
+</section>
+
+<!-- ======================================================================
+     02 — KNOWN APPLICATIONS
+     ====================================================================== -->
+<section class="section" aria-labelledby="s02">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="sec-head__num">02</span>
+      <div class="sec-head__meta">
+        <h2 class="sec-head__title" id="s02">Known applications — a selection, not a fitment list</h2>
+        <p class="t-sm sec-head__sub">Makes and models ZerOne has built kits for.</p>
+      </div>
+      <span class="t-micro sec-head__tag">SEC-02 / APPLICATIONS</span>
+    </div>
+
+    <div class="apps__notice panel" data-anim="rise">
+      <span class="crosshair" aria-hidden="true"></span>
+      <p class="t-sm">
+        Kits are model-specific and this list is not a fitment guide.
+        Confirm stock and exact fitment for your chassis with a
+        <a class="link-u" href="{{BASE}}dealers.html">ZerOne dealer</a>
+        before you order.
+      </p>
+    </div>
+
+    <div class="apps" data-stagger="40">
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Perodua</span>
+        <div class="apps__tags">
+          <span class="tag">Myvi</span>
+          <span class="tag">Axia</span>
+          <span class="tag">Kelisa</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Proton</span>
+        <div class="apps__tags">
+          <span class="tag">Saga</span>
+          <span class="tag">Wira</span>
+          <span class="tag">Waja</span>
+          <span class="tag">Gen2</span>
+          <span class="tag">Persona</span>
+          <span class="tag">Satria Neo</span>
+          <span class="tag">Inspira</span>
+          <span class="tag">Perdana</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Toyota</span>
+        <div class="apps__tags">
+          <span class="tag">Vios</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Honda</span>
+        <div class="apps__tags">
+          <span class="tag">Jazz GD</span>
+          <span class="tag">City</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Nissan</span>
+        <div class="apps__tags">
+          <span class="tag">Almera N17</span>
+          <span class="tag">Cefiro A32</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Kia</span>
+        <div class="apps__tags">
+          <span class="tag">Forte</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">Mitsubishi</span>
+        <div class="apps__tags">
+          <span class="tag">Lancer Evo 4/5/6</span>
+        </div>
+      </div>
+      <div class="apps__row" data-anim="rise">
+        <span class="apps__make t-label">BMW</span>
+        <div class="apps__tags">
+          <span class="tag">E60</span>
+          <span class="tag">E90</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="between apps__foot" data-anim="rise">
+      <p class="t-sm">Not seeing your car listed? Availability is model-specific — ask a dealer.</p>
+      <a class="btn" href="{{BASE}}dealers.html">Ask a dealer <span class="btn__arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     03 — DEALER CTA
+     ====================================================================== -->
+<section class="section pcta" aria-labelledby="s03">
+  <div class="shell pcta__inner">
+    <span class="t-label" data-anim="rise">03 — Fitment &amp; advice</span>
+    <h2 class="pcta__head" id="s03" data-anim="rise">
+      Talk to a dealer<br>before you order.
+    </h2>
+    <p class="t-lead" style="text-align:center" data-anim="rise">
+      Nothing on this page is sold direct. Height, spring rate and damper
+      choice change with the car — your nearest ZerOne dealer confirms
+      fitment and sets it up correctly before it goes on.
+    </p>
+    <div class="row wrap" style="gap:1rem;justify-content:center" data-anim="rise">
+      <a class="btn btn--solid" href="{{BASE}}dealers.html">
+        Find your nearest dealer <span class="btn__arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="btn" href="tel:+60162108271">Call +60 16-210 8271</a>
+    </div>
+    <div class="row wrap" style="gap:1.25rem;margin-top:1rem;justify-content:center" data-anim="rise">
+      <span class="tag tag--dot">Selangor</span>
+      <span class="tag tag--dot">Kuala Lumpur</span>
+      <span class="tag tag--dot">Perak</span>
+      <span class="tag tag--dot">Johor</span>
+      <span class="tag tag--dot">Melaka</span>
+      <span class="tag tag--dot">N. Sembilan</span>
+    </div>
+  </div>
+</section>

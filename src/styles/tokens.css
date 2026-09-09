@@ -1,0 +1,131 @@
+/* ==========================================================================
+   ZERONE — DESIGN TOKENS
+   Brand: monochrome only. Black, white, and the grey ramp between them.
+   Colour enters the page exclusively through product imagery.
+   ========================================================================== */
+
+:root {
+  /* --- SURFACE RAMP ------------------------------------------------------
+     Neutral greys, zero hue tint. Ordered darkest -> lightest.            */
+  --c-black:      #000000;
+  --c-void:       #050505;  /* page ground                                 */
+  --c-carbon:     #0A0A0A;  /* section alternate                           */
+  --c-graphite:   #101010;  /* raised card                                 */
+  --c-steel:      #181818;  /* raised card, hover                          */
+  --c-iron:       #242424;  /* hard border                                 */
+
+  /* --- INK RAMP ---------------------------------------------------------- */
+  --c-white:      #FFFFFF;
+  --c-text:       #C4C4C4;  /* body copy on dark                           */
+  --c-dim:        #8A8A8A;  /* secondary copy                              */
+  --c-mute:       #5C5C5C;  /* micro-labels, furniture                     */
+  --c-ghost:      #3A3A3A;  /* disabled, rule marks                        */
+
+  /* --- LINEWORK ----------------------------------------------------------
+     The hairline grid is the backbone of the whole system.               */
+  --c-line:       rgba(255, 255, 255, 0.11);
+  --c-line-soft:  rgba(255, 255, 255, 0.06);
+  --c-line-faint: rgba(255, 255, 255, 0.03);
+  --c-line-hard:  rgba(255, 255, 255, 0.22);
+
+  /* --- GLASS (the HUD layer) ---------------------------------------------
+     Frosted panels that float OVER product imagery. Never over flat black
+     — glass with nothing behind it is just a grey box.                    */
+  --glass-fill:      rgba(255, 255, 255, 0.045);
+  --glass-fill-hi:   rgba(255, 255, 255, 0.075);
+  --glass-edge:      rgba(255, 255, 255, 0.14);
+  --glass-edge-top:  rgba(255, 255, 255, 0.30);  /* 1px specular highlight */
+  --glass-blur:      blur(22px) saturate(115%);
+  --glass-blur-lite: blur(12px) saturate(110%);
+
+  /* --- TYPEFACES ----------------------------------------------------------
+     Michroma  : hero display + section numerals. ONE weight, no italic.
+     Saira     : working display face. Variable 100-900 + true italic.
+                 The italic echoes the oblique in the ZERONE wordmark.
+     Figtree   : body. Neutral geometric, tall x-height.
+     Plex Mono : data, micro-labels, serials, spec tables.               */
+  --ff-display: "Michroma", "Saira", ui-sans-serif, system-ui, sans-serif;
+  --ff-head:    "Saira", "Michroma", ui-sans-serif, system-ui, sans-serif;
+  --ff-body:    "Figtree", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --ff-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* --- TYPE SCALE ---------------------------------------------------------
+     Extreme contrast is the brief: enormous display, tiny labels,
+     deliberately little in between.                                      */
+  --fs-mega:    clamp(3.4rem, 13.5vw, 13rem);
+  --fs-display: clamp(2.6rem, 8.5vw, 7.5rem);
+  --fs-h1:      clamp(2.1rem, 5.4vw, 4.25rem);
+  --fs-h2:      clamp(1.6rem, 3.4vw, 2.75rem);
+  --fs-h3:      clamp(1.15rem, 1.9vw, 1.55rem);
+  --fs-lead:    clamp(1rem, 1.35vw, 1.2rem);
+  --fs-body:    1rem;
+  --fs-sm:      0.875rem;
+  --fs-xs:      0.8125rem;
+  --fs-label:   0.6875rem;   /* 11px — the micro-caps rail                */
+  --fs-micro:   0.625rem;    /* 10px — serials, ticks, registration       */
+
+  --lh-tight:   0.92;
+  --lh-head:    1.06;
+  --lh-snug:    1.35;
+  --lh-body:    1.62;
+
+  --ls-mega:    -0.035em;
+  --ls-display: -0.02em;
+  --ls-head:    -0.01em;
+  --ls-body:    0;
+  --ls-label:   0.2em;
+  --ls-micro:   0.24em;
+
+  /* --- SPACE (4px base) --------------------------------------------------- */
+  --s-1:  0.25rem;  --s-2:  0.5rem;   --s-3:  0.75rem;  --s-4:  1rem;
+  --s-5:  1.5rem;   --s-6:  2rem;     --s-7:  2.5rem;   --s-8:  3rem;
+  --s-9:  4rem;     --s-10: 5rem;     --s-11: 6.5rem;   --s-12: 8rem;
+  --s-13: 10rem;    --s-14: 13rem;
+
+  --section-y: clamp(4.5rem, 10vw, 9rem);
+
+  /* --- GRID ---------------------------------------------------------------- */
+  --grid-max:    1560px;
+  --grid-gutter: clamp(1.25rem, 4vw, 4rem);
+  --grid-cols:   12;
+  --grid-gap:    clamp(1rem, 1.8vw, 1.75rem);
+
+  /* --- FURNITURE ----------------------------------------------------------
+     Registration marks, tick rules, corner brackets.                     */
+  --tick:        1px;
+  --bracket:     14px;
+  --radius-none: 0;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   14px;
+  --radius-pill: 999px;
+
+  /* --- MOTION -------------------------------------------------------------
+     Blur is the transition, never the resting state.                     */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.30, 1);
+  --ease-out-quart:cubic-bezier(0.25, 1, 0.50, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --dur-fast:   180ms;
+  --dur-base:   320ms;
+  --dur-slow:   620ms;
+  --dur-reveal: 1050ms;
+  --dur-cine:   1600ms;
+
+  --blur-motion: 14px;   /* directional blur on reveal                     */
+  --blur-settle: 0px;
+
+  /* --- ELEVATION ----------------------------------------------------------- */
+  --shadow-hud:  0 1px 0 var(--glass-edge-top) inset,
+                 0 24px 60px -20px rgba(0, 0, 0, 0.9);
+  --shadow-card: 0 20px 50px -28px rgba(0, 0, 0, 1);
+
+  --z-grain:  9000;
+  --z-nav:    8000;
+  --z-modal:  9500;
+}
+
+/* Pure-black variant for full-bleed cinematic sections */
+[data-ground="black"] { --c-void: #000000; --c-carbon: #050505; }

@@ -1,0 +1,226 @@
+/* ==========================================================================
+   PAGE — HOME
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO
+   Full-bleed. Huge type overlapping an isolated product plate, telemetry
+   labels pinned to the corners, glass readout strip along the bottom.
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: var(--c-black);
+  padding-top: 68px;
+  isolation: isolate;
+}
+
+/* Graduated field the product sits in — the "studio sweep" from the refs */
+.hero__field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(58% 46% at 62% 34%, rgba(255,255,255,0.13), transparent 68%),
+    radial-gradient(90% 70% at 50% 120%, rgba(255,255,255,0.05), transparent 70%),
+    linear-gradient(180deg, #0A0A0A 0%, #000 62%);
+}
+.hero__lines {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right, var(--c-line-faint) 0 1px, transparent 1px calc(100% / 6));
+}
+
+/* The product plate — parallaxed, blurs on fast scroll */
+.hero__plate {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 8%;
+  translate: 0 -50%;
+  height: min(82vh, 780px);
+  width: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 50px 90px rgba(0,0,0,0.95));
+}
+.hero__plate img { height: 100%; width: auto; }
+
+.hero__inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-bottom: clamp(2rem, 5vh, 4rem);
+}
+
+.hero__eyebrow {
+  display: flex; align-items: flex-start; gap: var(--s-4);
+  margin-bottom: var(--s-6);
+}
+/* Keep the rule on the first line when the label wraps */
+.hero__eyebrow .rule { margin-top: 0.5em; }
+.hero__eyebrow .rule { flex: 0 0 clamp(28px, 6vw, 90px); }
+
+/* The headline. Michroma is extremely wide, so it takes the short word and
+   Saira's oblique takes the long one — that contrast IS the lockup. */
+.hero__head { margin-bottom: var(--s-6); }
+.hero__l1 {
+  font-family: var(--ff-display);
+  font-size: clamp(3rem, 12.5vw, 11.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: var(--c-white);
+  text-transform: uppercase;
+  display: block;
+}
+.hero__l2 {
+  font-family: var(--ff-head);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 11vw, 10rem);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  font-stretch: var(--fvs-wide);
+  text-transform: uppercase;
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-line-hard);
+  margin-top: 0.04em;
+}
+.hero__l2 em { font-style: inherit; color: var(--c-white); -webkit-text-stroke: 0; }
+
+.hero__sub { max-width: 40ch; margin-bottom: var(--s-7); }
+.hero__cta { display: flex; gap: var(--s-4); flex-wrap: wrap; }
+
+/* Corner telemetry */
+.hero__corner {
+  position: absolute;
+  z-index: 4;
+  display: flex; align-items: center; gap: var(--s-3);
+}
+.hero__corner--tl { top: calc(68px + var(--s-6)); left: var(--grid-gutter); }
+.hero__corner--tr { top: calc(68px + var(--s-6)); right: var(--grid-gutter); text-align: right; }
+@media (max-width: 900px) { .hero__corner--tr { display: none; } }
+
+/* Glass HUD readout across the base of the hero — sits over the gradient
+   field, which is the only place frosted glass actually reads as glass. */
+.hero__hud {
+  position: relative;
+  z-index: 3;
+  margin-top: var(--s-8);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--c-line-soft);
+  border: 1px solid var(--glass-edge);
+}
+.hero__hud > div {
+  background: var(--glass-fill);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  padding: var(--s-5);
+  display: flex; flex-direction: column; gap: var(--s-2);
+}
+@media (max-width: 800px) { .hero__hud { grid-template-columns: repeat(2, 1fr); } }
+
+
+/* Below 1000px the plate becomes atmosphere, not subject — it sits behind
+   the copy, so it is pushed off-frame, dimmed hard, and faded out under the
+   text block. Legibility wins over spectacle on a phone.                   */
+@media (max-width: 1000px) {
+  .hero { justify-content: center; }
+  .hero__plate {
+    right: -22%;
+    height: 68vh;
+    opacity: 0.28;
+    -webkit-mask-image: linear-gradient(200deg, #000 30%, transparent 78%);
+    mask-image: linear-gradient(200deg, #000 30%, transparent 78%);
+  }
+  /* Scrim: guarantees contrast for the headline and body copy */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(100deg, #000 6%, rgba(0,0,0,0.82) 46%, transparent 92%);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__plate { opacity: 0.2; right: -34%; }
+  /* Corner telemetry collides with the eyebrow at this width */
+  .hero__corner--tl { display: none; }
+  .hero__hud > div { padding: var(--s-4); }
+}
+
+/* --------------------------------------------------------------------------
+   STATEMENT
+   -------------------------------------------------------------------------- */
+.statement__big {
+  font-family: var(--ff-head);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3.6vw, 3rem);
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  color: var(--c-dim);
+  max-width: 22ch;
+}
+.statement__big b { font-weight: 800; color: var(--c-white); font-style: italic; }
+
+/* --------------------------------------------------------------------------
+   PRODUCT GRID
+   -------------------------------------------------------------------------- */
+.range { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap); }
+@media (max-width: 1180px) { .range { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px)  { .range { grid-template-columns: 1fr; } }
+
+/* --------------------------------------------------------------------------
+   TECHNOLOGY BAND — dark, cinematic, big numerals
+   -------------------------------------------------------------------------- */
+.tech { position: relative; overflow: hidden; background: var(--c-black); }
+.tech__glow {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(46% 62% at 78% 46%, rgba(255,255,255,0.10), transparent 70%);
+}
+.tech__inner { position: relative; z-index: 1; }
+.tech__stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  border-top: 1px solid var(--c-line);
+  padding-top: var(--s-6);
+  margin-top: var(--s-8);
+}
+@media (max-width: 720px) { .tech__stats { grid-template-columns: 1fr; gap: var(--s-6); } }
+
+.tech__figure {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: grid; place-items: center;
+  border: 1px solid var(--c-line-soft);
+  background: radial-gradient(70% 60% at 50% 40%, rgba(255,255,255,0.07), transparent 70%);
+}
+.tech__figure img { width: 66%; }
+
+/* --------------------------------------------------------------------------
+   DEALER CTA
+   -------------------------------------------------------------------------- */
+.cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(70% 120% at 50% 0%, rgba(255,255,255,0.08), transparent 62%),
+    var(--c-carbon);
+  text-align: center;
+}
+.cta__inner { position: relative; z-index: 1; display: flex; flex-direction: column;
+  align-items: center; gap: var(--s-6); }
+.cta__head {
+  font-family: var(--ff-display);
+  font-size: clamp(1.9rem, 6vw, 5rem);
+  line-height: 0.95; letter-spacing: -0.025em;
+  text-transform: uppercase; color: var(--c-white);
+}

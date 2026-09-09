@@ -1,0 +1,161 @@
+/* ==========================================================================
+   PAGE — CONTACT
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PAGE HEADER
+   -------------------------------------------------------------------------- */
+.pagehead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(68px + var(--section-y));
+  padding-bottom: var(--s-8);
+  background: var(--c-black);
+}
+.pagehead__field {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 50% 0%, rgba(255,255,255,0.10), transparent 62%),
+    linear-gradient(180deg, #0A0A0A 0%, #000 74%);
+}
+.pagehead__lines {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right, var(--c-line-faint) 0 1px, transparent 1px calc(100% / 6));
+}
+.pagehead__inner { position: relative; z-index: 1; }
+.pagehead__eyebrow {
+  display: flex; align-items: center; gap: var(--s-4);
+  margin-bottom: var(--s-5);
+}
+.pagehead__eyebrow .rule { flex: 0 0 clamp(28px, 6vw, 64px); }
+.pagehead__title { margin-bottom: var(--s-5); display: flex; flex-direction: column; }
+.pagehead__l1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 7.4vw, 5rem);
+  line-height: 0.92; letter-spacing: -0.03em;
+  color: var(--c-white); text-transform: uppercase;
+}
+.pagehead__l2 {
+  font-family: var(--ff-head);
+  font-style: italic; font-weight: 900;
+  font-size: clamp(2rem, 6.6vw, 4.4rem);
+  line-height: 0.95; letter-spacing: -0.02em;
+  text-transform: uppercase; color: var(--c-white);
+  margin-top: 0.06em;
+}
+.pagehead__sub { max-width: 56ch; }
+
+/* --------------------------------------------------------------------------
+   TWO-COLUMN CONTACT LAYOUT
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--s-11);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: var(--s-9); }
+}
+
+/* --- LEFT : direct contact -------------------------------------------- */
+.direct { display: flex; flex-direction: column; gap: var(--s-6); }
+.direct__field { display: flex; flex-direction: column; gap: 6px; }
+.direct__field .t-micro { color: var(--c-mute); }
+.direct__field address,
+.direct__field span.t-body { font-style: normal; }
+.direct__field a.t-mono {
+  font-size: 1.05rem; color: var(--c-white); width: fit-content;
+}
+.direct__field a.t-mono:hover { opacity: 0.7; }
+
+.route {
+  margin-top: var(--s-2);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--c-line-soft);
+  display: flex; flex-direction: column; gap: var(--s-4);
+}
+.route__row { display: flex; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; }
+.route__row .t-micro { color: var(--c-mute); white-space: nowrap; }
+.route__row p { font-size: var(--fs-sm); color: var(--c-text); line-height: 1.5; }
+
+/* --- RIGHT : enquiry form ----------------------------------------------- */
+.enquiry {
+  border: 1px solid var(--c-line);
+  background: var(--c-carbon);
+  padding: var(--s-7);
+}
+@media (max-width: 560px) { .enquiry { padding: var(--s-5); } }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+@media (max-width: 620px) { .form-row { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: var(--s-2); margin-top: var(--s-5); }
+.field:first-child, .form-row .field { margin-top: 0; }
+.form-row + .field { margin-top: var(--s-5); }
+
+.field__label {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-micro);
+  text-transform: uppercase;
+  color: var(--c-mute);
+}
+.field__label .req { color: var(--c-dim); margin-left: 2px; }
+
+.field__input,
+.field__select,
+.field__textarea {
+  width: 100%;
+  background: var(--c-graphite);
+  border: 1px solid var(--c-line);
+  color: var(--c-white);
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  padding: 0.8rem 0.9rem;
+  transition: border-color var(--dur-fast) linear, background var(--dur-fast) linear;
+}
+.field__textarea { resize: vertical; min-height: 9rem; font-family: var(--ff-body); }
+.field__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--c-mute) 50%),
+                     linear-gradient(135deg, var(--c-mute) 50%, transparent 50%);
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.field__input::placeholder,
+.field__textarea::placeholder { color: var(--c-mute); }
+
+.field__input:hover, .field__select:hover, .field__textarea:hover { border-color: var(--c-line-hard); }
+.field__input:focus, .field__select:focus, .field__textarea:focus {
+  outline: none;
+  border-color: var(--c-white);
+  background: var(--c-steel);
+}
+.field__input:focus-visible, .field__select:focus-visible, .field__textarea:focus-visible {
+  outline: 1px solid var(--c-white);
+  outline-offset: 2px;
+}
+
+.field__hint { font-size: var(--fs-xs); color: var(--c-mute); }
+
+.enquiry__foot {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   DEALER-STATE STRIP
+   -------------------------------------------------------------------------- */
+.state-strip {
+  display: flex; align-items: center; gap: var(--s-4); flex-wrap: wrap;
+}
+.state-strip .tag {
+  transition: color var(--dur-fast) linear, border-color var(--dur-fast) linear;
+}
+.state-strip .tag:hover { color: var(--c-white); border-color: var(--c-line-hard); }

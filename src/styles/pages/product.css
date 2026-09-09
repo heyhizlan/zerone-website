@@ -1,0 +1,436 @@
+/* ==========================================================================
+   PAGE — PRODUCT DETAIL
+   One template, five products. Instrument-panel read: hairline frames,
+   registration marks, numbered anatomy, a ruler for the damping range.
+   Composes tokens only — no new colours, no new hues.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   A · HERO
+   Two columns. Type lockup left, isolated object on a graduated field right.
+   -------------------------------------------------------------------------- */
+.pdp-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--c-black);
+  padding-top: calc(68px + var(--s-6));
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+.pdp-hero__field {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(52% 44% at 74% 38%, rgba(255,255,255,0.12), transparent 66%),
+    radial-gradient(96% 74% at 34% 120%, rgba(255,255,255,0.045), transparent 72%),
+    linear-gradient(180deg, #0A0A0A 0%, #000 70%);
+}
+.pdp-hero__lines {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right, var(--c-line-faint) 0 1px, transparent 1px calc(100% / 6));
+}
+.pdp-hero__inner { position: relative; z-index: 2; }
+
+/* Breadcrumb rail — crumb left, telemetry right, hairline beneath */
+.pdp-rail {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s-5);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--c-line);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+.pdp-crumb ol {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap;
+}
+.pdp-crumb li { display: flex; align-items: center; gap: var(--s-3); }
+.pdp-crumb li + li::before { content: "/"; color: var(--c-ghost); }
+.pdp-crumb a { color: var(--c-mute); transition: color var(--dur-fast) linear; }
+.pdp-crumb a:hover { color: var(--c-white); }
+.pdp-crumb [aria-current] { color: var(--c-white); }
+.pdp-rail__meta { display: flex; align-items: center; gap: var(--s-4); }
+@media (max-width: 720px) { .pdp-rail__meta { display: none; } }
+
+.pdp-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+@media (max-width: 980px) { .pdp-hero__grid { grid-template-columns: minmax(0, 1fr); } }
+
+.pdp-eyebrow {
+  display: flex; align-items: center; gap: var(--s-4);
+  margin-bottom: var(--s-6);
+}
+.pdp-eyebrow .rule { flex: 0 0 clamp(24px, 5vw, 72px); }
+
+/* The lockup. Michroma takes the short serial, Saira's oblique takes the
+   long word — that contrast is the lockup. */
+.pdp-name { margin-bottom: var(--s-5); }
+.pdp-name__a {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 7.2vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--c-white);
+}
+.pdp-name__b {
+  display: block;
+  font-family: var(--ff-head);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.9rem, 6.6vw, 4.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  font-stretch: var(--fvs-wide);
+  text-transform: uppercase;
+  margin-top: 0.06em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--c-line-hard);
+}
+/* The flagship fills its oblique solid; everything else runs outlined. */
+.pdp-name__b--solid { color: var(--c-white); -webkit-text-stroke: 0; }
+@supports not (-webkit-text-stroke: 1px #fff) {
+  .pdp-name__b { color: var(--c-dim); }
+}
+
+.pdp-lede { max-width: 46ch; margin-bottom: var(--s-6); }
+
+.pdp-tags { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-bottom: var(--s-6); }
+.pdp-hero__cta { display: flex; flex-wrap: wrap; gap: var(--s-4); }
+
+/* Isolated object on a graduated field */
+.pdp-figure {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  max-height: 76vh;
+  padding: var(--s-6);
+  border: 1px solid var(--c-line-soft);
+  background:
+    radial-gradient(64% 54% at 50% 34%, rgba(255,255,255,0.10), transparent 68%),
+    linear-gradient(180deg, #121212, #060606);
+}
+.pdp-figure img {
+  width: auto; max-width: 62%; max-height: 88%;
+  filter: drop-shadow(0 34px 54px rgba(0,0,0,0.9));
+}
+.pdp-figure figcaption {
+  position: absolute; left: var(--s-5); bottom: var(--s-4);
+  display: flex; align-items: center; gap: var(--s-3);
+}
+.pdp-figure__ticks {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 14px;
+  background-image: repeating-linear-gradient(
+    to bottom, var(--c-ghost) 0 1px, transparent 1px 11px);
+  opacity: 0.5;
+}
+
+/* --------------------------------------------------------------------------
+   B · ANATOMY — the numbered callout diagram
+   -------------------------------------------------------------------------- */
+.anat {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+@media (max-width: 980px) { .anat { grid-template-columns: minmax(0, 1fr); } }
+
+.anat__stage { position: sticky; top: 96px; }
+@media (max-width: 980px) { .anat__stage { position: static; } }
+
+.anat__frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--c-line-soft);
+  background:
+    radial-gradient(60% 52% at 56% 40%, rgba(255,255,255,0.085), transparent 68%),
+    linear-gradient(180deg, #101010, #050505);
+  padding-left: 78px;
+  padding-right: var(--s-5);
+}
+.anat__frame img { width: auto; max-width: 70%; max-height: 86%;
+  filter: drop-shadow(0 30px 46px rgba(0,0,0,0.9)); }
+@media (max-width: 560px) { .anat__frame { padding-left: 62px; } }
+
+/* Index rail down the left edge of the frame. Nodes light when the matching
+   spec row is hovered — the leader lines are furniture, not a claim about
+   where a part physically sits. */
+.anat__rail {
+  position: absolute;
+  left: var(--s-5); top: var(--s-6); bottom: var(--s-6);
+  width: 46px;
+  border-left: 1px solid var(--c-line-soft);
+}
+@media (max-width: 560px) { .anat__rail { left: var(--s-4); width: 34px; } }
+.anat__node {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex; align-items: center; gap: var(--s-2);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  color: var(--c-mute);
+  transition: color var(--dur-base) linear;
+}
+.anat__node::before {
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--c-ghost);
+  transition: background var(--dur-base) linear, width var(--dur-base) var(--ease-out-expo);
+}
+@media (max-width: 560px) { .anat__node::before { width: 12px; } }
+.anat__node[data-active="true"] { color: var(--c-white); }
+.anat__node[data-active="true"]::before { background: var(--c-white); width: 30px; }
+
+/* Callout list */
+.anat__list { list-style: none; margin: 0; padding: 0; }
+.anat__list .callout__t { display: block; }
+.anat__list .callout:first-child { border-top: 1px solid var(--c-line-soft); }
+.anat__lead {
+  margin-bottom: var(--s-5);
+  padding-bottom: var(--s-4);
+}
+
+/* --------------------------------------------------------------------------
+   C · SPECIFICATION
+   -------------------------------------------------------------------------- */
+.spec-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+@media (max-width: 900px) { .spec-wrap { grid-template-columns: minmax(0, 1fr); } }
+.spec-table { overflow-x: auto; border-top: 1px solid var(--c-line); }
+.spec-table .spec { min-width: 420px; }
+
+.notes { display: flex; flex-direction: column; gap: var(--s-5); }
+.note {
+  border: 1px solid var(--c-line-soft);
+  background: var(--c-carbon);
+  padding: var(--s-5);
+  display: flex; flex-direction: column; gap: var(--s-3);
+}
+.note h3 {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--ls-micro);
+  text-transform: uppercase;
+  color: var(--c-mute);
+  font-weight: 400;
+}
+.note p { font-size: var(--fs-sm); color: var(--c-text); line-height: 1.55; }
+
+/* --------------------------------------------------------------------------
+   D · ADJUSTMENT RANGE — the ruler
+   Discrete bars, one per click. This is what makes "32 steps" a thing you
+   can look at rather than a claim.
+   -------------------------------------------------------------------------- */
+.clicks { display: flex; flex-direction: column; gap: var(--s-6); }
+.clicks__unit { display: flex; flex-direction: column; gap: var(--s-4); }
+
+.clicks__top {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: var(--s-4);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--c-line-soft);
+}
+.clicks__axis {
+  font-family: var(--ff-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-white);
+}
+.clicks__count { font-family: var(--ff-mono); font-size: var(--fs-sm); color: var(--c-dim); }
+
+.clicks__scale {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(2px, 0.5vw, 7px);
+  height: clamp(76px, 11vw, 132px);
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--c-line);
+}
+.clicks__bar {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 2px;
+  background: var(--c-ghost);
+  height: calc(30% + 70% * var(--i) / var(--n));
+  transition: background var(--dur-base) linear;
+}
+.clicks__bar--maj { background: var(--c-mute); }
+.clicks__bar--maj::after {
+  content: attr(data-n);
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  color: var(--c-mute);
+}
+.clicks__bar--last::after { left: auto; right: 0; transform: none; }
+.clicks__scale:hover .clicks__bar { background: var(--c-iron); }
+.clicks__scale:hover .clicks__bar--maj { background: var(--c-dim); }
+.clicks__bar:hover, .clicks__scale:hover .clicks__bar:hover { background: var(--c-white); }
+
+.clicks__ends {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s-4);
+}
+.clicks__ends span:first-child,
+.clicks__ends span:last-child { color: var(--c-white); }
+
+/* Continuous sweep — used where the step count is not published */
+.clicks__ramp {
+  height: clamp(48px, 6vw, 74px);
+  border-bottom: 1px solid var(--c-line);
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.34) 100%);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0.15) 100%);
+  mask-image: linear-gradient(to top, #000 0%, rgba(0,0,0,0.15) 100%);
+}
+
+/* Bars reveal from the baseline instead of the global rise+blur — a 3px bar
+   in a 14px blur is a smudge. Overrides motion.css for these nodes only. */
+.clicks__bar[data-anim] {
+  transform: scaleY(0.06);
+  transform-origin: bottom;
+  filter: none;
+  transition:
+    opacity   var(--dur-base) var(--ease-out-quart),
+    transform var(--dur-slow) var(--ease-out-expo);
+}
+.clicks__bar[data-anim][data-inview="true"] { opacity: 1; transform: scaleY(1); }
+
+/* --------------------------------------------------------------------------
+   E · WHERE IT SITS IN THE RANGE
+   -------------------------------------------------------------------------- */
+.range-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid var(--c-line-soft);
+}
+@media (max-width: 1080px) { .range-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px)  { .range-strip { grid-template-columns: minmax(0, 1fr); } }
+
+.range-strip__item {
+  display: flex; flex-direction: column; gap: var(--s-3);
+  padding: var(--s-5);
+  border-right: 1px solid var(--c-line-soft);
+  background: transparent;
+  transition: background var(--dur-base) linear;
+  min-height: 100%;
+}
+.range-strip__item:last-child { border-right: 0; }
+@media (max-width: 1080px) {
+  .range-strip__item { border-bottom: 1px solid var(--c-line-soft); }
+  .range-strip__item:nth-child(2n) { border-right: 0; }
+}
+@media (max-width: 520px) { .range-strip__item { border-right: 0; } }
+a.range-strip__item:hover { background: var(--c-graphite); }
+
+.range-strip__idx { font-family: var(--ff-mono); font-size: var(--fs-micro);
+  letter-spacing: var(--ls-micro); color: var(--c-ghost); }
+.range-strip__name {
+  font-family: var(--ff-head); font-weight: 800; font-size: 1.05rem;
+  text-transform: uppercase; color: var(--c-white); line-height: 1; letter-spacing: 0.01em;
+}
+.range-strip__sub { font-family: var(--ff-mono); font-size: var(--fs-micro);
+  letter-spacing: var(--ls-micro); text-transform: uppercase; color: var(--c-mute); }
+.range-strip__d { font-size: var(--fs-xs); color: var(--c-dim); line-height: 1.5; margin-top: auto; }
+.range-strip__item--here { background: var(--c-graphite); }
+.range-strip__item--here .range-strip__idx { color: var(--c-white); }
+.range-strip__here { margin-top: var(--s-2); }
+
+/* --------------------------------------------------------------------------
+   ADFL band — flagship only
+   -------------------------------------------------------------------------- */
+.adfl { position: relative; overflow: hidden; background: var(--c-black); }
+.adfl__glow {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(44% 60% at 80% 44%, rgba(255,255,255,0.10), transparent 70%);
+}
+.adfl__inner { position: relative; z-index: 1; }
+.adfl__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+@media (max-width: 900px) { .adfl__grid { grid-template-columns: minmax(0, 1fr); } }
+.adfl__head {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 3.6vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--c-white);
+  margin-bottom: var(--s-5);
+}
+.adfl__figure {
+  position: relative;
+  display: grid; place-items: center;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--c-line-soft);
+  background: radial-gradient(70% 60% at 50% 40%, rgba(255,255,255,0.07), transparent 70%);
+}
+.adfl__figure img { width: auto; max-width: 58%; max-height: 84%; }
+.adfl__figure figcaption { position: absolute; left: var(--s-5); bottom: var(--s-4); }
+
+/* --------------------------------------------------------------------------
+   F · DEALER CTA
+   -------------------------------------------------------------------------- */
+.pdp-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(72% 120% at 50% 0%, rgba(255,255,255,0.08), transparent 62%),
+    var(--c-carbon);
+}
+.pdp-cta__inner { position: relative; z-index: 1; display: flex; flex-direction: column;
+  align-items: center; gap: var(--s-5); text-align: center; }
+.pdp-cta__head {
+  font-family: var(--ff-display);
+  font-size: clamp(1.7rem, 5vw, 4rem);
+  line-height: 0.98; letter-spacing: -0.025em;
+  text-transform: uppercase; color: var(--c-white);
+}
+.pdp-cta .t-lead { text-align: center; }
+.pdp-cta__acts { display: flex; flex-wrap: wrap; gap: var(--s-4); justify-content: center; }
+
+.apps {
+  margin-top: var(--s-8);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+  width: 100%;
+  display: flex; flex-direction: column; gap: var(--s-4); align-items: center;
+}
+.apps__list { display: flex; flex-wrap: wrap; gap: var(--s-2); justify-content: center; }
+
+/* --------------------------------------------------------------------------
+   Shared bits
+   -------------------------------------------------------------------------- */
+.pdp-figures-note { color: var(--c-mute); }
+.pdp-kicker {
+  font-family: var(--ff-head); font-weight: 300;
+  font-size: clamp(1.25rem, 2.6vw, 2rem);
+  line-height: 1.25; letter-spacing: -0.015em;
+  color: var(--c-dim); max-width: 30ch;
+}
+.pdp-kicker b { font-weight: 800; font-style: italic; color: var(--c-white); }

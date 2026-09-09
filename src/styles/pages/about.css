@@ -1,0 +1,146 @@
+/* ==========================================================================
+   PAGE — ABOUT
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PAGE HEADER  ·  compact variant of the home hero field
+   -------------------------------------------------------------------------- */
+.pagehead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(68px + var(--section-y));
+  padding-bottom: var(--s-9);
+  background: var(--c-black);
+}
+.pagehead__field {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 82% 0%, rgba(255,255,255,0.10), transparent 62%),
+    linear-gradient(180deg, #0A0A0A 0%, #000 74%);
+}
+.pagehead__lines {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right, var(--c-line-faint) 0 1px, transparent 1px calc(100% / 6));
+}
+.pagehead__inner { position: relative; z-index: 1; }
+.pagehead__eyebrow {
+  display: flex; align-items: center; gap: var(--s-4);
+  margin-bottom: var(--s-5);
+}
+.pagehead__eyebrow .rule { flex: 0 0 clamp(28px, 6vw, 64px); }
+.pagehead__title {
+  margin-bottom: var(--s-5);
+  display: flex; flex-direction: column;
+}
+.pagehead__l1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 8vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  color: var(--c-white);
+  text-transform: uppercase;
+}
+.pagehead__l2 {
+  font-family: var(--ff-head);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.1rem, 7vw, 4.7rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--c-white);
+  margin-top: 0.06em;
+}
+.pagehead__sub { max-width: 52ch; }
+.pagehead__meta {
+  display: flex; gap: var(--s-6); flex-wrap: wrap;
+  margin-top: var(--s-7); padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+}
+.pagehead__meta div { display: flex; flex-direction: column; gap: 4px; }
+
+/* --------------------------------------------------------------------------
+   01 — THE COMPANY
+   -------------------------------------------------------------------------- */
+.company__facts { margin-top: var(--s-6); }
+.company__facts.spec th { width: 46%; }
+
+/* --------------------------------------------------------------------------
+   02 — STANDARDS
+   The blunt commitment. Weight, not decoration.
+   -------------------------------------------------------------------------- */
+.standard {
+  position: relative;
+  padding: var(--s-8) var(--s-7);
+  border: 1px solid var(--c-line);
+  background: var(--c-carbon);
+}
+.standard__lead {
+  font-family: var(--ff-head);
+  font-weight: 300;
+  font-size: clamp(1.4rem, 3.4vw, 2.4rem);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  color: var(--c-white);
+  max-width: 34ch;
+}
+.standard__lead b { font-weight: 800; font-style: italic; }
+.standard__points {
+  margin-top: var(--s-7);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--c-line-soft);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-6);
+}
+@media (max-width: 860px) { .standard__points { grid-template-columns: 1fr; } }
+.standard__point { display: flex; flex-direction: column; gap: var(--s-2); }
+.standard__point .t-micro { color: var(--c-mute); }
+.standard__point p { font-size: var(--fs-sm); color: var(--c-text); line-height: 1.55; }
+.standard__point b { color: var(--c-white); font-weight: 600; }
+
+/* --------------------------------------------------------------------------
+   03 — WHAT WE MAKE
+   -------------------------------------------------------------------------- */
+.makes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--c-line-soft);
+  border: 1px solid var(--c-line-soft);
+  margin-top: var(--s-6);
+}
+@media (max-width: 720px) { .makes { grid-template-columns: 1fr; } }
+.makes__item {
+  background: var(--c-carbon);
+  padding: var(--s-6);
+  display: flex; flex-direction: column; gap: var(--s-3);
+}
+.makes__item .t-micro { color: var(--c-mute); }
+.makes__item h3 {
+  font-family: var(--ff-head); font-weight: 800; font-size: 1.15rem;
+  text-transform: uppercase; color: var(--c-white); line-height: 1.15;
+}
+.makes__item p { font-size: var(--fs-sm); color: var(--c-dim); line-height: 1.55; }
+
+/* --------------------------------------------------------------------------
+   04 — ENGINEERING
+   -------------------------------------------------------------------------- */
+.eng__figure {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: grid; place-items: center;
+  border: 1px solid var(--c-line-soft);
+  background: radial-gradient(70% 60% at 50% 40%, rgba(255,255,255,0.07), transparent 70%);
+}
+.eng__figure img { width: 42%; }
+
+/* --------------------------------------------------------------------------
+   05 — NETWORK
+   -------------------------------------------------------------------------- */
+.network__states {
+  display: flex; gap: var(--s-3); flex-wrap: wrap;
+  margin-top: var(--s-6); padding-top: var(--s-5);
+  border-top: 1px solid var(--c-line-soft);
+}
