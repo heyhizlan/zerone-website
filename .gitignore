@@ -1,4 +1,8 @@
 dist/
 node_modules/
 .DS_Store
+
+# Local dev / QA scratch — not part of the deliverable
 shot.mjs
+.diag.mjs
+*.local.*
