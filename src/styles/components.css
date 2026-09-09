@@ -200,6 +200,7 @@
 /* Text link with animated underline */
 .link-u {
   position: relative; color: var(--c-white);
+  white-space: nowrap;
   font-family: var(--ff-mono); font-size: var(--fs-label);
   letter-spacing: var(--ls-label); text-transform: uppercase;
   display: inline-flex; align-items: center; gap: var(--s-2);
@@ -279,7 +280,8 @@
 .pcard__desc { font-size: var(--fs-sm); color: var(--c-dim); line-height: 1.5; }
 .pcard__foot {
   margin-top: auto; padding-top: var(--s-4); border-top: 1px solid var(--c-line-soft);
-  display: flex; align-items: center; justify-content: space-between; gap: var(--s-3);
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: var(--s-3); flex-wrap: wrap;
 }
 .pcard__specs { display: flex; gap: var(--s-4); flex-wrap: wrap; }
 .pcard__spec { display: flex; flex-direction: column; gap: 3px; }

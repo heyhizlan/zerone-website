@@ -273,6 +273,11 @@ a { color: inherit; text-decoration: none; }
   writing-mode: vertical-rl;
   z-index: 2;
   pointer-events: none;
+  /* Vertical text has the section height as its measure — without this it
+     wraps into a second column and reads as garbled.                      */
+  white-space: nowrap;
+  max-height: 86vh;
+  overflow: hidden;
 }
 @media (max-width: 1180px) { .side-rail { display: none; } }
 

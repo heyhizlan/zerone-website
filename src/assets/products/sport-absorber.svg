@@ -98,7 +98,7 @@
     </linearGradient>
   </defs>
   <g id="sabs-core">
-    <path d="M166 700H234L234.6 790H165.4Z" fill="url(#sabs-collar)"/>
+    <path d="M164 700H236L234.6 790H165.4Z" fill="url(#sabs-collar)"/>
     <circle cx="200" cy="790" r="48" fill="url(#sabs-collar)"/>
     <rect x="152" y="742" width="96" height="96" fill="url(#sabs-spec)" opacity="0.0"/>
     <circle cx="200" cy="790" r="29.8" fill="url(#sabs-face)" opacity="0.55"/>
@@ -107,67 +107,81 @@
     <path d="M184.6 779.4A20.2 20.2 0 0 1 215.4 779.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="2"/>
     <path d="M152 790A48 48 0 0 1 176 748.2" fill="none" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="2.4"/>
     <path d="M233.6 823.6A48 48 0 0 0 248 790" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="2"/>
-    <rect x="136" y="352" width="128" height="362" fill="url(#sabs-body)"/>
-    <rect x="158.4" y="352" width="10.9" height="362" fill="url(#sabs-spec)" opacity="0.55"/>
-    <rect x="261.7" y="352" width="2.3" height="362" fill="#FFFFFF" opacity="0.22"/>
-    <rect x="136" y="352" width="1.5" height="362" fill="#000000" opacity="0.45"/>
-    <rect x="136" y="352" width="128" height="26" fill="url(#sabs-aod)" opacity="0.42"/>
-    <rect x="136" y="684" width="128" height="30" fill="url(#sabs-aou)" opacity="0.45"/>
-    <path d="M136 388H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
-    <path d="M136 390.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M136 414H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
-    <path d="M136 416.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M136 660H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
-    <path d="M136 662.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M136 686H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
-    <path d="M136 688.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
-    <ellipse cx="200" cy="714" rx="64" ry="9.6" fill="url(#sabs-foot)"/>
-    <rect x="148" y="168" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="187.6" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="207.1" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="226.7" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="246.2" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="265.8" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="285.3" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="304.9" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="148" y="324.4" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
-    <rect x="165.7" y="168" width="7.3" height="176" fill="url(#sabs-spec)" opacity="0.34"/>
-    <rect x="250" y="168" width="2" height="176" fill="#FFFFFF" opacity="0.16"/>
-    <rect x="156" y="148" width="88" height="24" fill="url(#sabs-collar)"/>
-    <rect x="171.4" y="148" width="7" height="24" fill="url(#sabs-spec)" opacity="0.55"/>
-    <rect x="242.4" y="148" width="1.6" height="24" fill="#FFFFFF" opacity="0.22"/>
-    <rect x="156" y="148" width="1.2" height="24" fill="#000000" opacity="0.45"/>
-    <ellipse cx="200" cy="172" rx="44" ry="7" fill="url(#sabs-foot)"/>
-    <ellipse cx="200" cy="148" rx="44" ry="7" fill="url(#sabs-face)"/>
-    <ellipse cx="200" cy="148" rx="44" ry="7" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
-    <rect x="187" y="96" width="26" height="76" fill="url(#sabs-chrome)"/>
-    <rect x="191.2" y="96" width="3.6" height="76" fill="url(#sabs-spec)" opacity="0.75"/>
-    <rect x="211.6" y="96" width="1.4" height="76" fill="#FFFFFF" opacity="0.22"/>
-    <rect x="187" y="96" width="1.2" height="76" fill="#000000" opacity="0.45"/>
-    <rect x="170" y="118" width="60" height="14" fill="url(#sabs-collar)"/>
-    <rect x="180.5" y="118" width="4.8" height="14" fill="url(#sabs-spec)" opacity="0.55"/>
-    <rect x="228.6" y="118" width="1.4" height="14" fill="#FFFFFF" opacity="0.22"/>
-    <rect x="170" y="118" width="1.2" height="14" fill="#000000" opacity="0.45"/>
-    <ellipse cx="200" cy="132" rx="30" ry="5" fill="url(#sabs-foot)"/>
-    <rect x="176" y="100" width="48" height="20" fill="url(#sabs-collar)"/>
-    <rect x="184.4" y="100" width="3.8" height="20" fill="url(#sabs-spec)" opacity="0.55"/>
-    <rect x="222.6" y="100" width="1.4" height="20" fill="#FFFFFF" opacity="0.22"/>
-    <rect x="176" y="100" width="1.2" height="20" fill="#000000" opacity="0.45"/>
-    <ellipse cx="200" cy="120" rx="24" ry="4" fill="url(#sabs-foot)"/>
-    <ellipse cx="200" cy="100" rx="24" ry="4" fill="url(#sabs-face)"/>
-    <ellipse cx="200" cy="100" rx="24" ry="4" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
-    <path d="M178.2 102V118" stroke="#000000" stroke-opacity="0.25" stroke-width="1.5"/>
-    <path d="M180 102V118" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.1"/>
-    <path d="M182.4 102V118M216 102V118M220.2 102V118" stroke="#000000" stroke-opacity="0.41" stroke-width="1.5"/>
-    <path d="M184.2 102V118M217.8 102V118M222 102V118" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.1"/>
-    <path d="M186.6 102V118M190.8 102V118M195 102V118M199.2 102V118M203.4 102V118M207.6 102V118M211.8 102V118" stroke="#000000" stroke-opacity="0.56" stroke-width="1.5"/>
-    <path d="M188.4 102V118M192.6 102V118M196.8 102V118M201 102V118M205.2 102V118M209.4 102V118M213.6 102V118" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.1"/>
-    <rect x="180" y="76" width="40" height="24" fill="url(#sabs-chrome)"/>
-    <rect x="187" y="76" width="4.8" height="24" fill="url(#sabs-spec)" opacity="0.55"/>
-    <rect x="218.6" y="76" width="1.4" height="24" fill="#FFFFFF" opacity="0.22"/>
-    <rect x="180" y="76" width="1.2" height="24" fill="#000000" opacity="0.45"/>
-    <ellipse cx="200" cy="100" rx="20" ry="3.4" fill="url(#sabs-foot)"/>
-    <ellipse cx="200" cy="76" rx="20" ry="3.4" fill="url(#sabs-face)"/>
-    <ellipse cx="200" cy="76" rx="20" ry="3.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
+    <rect x="132" y="352" width="136" height="362" fill="url(#sabs-body)"/>
+    <rect x="155.8" y="352" width="11.6" height="362" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="265.6" y="352" width="2.4" height="362" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="132" y="352" width="136" height="26" fill="url(#sabs-aod)" opacity="0.42"/>
+    <rect x="132" y="684" width="136" height="30" fill="url(#sabs-aou)" opacity="0.45"/>
+    <path d="M132 386H268" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M132 388.2H268" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M132 412H268" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M132 414.2H268" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M132 656H268" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M132 658.2H268" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M132 682H268" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M132 684.2H268" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <ellipse cx="200" cy="714" rx="68" ry="10.2" fill="url(#sabs-foot)"/>
+    <rect x="144" y="162" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 164.4H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 178.2H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="180.6" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 183H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 196.8H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="199.2" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 201.6H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 215.4H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="217.8" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 220.2H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 234H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="236.4" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 238.8H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 252.6H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="255" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 257.4H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 271.2H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="273.6" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 276H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 289.8H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="292.2" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 294.6H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 308.4H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="310.8" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 313.2H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 327H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="144" y="329.4" width="112" height="17" rx="8" fill="url(#sabs-boot)"/>
+    <path d="M151 331.8H249" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.6" fill="none"/>
+    <path d="M149 345.6H251" stroke="#000000" stroke-opacity="0.6" stroke-width="2.6" fill="none"/>
+    <rect x="163" y="162" width="9" height="186" fill="url(#sabs-spec)" opacity="0.4"/>
+    <rect x="253.6" y="162" width="2.4" height="186" fill="#FFFFFF" opacity="0.15"/>
+    <rect x="144" y="162" width="2" height="186" fill="#000000" opacity="0.5"/>
+    <rect x="154" y="140" width="92" height="26" fill="url(#sabs-collar)"/>
+    <rect x="170.1" y="140" width="7.4" height="26" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="244.3" y="140" width="1.7" height="26" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="200" cy="166" rx="46" ry="7.4" fill="url(#sabs-foot)"/>
+    <ellipse cx="200" cy="140" rx="46" ry="7.4" fill="url(#sabs-face)"/>
+    <ellipse cx="200" cy="140" rx="46" ry="7.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
+    <rect x="186" y="92" width="28" height="74" fill="url(#sabs-chrome)"/>
+    <rect x="190.5" y="92" width="3.9" height="74" fill="url(#sabs-spec)" opacity="0.75"/>
+    <rect x="212.6" y="92" width="1.4" height="74" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="168" y="112" width="64" height="16" fill="url(#sabs-collar)"/>
+    <rect x="179.2" y="112" width="5.1" height="16" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="230.6" y="112" width="1.4" height="16" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="200" cy="128" rx="32" ry="5.2" fill="url(#sabs-foot)"/>
+    <rect x="174" y="94" width="52" height="20" fill="url(#sabs-collar)"/>
+    <rect x="183.1" y="94" width="4.2" height="20" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="224.6" y="94" width="1.4" height="20" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="200" cy="114" rx="26" ry="4.4" fill="url(#sabs-foot)"/>
+    <ellipse cx="200" cy="94" rx="26" ry="4.4" fill="url(#sabs-face)"/>
+    <ellipse cx="200" cy="94" rx="26" ry="4.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
+    <path d="M176.3 96V112M220.3 96V112" stroke="#000000" stroke-opacity="0.30" stroke-width="1.5"/>
+    <path d="M178.3 96V112M222.3 96V112" stroke="#FFFFFF" stroke-opacity="0.13" stroke-width="1.1"/>
+    <path d="M180.7 96V112M185.1 96V112M189.5 96V112M193.9 96V112M198.3 96V112M202.7 96V112M207.1 96V112M211.5 96V112M215.9 96V112" stroke="#000000" stroke-opacity="0.53" stroke-width="1.5"/>
+    <path d="M182.7 96V112M187.1 96V112M191.5 96V112M195.9 96V112M200.3 96V112M204.7 96V112M209.1 96V112M213.5 96V112M217.9 96V112" stroke="#FFFFFF" stroke-opacity="0.24" stroke-width="1.1"/>
+    <rect x="179" y="70" width="42" height="24" fill="url(#sabs-chrome)"/>
+    <rect x="186.3" y="70" width="5" height="24" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="219.6" y="70" width="1.4" height="24" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="200" cy="94" rx="21" ry="3.6" fill="url(#sabs-foot)"/>
+    <ellipse cx="200" cy="70" rx="21" ry="3.6" fill="url(#sabs-face)"/>
+    <ellipse cx="200" cy="70" rx="21" ry="3.6" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
   </g>
 </svg>
