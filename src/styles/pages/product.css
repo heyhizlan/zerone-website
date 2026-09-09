@@ -47,7 +47,7 @@
 }
 .pdp-crumb li { display: flex; align-items: center; gap: var(--s-3); }
 .pdp-crumb li + li::before { content: "/"; color: var(--c-ghost); }
-.pdp-crumb a { color: var(--c-mute); transition: color var(--dur-fast) linear; }
+.pdp-crumb a { color: var(--c-dim); transition: color var(--dur-fast) linear; }
 .pdp-crumb a:hover { color: var(--c-white); }
 .pdp-crumb [aria-current] { color: var(--c-white); }
 .pdp-rail__meta { display: flex; align-items: center; gap: var(--s-4); }
@@ -193,9 +193,12 @@
 .anat__node[data-active="true"] { color: var(--c-white); }
 .anat__node[data-active="true"]::before { background: var(--c-white); width: 30px; }
 
-/* Callout list */
+/* Callout list. The shared component sets the description at --c-mute; on a
+   carbon ground that is under 3:1, and these sentences are content — not
+   furniture — so they run at --c-dim here. */
 .anat__list { list-style: none; margin: 0; padding: 0; }
 .anat__list .callout__t { display: block; }
+.anat__list .callout__d { color: var(--c-dim); }
 .anat__list .callout:first-child { border-top: 1px solid var(--c-line-soft); }
 .anat__lead {
   margin-bottom: var(--s-5);
@@ -213,7 +216,22 @@
 }
 @media (max-width: 900px) { .spec-wrap { grid-template-columns: minmax(0, 1fr); } }
 .spec-table { overflow-x: auto; border-top: 1px solid var(--c-line); }
-.spec-table .spec { min-width: 420px; }
+.spec-table .spec { min-width: 400px; }
+
+/* Below the fold of a phone the two-column table stops being a table and
+   becomes a stacked readout — key above value, no sideways scrolling. */
+@media (max-width: 640px) {
+  .spec-table { overflow-x: visible; }
+  .spec-table .spec,
+  .spec-table .spec tbody,
+  .spec-table .spec tr,
+  .spec-table .spec th,
+  .spec-table .spec td { display: block; width: auto; min-width: 0; }
+  .spec-table .spec tr { padding-block: var(--s-4); border-bottom: 1px solid var(--c-line-soft); }
+  .spec-table .spec tr:last-child { border-bottom: 0; }
+  .spec-table .spec th { border-bottom: 0; padding: 0 0 var(--s-2); }
+  .spec-table .spec td { border-bottom: 0; padding: 0; }
+}
 
 .notes { display: flex; flex-direction: column; gap: var(--s-5); }
 .note {
@@ -227,7 +245,7 @@
   font-size: var(--fs-micro);
   letter-spacing: var(--ls-micro);
   text-transform: uppercase;
-  color: var(--c-mute);
+  color: var(--c-dim);
   font-weight: 400;
 }
 .note p { font-size: var(--fs-sm); color: var(--c-text); line-height: 1.55; }
@@ -237,8 +255,21 @@
    Discrete bars, one per click. This is what makes "32 steps" a thing you
    can look at rather than a claim.
    -------------------------------------------------------------------------- */
-.clicks { display: flex; flex-direction: column; gap: var(--s-6); }
-.clicks__unit { display: flex; flex-direction: column; gap: var(--s-4); }
+.clicks { display: flex; flex-direction: column; gap: var(--s-8); }
+.clicks__unit { display: flex; flex-direction: column; gap: var(--s-4); max-width: 52rem; }
+
+/* Two independent axes, shown side by side where there is room for them. */
+.clicks--dual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+.clicks--dual .clicks__unit { max-width: none; }
+.clicks--dual .clicks__note { grid-column: 1 / -1; }
+@media (max-width: 1024px) {
+  .clicks--dual { grid-template-columns: minmax(0, 1fr); gap: var(--s-8); }
+}
 
 .clicks__top {
   display: flex; align-items: baseline; justify-content: space-between;
@@ -257,22 +288,22 @@
 .clicks__count { font-family: var(--ff-mono); font-size: var(--fs-sm); color: var(--c-dim); }
 
 .clicks__scale {
-  display: flex;
-  align-items: flex-end;
-  gap: clamp(2px, 0.5vw, 7px);
-  height: clamp(76px, 11vw, 132px);
-  padding-bottom: 22px;
+  display: grid;
+  grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  align-items: end;
+  justify-items: center;
+  height: clamp(78px, 10vw, 124px);
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--c-line);
 }
 .clicks__bar {
   position: relative;
-  flex: 1 1 0;
-  min-width: 2px;
+  width: clamp(2px, 0.28vw, 4px);
   background: var(--c-ghost);
-  height: calc(30% + 70% * var(--i) / var(--n));
+  height: calc(28% + 72% * var(--i) / var(--n));
   transition: background var(--dur-base) linear;
 }
-.clicks__bar--maj { background: var(--c-mute); }
+.clicks__bar--maj { background: var(--c-dim); }
 .clicks__bar--maj::after {
   content: attr(data-n);
   position: absolute;
@@ -282,7 +313,7 @@
   font-family: var(--ff-mono);
   font-size: var(--fs-micro);
   letter-spacing: 0.08em;
-  color: var(--c-mute);
+  color: var(--c-dim);
 }
 .clicks__bar--last::after { left: auto; right: 0; transform: none; }
 .clicks__scale:hover .clicks__bar { background: var(--c-iron); }
@@ -293,12 +324,15 @@
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--s-4);
 }
+.clicks__ends span { color: var(--c-dim); }
 .clicks__ends span:first-child,
 .clicks__ends span:last-child { color: var(--c-white); }
+.clicks__note { max-width: 56ch; }
 
 /* Continuous sweep — used where the step count is not published */
 .clicks__ramp {
-  height: clamp(48px, 6vw, 74px);
+  height: clamp(56px, 7vw, 92px);
+  transform-origin: left;
   border-bottom: 1px solid var(--c-line);
   background: linear-gradient(90deg,
     rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.34) 100%);
@@ -346,13 +380,13 @@
 a.range-strip__item:hover { background: var(--c-graphite); }
 
 .range-strip__idx { font-family: var(--ff-mono); font-size: var(--fs-micro);
-  letter-spacing: var(--ls-micro); color: var(--c-ghost); }
+  letter-spacing: var(--ls-micro); color: var(--c-mute); }
 .range-strip__name {
   font-family: var(--ff-head); font-weight: 800; font-size: 1.05rem;
   text-transform: uppercase; color: var(--c-white); line-height: 1; letter-spacing: 0.01em;
 }
 .range-strip__sub { font-family: var(--ff-mono); font-size: var(--fs-micro);
-  letter-spacing: var(--ls-micro); text-transform: uppercase; color: var(--c-mute); }
+  letter-spacing: var(--ls-micro); text-transform: uppercase; color: var(--c-dim); }
 .range-strip__d { font-size: var(--fs-xs); color: var(--c-dim); line-height: 1.5; margin-top: auto; }
 .range-strip__item--here { background: var(--c-graphite); }
 .range-strip__item--here .range-strip__idx { color: var(--c-white); }
@@ -426,7 +460,7 @@ a.range-strip__item:hover { background: var(--c-graphite); }
 /* --------------------------------------------------------------------------
    Shared bits
    -------------------------------------------------------------------------- */
-.pdp-figures-note { color: var(--c-mute); }
+.pdp-figures-note { color: var(--c-dim); }
 .pdp-kicker {
   font-family: var(--ff-head); font-weight: 300;
   font-size: clamp(1.25rem, 2.6vw, 2rem);

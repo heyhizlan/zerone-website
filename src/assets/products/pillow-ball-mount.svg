@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ZerOne — Pillow-ball upper mount — machined plate, spherical bearing -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="pbm-t">
+  <title id="pbm-t">ZerOne pillow-ball upper mount</title>
+  <defs>
+    <linearGradient id="pbm-spec" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pbm-collar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1B1B1B"/>
+      <stop offset="0.04" stop-color="#454545"/>
+      <stop offset="0.115" stop-color="#8A8A8A"/>
+      <stop offset="0.18" stop-color="#C8C8C8"/>
+      <stop offset="0.235" stop-color="#F6F6F6"/>
+      <stop offset="0.29" stop-color="#BCBCBC"/>
+      <stop offset="0.42" stop-color="#8A8A8A"/>
+      <stop offset="0.58" stop-color="#606060"/>
+      <stop offset="0.76" stop-color="#3E3E3E"/>
+      <stop offset="0.91" stop-color="#212121"/>
+      <stop offset="0.958" stop-color="#909090"/>
+      <stop offset="1" stop-color="#1C1C1C"/>
+    </linearGradient>
+    <linearGradient id="pbm-chrome" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#242424"/>
+      <stop offset="0.05" stop-color="#606060"/>
+      <stop offset="0.11" stop-color="#B8B8B8"/>
+      <stop offset="0.17" stop-color="#FCFCFC"/>
+      <stop offset="0.23" stop-color="#D0D0D0"/>
+      <stop offset="0.32" stop-color="#787878"/>
+      <stop offset="0.45" stop-color="#454545"/>
+      <stop offset="0.55" stop-color="#3E3E3E"/>
+      <stop offset="0.66" stop-color="#9A9A9A"/>
+      <stop offset="0.76" stop-color="#B4B4B4"/>
+      <stop offset="0.86" stop-color="#4E4E4E"/>
+      <stop offset="0.955" stop-color="#A6A6A6"/>
+      <stop offset="1" stop-color="#222222"/>
+    </linearGradient>
+    <linearGradient id="pbm-wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#131313"/>
+      <stop offset="0.04" stop-color="#313131"/>
+      <stop offset="0.115" stop-color="#636363"/>
+      <stop offset="0.18" stop-color="#909090"/>
+      <stop offset="0.235" stop-color="#B1B1B1"/>
+      <stop offset="0.29" stop-color="#878787"/>
+      <stop offset="0.42" stop-color="#636363"/>
+      <stop offset="0.58" stop-color="#454545"/>
+      <stop offset="0.76" stop-color="#2C2C2C"/>
+      <stop offset="0.91" stop-color="#171717"/>
+      <stop offset="0.958" stop-color="#676767"/>
+      <stop offset="1" stop-color="#141414"/>
+    </linearGradient>
+    <radialGradient id="pbm-plate" cx="0.33" cy="0.24" r="0.86">
+      <stop offset="0" stop-color="#F0F0F0"/>
+      <stop offset="0.16" stop-color="#C9C9C9"/>
+      <stop offset="0.4" stop-color="#9A9A9A"/>
+      <stop offset="0.66" stop-color="#6A6A6A"/>
+      <stop offset="0.86" stop-color="#464646"/>
+      <stop offset="1" stop-color="#333333"/>
+    </radialGradient>
+    <radialGradient id="pbm-ball" cx="0.32" cy="0.26" r="0.82">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.1" stop-color="#E4E4E4"/>
+      <stop offset="0.3" stop-color="#A6A6A6"/>
+      <stop offset="0.55" stop-color="#5E5E5E"/>
+      <stop offset="0.78" stop-color="#2E2E2E"/>
+      <stop offset="0.93" stop-color="#151515"/>
+      <stop offset="1" stop-color="#3A3A3A"/>
+    </radialGradient>
+    <radialGradient id="pbm-socket" cx="0.4" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#3C3C3C"/>
+      <stop offset="0.45" stop-color="#1E1E1E"/>
+      <stop offset="1" stop-color="#0C0C0C"/>
+    </radialGradient>
+    <linearGradient id="pbm-face" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3A3A3A"/>
+      <stop offset="0.07" stop-color="#787878"/>
+      <stop offset="0.18" stop-color="#B4B4B4"/>
+      <stop offset="0.25" stop-color="#EAEAEA"/>
+      <stop offset="0.33" stop-color="#BDBDBD"/>
+      <stop offset="0.48" stop-color="#969696"/>
+      <stop offset="0.66" stop-color="#6E6E6E"/>
+      <stop offset="0.86" stop-color="#4A4A4A"/>
+      <stop offset="1" stop-color="#2E2E2E"/>
+    </linearGradient>
+  </defs>
+  <g id="pbm-core">
+    <path d="M32 206V240A168 90 0 0 0 368 240V206A168 90 0 0 1 32 206Z" fill="url(#pbm-wall)"/>
+    <path d="M32 240A168 90 0 0 0 368 240" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="2"/>
+    <ellipse cx="200" cy="206" rx="168" ry="90" fill="url(#pbm-plate)"/>
+    <path d="M250.4 206L365.5 206M250.1 209L364.4 215.9M249.1 212L361.3 225.7M247.6 214.9L356.2 235.3M245.4 217.7L349.1 244.5M242.7 220.4L340.1 253.2M239.4 222.8L329.4 261.3M235.6 225.1L317 268.7M231.4 227.1L303.2 275.3M226.8 228.9L288 281.1M221.9 230.3L271.8 285.9M216.6 231.5L254.7 289.7M211.2 232.3L236.8 292.4M205.6 232.8L218.5 294.1M200 233L200 294.6M194.4 232.8L181.5 294.1M188.8 232.3L163.2 292.4M183.4 231.5L145.3 289.7M178.1 230.3L128.2 285.9M173.2 228.9L112 281.1M168.6 227.1L96.8 275.3M164.4 225.1L83 268.7M160.6 222.8L70.6 261.3M157.3 220.4L59.9 253.2M154.6 217.7L50.9 244.5M152.4 214.9L43.8 235.3M150.9 212L38.7 225.7M149.9 209L35.6 215.9M149.6 206L34.5 206M149.9 203L35.6 196.1M150.9 200L38.7 186.3M152.4 197.1L43.8 176.7M154.6 194.3L50.9 167.5M157.3 191.6L59.9 158.8M160.6 189.2L70.6 150.7M164.4 186.9L83 143.3M168.6 184.9L96.8 136.7M173.2 183.1L112 130.9M178.1 181.7L128.2 126.1M183.4 180.5L145.3 122.3M188.8 179.7L163.2 119.6M194.4 179.2L181.5 117.9M200 179L200 117.3M205.6 179.2L218.5 117.9M211.2 179.7L236.8 119.6M216.6 180.5L254.7 122.3M221.9 181.7L271.8 126.1M226.8 183.1L288 130.9M231.4 184.9L303.2 136.7M235.6 186.9L317 143.3M239.4 189.2L329.4 150.7M242.7 191.6L340.1 158.8M245.4 194.3L349.1 167.5M247.6 197.1L356.2 176.7M249.1 200L361.3 186.3M250.1 203L364.4 196.1" stroke="#FFFFFF" stroke-opacity="0.055" stroke-width="1.6" fill="none"/>
+    <ellipse cx="200" cy="206" rx="154.6" ry="82.8" fill="none" stroke="#000000" stroke-opacity="0.45" stroke-width="2.4"/>
+    <ellipse cx="200" cy="208.6" rx="154.6" ry="82.8" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.6"/>
+    <ellipse cx="200" cy="206" rx="131" ry="70.2" fill="none" stroke="#000000" stroke-opacity="0.4" stroke-width="2.4"/>
+    <ellipse cx="200" cy="208.6" rx="131" ry="70.2" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1.6"/>
+    <ellipse cx="200" cy="206" rx="104.2" ry="55.8" fill="none" stroke="#000000" stroke-opacity="0.38" stroke-width="2.4"/>
+    <ellipse cx="200" cy="208.6" rx="104.2" ry="55.8" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.6"/>
+    <ellipse cx="200" cy="206" rx="168" ry="90" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.6"/>
+    <ellipse cx="200" cy="206" rx="78" ry="44" fill="url(#pbm-socket)"/>
+    <path d="M122 206A78 44 0 0 1 278 206" fill="none" stroke="#000000" stroke-opacity="0.7" stroke-width="3"/>
+    <path d="M126 212A78 44 0 0 0 274 212" fill="none" stroke="#FFFFFF" stroke-opacity="0.26" stroke-width="2.4"/>
+    <circle cx="200" cy="202" r="52" fill="url(#pbm-ball)"/>
+    <ellipse cx="181" cy="180" rx="13" ry="9" fill="#FFFFFF" opacity="0.75" transform="rotate(-28 181 180)"/>
+    <path d="M160 236A52 52 0 0 0 234 241" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="3"/>
+    <ellipse cx="200" cy="198" rx="17" ry="13" fill="#101010"/>
+    <path d="M183 198A17 13 0 0 1 217 198" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.8"/>
+    <ellipse cx="200" cy="137.6" rx="20" ry="6.8" fill="#101010" opacity="0.55"/>
+    <rect x="185" y="93.6" width="30" height="44" fill="url(#pbm-chrome)"/>
+    <rect x="189.8" y="93.6" width="3.9" height="44" fill="url(#pbm-spec)" opacity="0.7"/>
+    <rect x="213.6" y="93.6" width="1.4" height="44" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="200" cy="93.6" rx="15" ry="5.1" fill="url(#pbm-face)"/>
+    <path d="M181 97.6v13l19 8l19 -8v-13l-19 -8Z" fill="url(#pbm-collar)"/>
+    <path d="M181 97.6l19 8l19 -8l-19 -8Z" fill="url(#pbm-face)"/>
+    <ellipse cx="310.6" cy="240.2" rx="20" ry="6.8" fill="#101010" opacity="0.55"/>
+    <rect x="295.6" y="196.2" width="30" height="44" fill="url(#pbm-chrome)"/>
+    <rect x="300.4" y="196.2" width="3.9" height="44" fill="url(#pbm-spec)" opacity="0.7"/>
+    <rect x="324.2" y="196.2" width="1.4" height="44" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="310.6" cy="196.2" rx="15" ry="5.1" fill="url(#pbm-face)"/>
+    <path d="M291.6 200.2v13l19 8l19 -8v-13l-19 -8Z" fill="url(#pbm-collar)"/>
+    <path d="M291.6 200.2l19 8l19 -8l-19 -8Z" fill="url(#pbm-face)"/>
+    <ellipse cx="89.4" cy="240.2" rx="20" ry="6.8" fill="#101010" opacity="0.55"/>
+    <rect x="74.4" y="196.2" width="30" height="44" fill="url(#pbm-chrome)"/>
+    <rect x="79.2" y="196.2" width="3.9" height="44" fill="url(#pbm-spec)" opacity="0.7"/>
+    <rect x="103" y="196.2" width="1.4" height="44" fill="#FFFFFF" opacity="0.22"/>
+    <ellipse cx="89.4" cy="196.2" rx="15" ry="5.1" fill="url(#pbm-face)"/>
+    <path d="M70.4 200.2v13l19 8l19 -8v-13l-19 -8Z" fill="url(#pbm-collar)"/>
+    <path d="M70.4 200.2l19 8l19 -8l-19 -8Z" fill="url(#pbm-face)"/>
+  </g>
+</svg>

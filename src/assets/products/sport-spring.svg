@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ZerOne — Sport Spring — progressive-rate chrome-alloy coil -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="sspr-t">
+  <title id="sspr-t">ZerOne Sport Spring progressive-rate coil</title>
+  <defs>
+    <linearGradient id="sspr-spring" gradientUnits="userSpaceOnUse" x1="45" y1="0" x2="355" y2="0">
+      <stop offset="0" stop-color="#242424"/>
+      <stop offset="0.05" stop-color="#606060"/>
+      <stop offset="0.11" stop-color="#B8B8B8"/>
+      <stop offset="0.17" stop-color="#FCFCFC"/>
+      <stop offset="0.23" stop-color="#D0D0D0"/>
+      <stop offset="0.32" stop-color="#787878"/>
+      <stop offset="0.45" stop-color="#454545"/>
+      <stop offset="0.55" stop-color="#3E3E3E"/>
+      <stop offset="0.66" stop-color="#9A9A9A"/>
+      <stop offset="0.76" stop-color="#B4B4B4"/>
+      <stop offset="0.86" stop-color="#4E4E4E"/>
+      <stop offset="0.955" stop-color="#A6A6A6"/>
+      <stop offset="1" stop-color="#222222"/>
+    </linearGradient>
+    <linearGradient id="sspr-spring-bk" gradientUnits="userSpaceOnUse" x1="45" y1="0" x2="355" y2="0">
+      <stop offset="0" stop-color="#0A0A0A"/>
+      <stop offset="0.05" stop-color="#1C1C1C"/>
+      <stop offset="0.11" stop-color="#373737"/>
+      <stop offset="0.17" stop-color="#4B4B4B"/>
+      <stop offset="0.23" stop-color="#3E3E3E"/>
+      <stop offset="0.32" stop-color="#242424"/>
+      <stop offset="0.45" stop-color="#141414"/>
+      <stop offset="0.55" stop-color="#121212"/>
+      <stop offset="0.66" stop-color="#2E2E2E"/>
+      <stop offset="0.76" stop-color="#363636"/>
+      <stop offset="0.86" stop-color="#171717"/>
+      <stop offset="0.955" stop-color="#313131"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+  </defs>
+  <g id="sspr-back">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M63.4 121.8L60.3 126.6L68.5 131.4L87.3 136.2L115.3 141L150.2 145.7L189 150.4L228.8 155.2L266.2 159.9L298.3 164.6L322.4 169.2L336.6 173.9L339.7 178.5" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M57 125L66 138L114 148L188 158L265 167L321 176L336 185" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 224.2L60.3 228.7L68.5 233.2L87.3 237.6L115.3 242.1L150.2 246.5L189 250.9L228.8 255.4L266.2 259.7L298.3 264.1L322.4 268.5L336.6 272.8L339.7 277.2" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M57 228L66 240L114 250L188 258L265 267L321 276L336 284" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 319.7L60.3 323.9L68.5 328.1L87.3 332.2L115.3 336.4L150.2 340.5L189 344.6L228.8 348.7L266.2 352.8L298.3 356.9L322.4 360.9L336.6 365L339.7 369" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M57 324L66 335L114 344L188 352L265 360L321 368L337 376" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 408.4L60.3 412.3L68.5 416.2L87.3 420L115.3 423.8L150.2 427.6L189 431.4L228.8 435.2L266.2 439L298.3 442.8L322.4 446.5L336.6 450.2L339.7 453.9" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M57 413L66 423L114 431L188 439L265 446L321 454L337 461" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 490.3L60.3 493.9L68.5 497.4L87.3 500.9L115.3 504.5L150.2 508L189 511.4L228.8 514.9L266.2 518.4L298.3 521.8L322.4 525.3L336.6 528.7L339.7 532.1" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M57 495L67 505L114 512L188 519L265 526L321 533L337 539" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 565.3L60.3 568.6L68.5 571.8L87.3 575L115.3 578.2L150.2 581.4L189 584.6L228.8 587.8L266.2 590.9L298.3 594L322.4 597.2L336.6 600.3L339.7 603.4" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M58 570L67 579L115 586L188 592L266 598L321 605L337 610" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 633.5L60.3 636.4L68.5 639.4L87.3 642.3L115.3 645.2L150.2 648.1L189 650.9L228.8 653.8L266.2 656.6L298.3 659.4L322.4 662.2L336.6 665L339.7 667.8" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M58 638L67 647L115 653L188 658L266 664L321 670L337 675" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 694.9L60.3 697.5L68.5 700.1L87.3 702.7L115.3 705.3L150.2 707.8L189 710.4L228.8 712.9L266.2 715.5L298.3 718L322.4 720.5L336.6 723L339.7 725.4" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M58 700L67 707L115 713L189 718L266 723L321 728L338 733" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 749.4L60.3 751.7L68.5 754L87.3 756.3L115.3 758.5L150.2 760.8L189 763L228.8 765.3L266.2 767.5L298.3 769.7L322.4 771.9L336.6 774.1L339.7 776.2" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M58 755L67 761L115 766L189 771L266 775L322 779L338 783" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+      <path d="M63.4 797L60.3 799L68.5 801L87.3 803L115.3 805L150.2 806.9L189 808.9L228.8 810.8L266.2 812.7L298.3 814.6L322.4 816.5L336.6 818.3L339.7 820.2" stroke="url(#sspr-spring-bk)" stroke-width="24"/>
+      <path d="M59 803L67 808L115 812L189 816L266 820L322 824L338 827" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="6.2"/>
+    </g>
+  </g>
+  <g id="sspr-front">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M331.5 78L312.7 82.9L284.7 87.8L249.8 92.7L211 97.6L171.2 102.5L133.8 107.4L101.7 112.2L77.6 117L63.4 121.8L60.3 126.6" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M330 71L283 80L210 90L133 100L76 110L57 120" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M333 85L286 95L212 105L135 115L80 124L64 133" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 173.9L339.7 178.5L331.5 183.2L312.7 187.8L284.7 192.4L249.8 197L211 201.6L171.2 206.1L133.8 210.7L101.7 215.2L77.6 219.7L63.4 224.2L60.3 228.7" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M330 170L329 176L284 185L210 194L133 203L76 212L57 222" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M343 177L334 190L286 200L212 209L135 218L79 227L64 235" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 272.8L339.7 277.2L331.5 281.5L312.7 285.8L284.7 290.1L249.8 294.4L211 298.6L171.2 302.9L133.8 307.1L101.7 311.3L77.6 315.6L63.4 319.7L60.3 323.9" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M330 269L329 274L284 283L210 291L133 300L76 308L57 317" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M343 277L334 289L286 298L212 306L135 315L79 323L64 331" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 365L339.7 369L331.5 373L312.7 377L284.7 381L249.8 384.9L211 388.9L171.2 392.8L133.8 396.8L101.7 400.7L77.6 404.6L63.4 408.4L60.3 412.3" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M330 361L329 366L284 374L210 381L133 389L76 397L57 405" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M343 369L334 380L286 388L212 396L135 404L79 412L63 419" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 450.2L339.7 453.9L331.5 457.6L312.7 461.3L284.7 465L249.8 468.7L211 472.3L171.2 475.9L133.8 479.5L101.7 483.1L77.6 486.7L63.4 490.3L60.3 493.9" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M330 446L329 450L284 458L210 465L133 472L76 479L57 487" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M343 454L334 465L286 472L212 480L135 487L79 494L63 501" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 528.7L339.7 532.1L331.5 535.5L312.7 538.8L284.7 542.2L249.8 545.5L211 548.9L171.2 552.2L133.8 555.5L101.7 558.8L77.6 562.1L63.4 565.3L60.3 568.6" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M331 524L330 528L284 535L210 541L133 548L76 555L58 562" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M343 533L333 543L286 550L212 556L135 563L79 569L63 576" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 600.3L339.7 603.4L331.5 606.4L312.7 609.5L284.7 612.6L249.8 615.6L211 618.6L171.2 621.6L133.8 624.6L101.7 627.6L77.6 630.6L63.4 633.5L60.3 636.4" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M331 596L330 599L284 605L210 611L133 617L76 623L58 629" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M342 605L333 614L285 620L212 626L134 632L79 638L63 644" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 665L339.7 667.8L331.5 670.6L312.7 673.3L284.7 676.1L249.8 678.8L211 681.5L171.2 684.2L133.8 686.9L101.7 689.6L77.6 692.2L63.4 694.9L60.3 697.5" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M331 660L330 663L284 669L210 674L133 679L77 685L58 690" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M342 670L333 678L285 684L212 689L134 694L79 700L62 705" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 723L339.7 725.4L331.5 727.9L312.7 730.3L284.7 732.8L249.8 735.2L211 737.6L171.2 740L133.8 742.3L101.7 744.7L77.6 747L63.4 749.4L60.3 751.7" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M331 718L330 721L284 725L210 730L133 735L77 740L58 744" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M342 728L333 735L285 740L211 745L134 750L79 754L62 759" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 774.1L339.7 776.2L331.5 778.4L312.7 780.5L284.7 782.6L249.8 784.7L211 786.8L171.2 788.9L133.8 790.9L101.7 793L77.6 795L63.4 797L60.3 799" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M332 768L330 771L284 775L211 779L133 783L77 788L59 792" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M341 780L333 786L285 790L211 794L134 798L78 802L62 806" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+      <path d="M336.6 818.3L339.7 820.2L331.5 822" stroke="url(#sspr-spring)" stroke-width="25"/>
+      <path d="M340 812L335 814L330 815" stroke="#000000" stroke-opacity=".46" stroke-width="7.5"/>
+      <path d="M333 825L344 826L333 829" stroke="#FFFFFF" stroke-opacity=".82" stroke-width="6.5"/>
+    </g>
+  </g>
+</svg>

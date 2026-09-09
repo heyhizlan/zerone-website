@@ -2,7 +2,11 @@ dist/
 node_modules/
 .DS_Store
 
-# Local dev / QA scratch — not part of the deliverable
+# Local dev / QA scratch — hardcoded environment paths, not part of the
+# deliverable. Agents also drop diagnostic scripts here while working.
 shot.mjs
+shot.cjs
+qa-scratch/
 .diag.mjs
+diag.cjs
 *.local.*
