@@ -1,0 +1,182 @@
+<!--@meta
+{
+  "title": "Contact ZerOne | Head Office & Enquiries",
+  "desc": "Reach ZerOne's Kuala Lumpur head office for dealership, distribution and product enquiries — or find your nearest dealer for fitment and set-up advice.",
+  "nav": "contact",
+  "css": "contact.css"
+}
+-->
+
+<!-- ======================================================================
+     PAGE HEADER
+     ====================================================================== -->
+<section class="pagehead" aria-labelledby="page-h">
+  <div class="pagehead__field" aria-hidden="true"></div>
+  <div class="pagehead__lines" aria-hidden="true"></div>
+
+  <div class="shell pagehead__inner">
+    <p class="pagehead__eyebrow" data-anim="rise">
+      <span class="rule" aria-hidden="true"></span>
+      <span class="t-label">Contact / SEC-00</span>
+    </p>
+
+    <h1 class="pagehead__title" id="page-h">
+      <span class="pagehead__l1" data-anim="rise">Talk to</span>
+      <span class="pagehead__l2 t-oblique" data-anim="rise" style="--d:80ms">ZerOne</span>
+    </h1>
+
+    <p class="t-lead pagehead__sub" data-anim="rise" style="--d:140ms">
+      Head office, for dealership and distribution enquiries. Your nearest
+      dealer, for fitment and set-up advice. Either way, here is how to
+      reach us.
+    </p>
+  </div>
+</section>
+
+<!-- ======================================================================
+     CONTACT + ENQUIRY
+     ====================================================================== -->
+<section class="section" aria-labelledby="contact-h">
+  <div class="shell">
+    <h2 class="sr-only" id="contact-h">Get in touch</h2>
+
+    <div class="contact-grid">
+
+      <!-- LEFT — direct contact -->
+      <div data-stagger="80">
+        <div class="sec-head" style="grid-template-columns:auto 1fr;margin-bottom:var(--s-6)" data-anim="rise">
+          <span class="sec-head__num">01</span>
+          <div class="sec-head__meta">
+            <h3 class="sec-head__title" id="direct-h" style="font-size:1.2rem">Direct contact</h3>
+            <p class="t-sm sec-head__sub">Head office, Kuala Lumpur.</p>
+          </div>
+        </div>
+
+        <div class="direct" aria-labelledby="direct-h">
+          <div class="direct__field" data-anim="rise">
+            <span class="t-micro">Address</span>
+            <address>
+              <span class="t-body">2, Jalan PJS 11/18, Bandar Sunway,<br>46150 Petaling Jaya, Selangor, Malaysia</span>
+            </address>
+          </div>
+          <div class="direct__field" data-anim="rise">
+            <span class="t-micro">Phone</span>
+            <a class="t-mono" href="tel:+60162108271">+60 16-210 8271</a>
+          </div>
+          <div class="direct__field" data-anim="rise">
+            <span class="t-micro">Email</span>
+            <a class="t-mono" href="mailto:ftzerone@gmail.com">ftzerone@gmail.com</a>
+          </div>
+          <div class="direct__field" data-anim="rise">
+            <span class="t-micro">Hours</span>
+            <span class="t-body">MON–SAT 09:30–19:00</span>
+          </div>
+
+          <div class="route" data-anim="rise">
+            <div class="route__row">
+              <span class="t-micro">Fitment &amp; product advice</span>
+              <p>Talk to <a class="link-u" href="{{BASE}}dealers.html">your nearest dealer</a> —
+              they confirm what fits and set the damping for your car.</p>
+            </div>
+            <div class="route__row">
+              <span class="t-micro">Dealership &amp; distribution</span>
+              <p>Use the form, or reach head office directly with the details above.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — enquiry form -->
+      <div>
+        <div class="sec-head" style="grid-template-columns:auto 1fr;margin-bottom:var(--s-6)" data-anim="rise">
+          <span class="sec-head__num">02</span>
+          <div class="sec-head__meta">
+            <h3 class="sec-head__title" id="enquiry-h" style="font-size:1.2rem">Send an enquiry</h3>
+            <p class="t-sm sec-head__sub">Product, dealership or distribution — tell us which.</p>
+          </div>
+        </div>
+
+        <div class="enquiry" data-anim="rise">
+          <!--
+            No backend is wired to this form. `action="#"` is a placeholder —
+            before deployment, point it at a form handler (Formspree, Netlify
+            Forms, or a server-side mail handler) and set `method`/`action`
+            accordingly.
+          -->
+          <form action="#" method="post" novalidate="false" aria-labelledby="enquiry-h">
+
+            <div class="form-row">
+              <div class="field">
+                <label class="field__label" for="f-name">Name <span class="req">*</span></label>
+                <input class="field__input" type="text" id="f-name" name="name"
+                  autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-email">Email <span class="req">*</span></label>
+                <input class="field__input" type="email" id="f-email" name="email"
+                  autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label class="field__label" for="f-phone">Phone</label>
+                <input class="field__input" type="tel" id="f-phone" name="phone"
+                  autocomplete="tel">
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-type">Enquiry type <span class="req">*</span></label>
+                <select class="field__select" id="f-type" name="enquiry_type" required>
+                  <option value="" disabled selected>Select an enquiry type</option>
+                  <option value="Product enquiry">Product enquiry</option>
+                  <option value="Become a dealer">Become a dealer</option>
+                  <option value="Distribution">Distribution</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-vehicle">Vehicle <span class="t-micro">(optional)</span></label>
+              <input class="field__input" type="text" id="f-vehicle" name="vehicle"
+                autocomplete="off" placeholder="e.g. Proton Saga Flx, 2018">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-message">Message <span class="req">*</span></label>
+              <textarea class="field__textarea" id="f-message" name="message" required></textarea>
+            </div>
+
+            <div class="enquiry__foot">
+              <p class="field__hint">We reply from ftzerone@gmail.com, usually within one business day.</p>
+              <button class="btn btn--solid" type="submit">
+                Send enquiry <span class="btn__arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     DEALER STATES STRIP
+     ====================================================================== -->
+<section class="section section--tight section--carbon" aria-labelledby="strip-h">
+  <div class="shell">
+    <h2 class="sr-only" id="strip-h">Dealer states</h2>
+    <div class="between wrap" style="gap:1.5rem">
+      <span class="t-label">Dealer network — six states</span>
+      <div class="state-strip">
+        <a class="tag tag--dot" href="{{BASE}}dealers.html">Selangor</a>
+        <a class="tag tag--dot" href="{{BASE}}dealers.html">Kuala Lumpur</a>
+        <a class="tag tag--dot" href="{{BASE}}dealers.html">Perak</a>
+        <a class="tag tag--dot" href="{{BASE}}dealers.html">Johor</a>
+        <a class="tag tag--dot" href="{{BASE}}dealers.html">Melaka</a>
+        <a class="tag tag--dot" href="{{BASE}}dealers.html">Negeri Sembilan</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ZerOne — Sport Absorber — OE-replacement damper, no coil spring -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="sabs-t">
+  <title id="sabs-t">ZerOne Sport Absorber OE-replacement damper</title>
+  <defs>
+    <linearGradient id="sabs-spec" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sabs-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101010"/>
+      <stop offset="0.04" stop-color="#2B2B2B"/>
+      <stop offset="0.11" stop-color="#616161"/>
+      <stop offset="0.18" stop-color="#9E9E9E"/>
+      <stop offset="0.235" stop-color="#DEDEDE"/>
+      <stop offset="0.29" stop-color="#9B9B9B"/>
+      <stop offset="0.42" stop-color="#6C6C6C"/>
+      <stop offset="0.6" stop-color="#494949"/>
+      <stop offset="0.78" stop-color="#2C2C2C"/>
+      <stop offset="0.92" stop-color="#161616"/>
+      <stop offset="0.96" stop-color="#6B6B6B"/>
+      <stop offset="1" stop-color="#131313"/>
+    </linearGradient>
+    <linearGradient id="sabs-collar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1B1B1B"/>
+      <stop offset="0.04" stop-color="#454545"/>
+      <stop offset="0.115" stop-color="#8A8A8A"/>
+      <stop offset="0.18" stop-color="#C8C8C8"/>
+      <stop offset="0.235" stop-color="#F6F6F6"/>
+      <stop offset="0.29" stop-color="#BCBCBC"/>
+      <stop offset="0.42" stop-color="#8A8A8A"/>
+      <stop offset="0.58" stop-color="#606060"/>
+      <stop offset="0.76" stop-color="#3E3E3E"/>
+      <stop offset="0.91" stop-color="#212121"/>
+      <stop offset="0.958" stop-color="#909090"/>
+      <stop offset="1" stop-color="#1C1C1C"/>
+    </linearGradient>
+    <linearGradient id="sabs-chrome" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#242424"/>
+      <stop offset="0.05" stop-color="#606060"/>
+      <stop offset="0.11" stop-color="#B8B8B8"/>
+      <stop offset="0.17" stop-color="#FCFCFC"/>
+      <stop offset="0.23" stop-color="#D0D0D0"/>
+      <stop offset="0.32" stop-color="#787878"/>
+      <stop offset="0.45" stop-color="#454545"/>
+      <stop offset="0.55" stop-color="#3E3E3E"/>
+      <stop offset="0.66" stop-color="#9A9A9A"/>
+      <stop offset="0.76" stop-color="#B4B4B4"/>
+      <stop offset="0.86" stop-color="#4E4E4E"/>
+      <stop offset="0.955" stop-color="#A6A6A6"/>
+      <stop offset="1" stop-color="#222222"/>
+    </linearGradient>
+    <linearGradient id="sabs-face" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3A3A3A"/>
+      <stop offset="0.07" stop-color="#787878"/>
+      <stop offset="0.18" stop-color="#B4B4B4"/>
+      <stop offset="0.25" stop-color="#EAEAEA"/>
+      <stop offset="0.33" stop-color="#BDBDBD"/>
+      <stop offset="0.48" stop-color="#969696"/>
+      <stop offset="0.66" stop-color="#6E6E6E"/>
+      <stop offset="0.86" stop-color="#4A4A4A"/>
+      <stop offset="1" stop-color="#2E2E2E"/>
+    </linearGradient>
+    <linearGradient id="sabs-foot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#070707"/>
+      <stop offset="0.04" stop-color="#131313"/>
+      <stop offset="0.11" stop-color="#2B2B2B"/>
+      <stop offset="0.18" stop-color="#474747"/>
+      <stop offset="0.235" stop-color="#636363"/>
+      <stop offset="0.29" stop-color="#454545"/>
+      <stop offset="0.42" stop-color="#303030"/>
+      <stop offset="0.6" stop-color="#202020"/>
+      <stop offset="0.78" stop-color="#131313"/>
+      <stop offset="0.92" stop-color="#090909"/>
+      <stop offset="0.96" stop-color="#303030"/>
+      <stop offset="1" stop-color="#080808"/>
+    </linearGradient>
+    <linearGradient id="sabs-aod" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sabs-aou" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="sabs-boot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0C0C0C"/>
+      <stop offset="0.08" stop-color="#1C1C1C"/>
+      <stop offset="0.19" stop-color="#383838"/>
+      <stop offset="0.26" stop-color="#5C5C5C"/>
+      <stop offset="0.34" stop-color="#3C3C3C"/>
+      <stop offset="0.5" stop-color="#2E2E2E"/>
+      <stop offset="0.7" stop-color="#212121"/>
+      <stop offset="0.88" stop-color="#141414"/>
+      <stop offset="0.955" stop-color="#3E3E3E"/>
+      <stop offset="1" stop-color="#0F0F0F"/>
+    </linearGradient>
+  </defs>
+  <g id="sabs-core">
+    <path d="M166 700H234L234.6 790H165.4Z" fill="url(#sabs-collar)"/>
+    <circle cx="200" cy="790" r="48" fill="url(#sabs-collar)"/>
+    <rect x="152" y="742" width="96" height="96" fill="url(#sabs-spec)" opacity="0.0"/>
+    <circle cx="200" cy="790" r="29.8" fill="url(#sabs-face)" opacity="0.55"/>
+    <circle cx="200" cy="790" r="20.2" fill="#0C0C0C"/>
+    <circle cx="200" cy="790" r="20.2" fill="none" stroke="#000000" stroke-opacity="0.85" stroke-width="3"/>
+    <path d="M184.6 779.4A20.2 20.2 0 0 1 215.4 779.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="2"/>
+    <path d="M152 790A48 48 0 0 1 176 748.2" fill="none" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="2.4"/>
+    <path d="M233.6 823.6A48 48 0 0 0 248 790" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="2"/>
+    <rect x="136" y="352" width="128" height="362" fill="url(#sabs-body)"/>
+    <rect x="158.4" y="352" width="10.9" height="362" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="261.7" y="352" width="2.3" height="362" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="136" y="352" width="1.5" height="362" fill="#000000" opacity="0.45"/>
+    <rect x="136" y="352" width="128" height="26" fill="url(#sabs-aod)" opacity="0.42"/>
+    <rect x="136" y="684" width="128" height="30" fill="url(#sabs-aou)" opacity="0.45"/>
+    <path d="M136 388H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M136 390.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M136 414H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M136 416.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M136 660H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M136 662.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M136 686H264" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M136 688.2H264" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+    <ellipse cx="200" cy="714" rx="64" ry="9.6" fill="url(#sabs-foot)"/>
+    <rect x="148" y="168" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="187.6" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="207.1" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="226.7" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="246.2" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="265.8" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="285.3" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="304.9" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="148" y="324.4" width="104" height="17.2" rx="7" fill="url(#sabs-boot)"/>
+    <rect x="165.7" y="168" width="7.3" height="176" fill="url(#sabs-spec)" opacity="0.34"/>
+    <rect x="250" y="168" width="2" height="176" fill="#FFFFFF" opacity="0.16"/>
+    <rect x="156" y="148" width="88" height="24" fill="url(#sabs-collar)"/>
+    <rect x="171.4" y="148" width="7" height="24" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="242.4" y="148" width="1.6" height="24" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="156" y="148" width="1.2" height="24" fill="#000000" opacity="0.45"/>
+    <ellipse cx="200" cy="172" rx="44" ry="7" fill="url(#sabs-foot)"/>
+    <ellipse cx="200" cy="148" rx="44" ry="7" fill="url(#sabs-face)"/>
+    <ellipse cx="200" cy="148" rx="44" ry="7" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
+    <rect x="187" y="96" width="26" height="76" fill="url(#sabs-chrome)"/>
+    <rect x="191.2" y="96" width="3.6" height="76" fill="url(#sabs-spec)" opacity="0.75"/>
+    <rect x="211.6" y="96" width="1.4" height="76" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="187" y="96" width="1.2" height="76" fill="#000000" opacity="0.45"/>
+    <rect x="170" y="118" width="60" height="14" fill="url(#sabs-collar)"/>
+    <rect x="180.5" y="118" width="4.8" height="14" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="228.6" y="118" width="1.4" height="14" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="170" y="118" width="1.2" height="14" fill="#000000" opacity="0.45"/>
+    <ellipse cx="200" cy="132" rx="30" ry="5" fill="url(#sabs-foot)"/>
+    <rect x="176" y="100" width="48" height="20" fill="url(#sabs-collar)"/>
+    <rect x="184.4" y="100" width="3.8" height="20" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="222.6" y="100" width="1.4" height="20" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="176" y="100" width="1.2" height="20" fill="#000000" opacity="0.45"/>
+    <ellipse cx="200" cy="120" rx="24" ry="4" fill="url(#sabs-foot)"/>
+    <ellipse cx="200" cy="100" rx="24" ry="4" fill="url(#sabs-face)"/>
+    <ellipse cx="200" cy="100" rx="24" ry="4" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
+    <path d="M178.2 102V118" stroke="#000000" stroke-opacity="0.25" stroke-width="1.5"/>
+    <path d="M180 102V118" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.1"/>
+    <path d="M182.4 102V118M216 102V118M220.2 102V118" stroke="#000000" stroke-opacity="0.41" stroke-width="1.5"/>
+    <path d="M184.2 102V118M217.8 102V118M222 102V118" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.1"/>
+    <path d="M186.6 102V118M190.8 102V118M195 102V118M199.2 102V118M203.4 102V118M207.6 102V118M211.8 102V118" stroke="#000000" stroke-opacity="0.56" stroke-width="1.5"/>
+    <path d="M188.4 102V118M192.6 102V118M196.8 102V118M201 102V118M205.2 102V118M209.4 102V118M213.6 102V118" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.1"/>
+    <rect x="180" y="76" width="40" height="24" fill="url(#sabs-chrome)"/>
+    <rect x="187" y="76" width="4.8" height="24" fill="url(#sabs-spec)" opacity="0.55"/>
+    <rect x="218.6" y="76" width="1.4" height="24" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="180" y="76" width="1.2" height="24" fill="#000000" opacity="0.45"/>
+    <ellipse cx="200" cy="100" rx="20" ry="3.4" fill="url(#sabs-foot)"/>
+    <ellipse cx="200" cy="76" rx="20" ry="3.4" fill="url(#sabs-face)"/>
+    <ellipse cx="200" cy="76" rx="20" ry="3.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.30" stroke-width="1.2"/>
+  </g>
+</svg>
