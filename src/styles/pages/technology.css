@@ -394,7 +394,7 @@
   text-transform: uppercase; color: var(--c-white); line-height: 1;
 }
 .axis__step .t-sm { color: var(--c-dim); }
-.axis__step .t-micro { color: var(--c-mute); }
+.axis__step .t-micro { color: var(--c-dim); }
 @media (max-width: 760px) { .axis__steps { grid-template-columns: minmax(0, 1fr); } }
 
 .shift { margin: var(--s-4) 0 0; display: flex; flex-direction: column; gap: var(--s-5); }
@@ -522,3 +522,4 @@
 .dsvg--valve .d-flow    { stroke-width: 3; }
 .dsvg--valve .d-flow--thin { stroke-width: 2.2; }
 .dsvg--valve .d-flow--fat  { stroke-width: 6.5; }
+.d-witness { stroke: var(--c-mute); stroke-width: 1; vector-effect: non-scaling-stroke; }

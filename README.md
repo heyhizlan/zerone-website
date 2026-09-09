@@ -89,7 +89,7 @@ and asset path so pages nested in `products/` resolve correctly.
 
 Copy was written only from what the live site and published specifications
 actually state. Where a figure was not published it reads "Confirm with
-dealer" rather than being guessed. Five points still need a real answer:
+dealer" rather than being guessed. Six points still need a real answer:
 
 1. **SSR700 vs SSR700 PLUS.** Published material treats them as one
    specification. The site currently distinguishes them: the PLUS gets
@@ -104,7 +104,15 @@ dealer" rather than being guessed. Five points still need a real answer:
    height adjustment and spring are all marked dealer-confirm.
 4. **Sport Absorber damping adjustment** — published material does not say
    whether it is adjustable.
-5. **The Johor dealer address** reads "Jalan Bendehara 12", which looks like
+5. **The ADFL valve geometry in Figs. 01–03** is a schematic interpretation.
+   What is published is only that ADFL "varies the valve using hydraulic oil
+   pressure". The figures draw the standard implementation of that — a
+   preloaded element over a port, deflecting as pressure rises to open flow
+   area. It is consistent with the published behaviour, but ZerOne's actual
+   valve architecture is not documented anywhere. Every figure is captioned
+   "Schematic" and the page says the figures describe the principle rather
+   than a production drawing. Worth a look from whoever knows the part.
+6. **The Johor dealer address** reads "Jalan Bendehara 12", which looks like
    a typo for *Bendahara* on the current site. Reproduced as published rather
    than silently corrected.
 
