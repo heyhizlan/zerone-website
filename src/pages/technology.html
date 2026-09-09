@@ -38,6 +38,7 @@
       <span class="th__l2 anim-smear" style="animation-delay:320ms">Active <em>damping force</em> levelling</span>
     </h1>
 
+    <div class="th__body">
     <p class="t-lead th__abstract anim-hero" style="animation-delay:520ms">
       A ZerOne damper is a set of ranges, not a fixed setting. This note
       describes what is inside one: the ADFL valve and how it uses oil
@@ -60,6 +61,7 @@
         <span class="t-micro">Figures</span>
         <span class="th__meta-v">04</span>
       </div>
+    </div>
     </div>
 
     <nav class="th__toc anim-hero" style="animation-delay:760ms" aria-label="Contents">
@@ -165,7 +167,7 @@
       <div class="dfig__plate marks">
         <span class="marks__b1" aria-hidden="true"></span><span class="marks__b2" aria-hidden="true"></span>
 
-        <svg class="dsvg dsvg--section" viewBox="0 0 560 790" role="img"
+        <svg class="dsvg dsvg--section" viewBox="0 0 560 800" role="img"
              aria-label="Cutaway section through a mono-tube damper. A piston rod enters the top of a single pressure tube through a rod guide and seal pack and carries a piston fitted with the ADFL valve. Ports run through the piston and are covered by valve elements. Oil fills the tube above and below the piston; lower down a floating piston separates the oil from a pressurised gas chamber. Arrows show oil pushed up through the piston ports on the compression stroke.">
           <title>Figure 01 — section through a ZerOne mono-tube damper</title>
           <desc>Schematic vertical cutaway. From the top: a damping adjuster, the piston rod, a rod guide and seal pack, the oil-filled rebound chamber, the piston carrying the ADFL valve elements, the oil-filled compression chamber, a floating piston, and a pressurised gas chamber. A dashed circle marks Detail A at the piston. Numbered balloons one to seven key the parts to the list beside the drawing.</desc>
@@ -177,6 +179,10 @@
             </pattern>
             <pattern id="adflMetal" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
               <rect class="d-metalbg" width="7" height="7"/>
+              <line class="d-hatch-m" x1="0" y1="0" x2="0" y2="7"/>
+            </pattern>
+            <pattern id="adflPart" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+              <rect class="d-partbg" width="7" height="7"/>
               <line class="d-hatch-m" x1="0" y1="0" x2="0" y2="7"/>
             </pattern>
             <pattern id="adflGas" width="13" height="13" patternUnits="userSpaceOnUse">
@@ -194,144 +200,131 @@
             </marker>
           </defs>
 
-          <rect x="0" y="0" width="560" height="790" fill="url(#adflField)"/>
+          <rect x="0" y="0" width="560" height="800" fill="url(#adflField)"/>
 
-          <!-- measurement rail -->
-          <g aria-hidden="true">
-            <line class="d-thin" x1="52" y1="90" x2="52" y2="678"/>
-            <g class="d-thin">
-              <line x1="52" y1="106" x2="60" y2="106"/><line x1="52" y1="138" x2="60" y2="138"/>
-              <line x1="52" y1="170" x2="70" y2="170"/><line x1="52" y1="202" x2="60" y2="202"/>
-              <line x1="52" y1="234" x2="60" y2="234"/><line x1="52" y1="266" x2="70" y2="266"/>
-              <line x1="52" y1="298" x2="60" y2="298"/><line x1="52" y1="330" x2="60" y2="330"/>
-              <line x1="52" y1="362" x2="70" y2="362"/><line x1="52" y1="394" x2="60" y2="394"/>
-              <line x1="52" y1="426" x2="60" y2="426"/><line x1="52" y1="458" x2="70" y2="458"/>
-              <line x1="52" y1="490" x2="60" y2="490"/><line x1="52" y1="522" x2="60" y2="522"/>
-              <line x1="52" y1="554" x2="70" y2="554"/><line x1="52" y1="586" x2="60" y2="586"/>
-              <line x1="52" y1="618" x2="60" y2="618"/><line x1="52" y1="650" x2="70" y2="650"/>
-            </g>
-            <text class="d-tag" x="34" y="384" transform="rotate(-90 34 384)" text-anchor="middle">SECTION</text>
-          </g>
+          <text class="d-tag" x="26" y="384" transform="rotate(-90 26 384)" text-anchor="middle">SECTION A&#8211;A</text>
 
           <!-- ---- damper body ---- -->
           <!-- adjuster -->
-          <rect class="d-body" x="226" y="12" width="48" height="28" fill="url(#adflMetal)"/>
-          <line class="d-thin" x1="236" y1="12" x2="236" y2="4"/>
-          <line class="d-thin" x1="250" y1="12" x2="250" y2="2"/>
-          <line class="d-thin" x1="264" y1="12" x2="264" y2="4"/>
-
-          <!-- rod -->
-          <rect class="d-body" x="236" y="40" width="28" height="300" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="249" y="10" width="52" height="30" fill="url(#adflMetal)"/>
+          <line class="d-thin" x1="261" y1="10" x2="261" y2="2"/>
+          <line class="d-thin" x1="275" y1="10" x2="275" y2="0"/>
+          <line class="d-thin" x1="289" y1="10" x2="289" y2="2"/>
 
           <!-- oil : rebound chamber -->
-          <rect x="198" y="132" width="104" height="202" fill="url(#adflOil)"/>
+          <rect x="202" y="132" width="146" height="202" fill="url(#adflOil)"/>
           <!-- oil : compression chamber -->
-          <rect x="198" y="398" width="104" height="130" fill="url(#adflOil)"/>
+          <rect x="202" y="398" width="146" height="130" fill="url(#adflOil)"/>
           <!-- gas -->
-          <rect x="198" y="562" width="104" height="98" fill="url(#adflGas)"/>
+          <rect x="202" y="562" width="146" height="98" fill="url(#adflGas)"/>
+
+          <!-- rod -->
+          <rect class="d-body" x="253" y="40" width="44" height="300" fill="url(#adflMetal)"/>
 
           <!-- tube walls -->
-          <rect class="d-body" x="188" y="90" width="10" height="570" fill="url(#adflMetal)"/>
-          <rect class="d-body" x="302" y="90" width="10" height="570" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="190" y="90" width="12" height="570" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="348" y="90" width="12" height="570" fill="url(#adflMetal)"/>
 
           <!-- rod guide + seal pack -->
-          <rect class="d-body" x="198" y="90" width="38" height="42" fill="url(#adflMetal)"/>
-          <rect class="d-body" x="264" y="90" width="38" height="42" fill="url(#adflMetal)"/>
-          <rect class="d-solid" x="226" y="96" width="10" height="30"/>
-          <rect class="d-solid" x="264" y="96" width="10" height="30"/>
+          <rect class="d-body" x="202" y="90" width="51" height="42" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="297" y="90" width="51" height="42" fill="url(#adflMetal)"/>
+          <rect class="d-solid" x="241" y="96" width="12" height="30"/>
+          <rect class="d-solid" x="297" y="96" width="12" height="30"/>
 
           <!-- piston + ports -->
-          <rect class="d-body" x="198" y="334" width="104" height="58" fill="url(#adflMetal)"/>
-          <rect x="208" y="334" width="14" height="58" fill="url(#adflOil)"/>
-          <rect class="d-thin" x="208" y="334" width="14" height="58"/>
-          <rect x="278" y="334" width="14" height="58" fill="url(#adflOil)"/>
-          <rect class="d-thin" x="278" y="334" width="14" height="58"/>
+          <rect class="d-part" x="202" y="334" width="146" height="58" fill="url(#adflPart)"/>
+          <rect x="212" y="334" width="22" height="58" fill="url(#adflOil)"/>
+          <rect class="d-edge" x="212" y="334" width="22" height="58"/>
+          <rect x="316" y="334" width="22" height="58" fill="url(#adflOil)"/>
+          <rect class="d-edge" x="316" y="334" width="22" height="58"/>
 
-          <!-- ADFL valve elements : shims clamped at the rod, free at the outer edge -->
-          <path class="d-shim" d="M236 328 H206 l-4 3 4 3 H236 Z"/>
-          <path class="d-shim" d="M264 328 H294 l4 3 -4 3 H264 Z"/>
-          <path class="d-shim" d="M236 392 H206 l-4 3 4 3 H236 Z"/>
-          <path class="d-shim" d="M264 392 H294 l4 3 -4 3 H264 Z"/>
+          <!-- ADFL valve elements : clamped at the rod, free at the outer edge -->
+          <path class="d-shim" d="M253 328 H208 a3 3 0 0 0 0 6 H253 Z"/>
+          <path class="d-shim" d="M297 328 H342 a3 3 0 0 1 0 6 H297 Z"/>
+          <path class="d-shim" d="M253 392 H208 a3 3 0 0 0 0 6 H253 Z"/>
+          <path class="d-shim" d="M297 392 H342 a3 3 0 0 1 0 6 H297 Z"/>
 
           <!-- floating piston -->
-          <rect class="d-body" x="198" y="528" width="104" height="34" fill="url(#adflMetal)"/>
-          <rect class="d-solid" x="198" y="534" width="104" height="5"/>
-          <rect class="d-solid" x="198" y="551" width="104" height="5"/>
+          <rect class="d-part" x="202" y="528" width="146" height="34" fill="url(#adflPart)"/>
+          <rect class="d-solid" x="202" y="534" width="146" height="5"/>
+          <rect class="d-solid" x="202" y="551" width="146" height="5"/>
 
           <!-- caps + lower mount / body-shift bracket -->
-          <rect class="d-body" x="188" y="660" width="124" height="18" fill="url(#adflMetal)"/>
-          <rect class="d-body" x="176" y="600" width="12" height="100" fill="url(#adflMetal)"/>
-          <rect class="d-body" x="312" y="600" width="12" height="100" fill="url(#adflMetal)"/>
-          <rect class="d-body" x="176" y="700" width="148" height="14" fill="url(#adflMetal)"/>
-          <circle class="d-body" cx="250" cy="740" r="18" fill="url(#adflMetal)"/>
-          <circle class="d-oilhole" cx="250" cy="740" r="8"/>
+          <rect class="d-body" x="190" y="660" width="170" height="18" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="176" y="600" width="14" height="100" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="360" y="600" width="14" height="100" fill="url(#adflMetal)"/>
+          <rect class="d-body" x="176" y="700" width="198" height="14" fill="url(#adflMetal)"/>
+          <circle class="d-body" cx="275" cy="738" r="19" fill="url(#adflMetal)"/>
+          <circle class="d-oilhole" cx="275" cy="738" r="8"/>
 
           <!-- ---- flow ---- -->
           <g aria-hidden="true">
-            <path class="d-flow" marker-end="url(#adflHead)" d="M215 486 L215 340 C215 330 208 324 201 320"/>
-            <path class="d-flow" marker-end="url(#adflHead)" d="M285 486 L285 340 C285 330 292 324 299 320"/>
-            <path class="d-flow d-flow--thin" marker-end="url(#adflHead)" d="M250 176 L250 226"/>
-            <path class="d-flow d-flow--thin" marker-end="url(#adflHead)" d="M250 596 L250 630"/>
+            <path class="d-flow" marker-end="url(#adflHead)" d="M223 458 L223 408"/>
+            <path class="d-flow" marker-end="url(#adflHead)" d="M327 458 L327 408"/>
+            <path class="d-flow" marker-end="url(#adflHead)" d="M223 322 C223 308 214 300 205 292"/>
+            <path class="d-flow" marker-end="url(#adflHead)" d="M327 322 C327 308 336 300 345 292"/>
+            <path class="d-flow d-flow--thin" marker-end="url(#adflHead)" d="M275 50 L275 84"/>
+            <path class="d-flow d-flow--thin" marker-end="url(#adflHead)" d="M311 596 L311 634"/>
           </g>
 
           <!-- ---- detail A ---- -->
-          <circle class="d-dash" cx="285" cy="363" r="52"/>
-          <text class="d-tag d-tag--lg" x="348" y="330">A</text>
-          <line class="d-dash" x1="330" y1="336" x2="344" y2="326"/>
+          <circle class="d-detail" cx="327" cy="363" r="60"/>
+          <line class="d-detail" x1="370" y1="320" x2="400" y2="292"/>
+          <text class="d-tag d-tag--lg" x="404" y="292">A</text>
 
           <!-- ---- chamber tags ---- -->
-          <text class="d-tag" x="217" y="240" text-anchor="middle">OIL</text>
-          <text class="d-tag" x="250" y="462" text-anchor="middle">OIL</text>
-          <text class="d-tag" x="250" y="600" text-anchor="middle">GAS</text>
+          <text class="d-tag" x="228" y="252" text-anchor="middle">OIL</text>
+          <text class="d-tag" x="275" y="486" text-anchor="middle">OIL</text>
+          <text class="d-tag" x="240" y="614" text-anchor="middle">GAS</text>
 
           <!-- ---- leaders + balloons ---- -->
           <g id="hs-01" data-hotspot>
-            <line class="d-lead" x1="276" y1="26" x2="454" y2="26"/>
-            <circle class="d-leaddot" cx="276" cy="26" r="3"/>
-            <circle class="d-disc" cx="474" cy="26" r="18"/>
-            <text class="d-disc-t" x="474" y="26">01</text>
+            <line class="d-lead" x1="301" y1="25" x2="476" y2="25"/>
+            <circle class="d-leaddot" cx="301" cy="25" r="3.5"/>
+            <circle class="d-disc" cx="498" cy="25" r="21"/>
+            <text class="d-disc-t" x="498" y="25">01</text>
           </g>
           <g id="hs-02" data-hotspot>
-            <line class="d-lead" x1="198" y1="112" x2="128" y2="112"/>
-            <circle class="d-leaddot" cx="198" cy="112" r="3"/>
-            <circle class="d-disc" cx="108" cy="112" r="18"/>
-            <text class="d-disc-t" x="108" y="112">02</text>
+            <line class="d-lead" x1="202" y1="111" x2="87" y2="111"/>
+            <circle class="d-leaddot" cx="202" cy="111" r="3.5"/>
+            <circle class="d-disc" cx="64" cy="111" r="21"/>
+            <text class="d-disc-t" x="64" y="111">02</text>
           </g>
           <g id="hs-03" data-hotspot>
-            <line class="d-lead" x1="307" y1="210" x2="454" y2="210"/>
-            <circle class="d-leaddot" cx="307" cy="210" r="3"/>
-            <circle class="d-disc" cx="474" cy="210" r="18"/>
-            <text class="d-disc-t" x="474" y="210">03</text>
+            <line class="d-lead" x1="354" y1="205" x2="476" y2="205"/>
+            <circle class="d-leaddot" cx="354" cy="205" r="3.5"/>
+            <circle class="d-disc" cx="498" cy="205" r="21"/>
+            <text class="d-disc-t" x="498" y="205">03</text>
           </g>
           <g id="hs-04" data-hotspot>
-            <line class="d-lead" x1="198" y1="363" x2="128" y2="363"/>
-            <circle class="d-leaddot" cx="198" cy="363" r="3"/>
-            <circle class="d-disc" cx="108" cy="363" r="18"/>
-            <text class="d-disc-t" x="108" y="363">04</text>
+            <line class="d-lead" x1="202" y1="363" x2="87" y2="363"/>
+            <circle class="d-leaddot" cx="202" cy="363" r="3.5"/>
+            <circle class="d-disc" cx="64" cy="363" r="21"/>
+            <text class="d-disc-t" x="64" y="363">04</text>
           </g>
           <g id="hs-05" data-hotspot>
-            <line class="d-lead" x1="285" y1="470" x2="454" y2="470"/>
-            <circle class="d-leaddot" cx="285" cy="470" r="3"/>
-            <circle class="d-disc" cx="474" cy="470" r="18"/>
-            <text class="d-disc-t" x="474" y="470">05</text>
+            <line class="d-lead" x1="327" y1="470" x2="476" y2="470"/>
+            <circle class="d-leaddot" cx="327" cy="470" r="3.5"/>
+            <circle class="d-disc" cx="498" cy="470" r="21"/>
+            <text class="d-disc-t" x="498" y="470">05</text>
           </g>
           <g id="hs-06" data-hotspot>
-            <line class="d-lead" x1="198" y1="545" x2="128" y2="545"/>
-            <circle class="d-leaddot" cx="198" cy="545" r="3"/>
-            <circle class="d-disc" cx="108" cy="545" r="18"/>
-            <text class="d-disc-t" x="108" y="545">06</text>
+            <line class="d-lead" x1="202" y1="545" x2="87" y2="545"/>
+            <circle class="d-leaddot" cx="202" cy="545" r="3.5"/>
+            <circle class="d-disc" cx="64" cy="545" r="21"/>
+            <text class="d-disc-t" x="64" y="545">06</text>
           </g>
           <g id="hs-07" data-hotspot>
-            <line class="d-lead" x1="302" y1="640" x2="454" y2="640"/>
-            <circle class="d-leaddot" cx="302" cy="640" r="3"/>
-            <circle class="d-disc" cx="474" cy="640" r="18"/>
-            <text class="d-disc-t" x="474" y="640">07</text>
+            <line class="d-lead" x1="348" y1="640" x2="476" y2="640"/>
+            <circle class="d-leaddot" cx="348" cy="640" r="3.5"/>
+            <circle class="d-disc" cx="498" cy="640" r="21"/>
+            <text class="d-disc-t" x="498" y="640">07</text>
           </g>
 
           <!-- ---- title block ---- -->
-          <line class="d-thin" x1="16" y1="756" x2="544" y2="756"/>
-          <text class="d-tag" x="16" y="776">FIG. 01 — ADFL / MONO-TUBE SECTION</text>
-          <text class="d-tag" x="544" y="776" text-anchor="end">SCHEMATIC</text>
+          <line class="d-thin" x1="16" y1="768" x2="544" y2="768"/>
+          <text class="d-tag" x="16" y="788">FIG. 01 — ADFL / MONO-TUBE SECTION</text>
+          <text class="d-tag" x="544" y="788" text-anchor="end">SCHEMATIC</text>
         </svg>
       </div>
       <div class="dfig__key">

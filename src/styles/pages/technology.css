@@ -54,8 +54,8 @@
 }
 .th__l2 {
   display: block;
-  margin-top: 0.14em;
-  max-width: 18ch;
+  margin-top: 0.4em;
+  max-width: 22ch;
   font-family: var(--ff-head);
   font-style: italic;
   font-weight: 900;
@@ -68,17 +68,22 @@
 }
 .th__l2 em { font-style: inherit; color: var(--c-white); -webkit-text-stroke: 0; }
 
+.th__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4.5rem);
+  align-items: end;
+}
 .th__abstract { max-width: 56ch; }
+@media (max-width: 900px) { .th__body { grid-template-columns: minmax(0, 1fr); align-items: start; } }
 
 /* Glass readout — legitimate here: it sits over the graduated field. */
 .th__meta {
-  margin-top: var(--s-8);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--c-line-soft);
   border: 1px solid var(--glass-edge);
-  max-width: 640px;
 }
 .th__meta > div {
   background: var(--glass-fill);
@@ -95,7 +100,7 @@
 }
 
 /* Contents index */
-.th__toc { margin-top: var(--s-9); max-width: 900px; }
+.th__toc { margin-top: var(--s-9); }
 .th__toc-h { margin-bottom: var(--s-4); }
 .th__toc-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--c-line); }
 .th__toc-list a {
@@ -140,7 +145,7 @@
 .d-metalbg { fill: var(--c-steel); }
 .d-oilbg   { fill: var(--c-black); }
 .d-gasbg   { fill: var(--c-black); }
-.d-hatch   { stroke: rgba(255,255,255,0.16); stroke-width: 1; }
+.d-hatch   { stroke: rgba(255,255,255,0.20); stroke-width: 1; }
 .d-hatch-m { stroke: rgba(255,255,255,0.26); stroke-width: 1.1; }
 .d-dotfill { fill: rgba(255,255,255,0.26); }
 .d-field-a { stop-color: rgba(255,255,255,0.055); }
@@ -158,7 +163,7 @@
 .d-shim    { fill: var(--c-white); fill-opacity: 0.92; stroke: var(--c-white); stroke-width: 1; vector-effect: non-scaling-stroke; }
 
 /* flow */
-.d-flow        { fill: none; stroke: var(--c-white); stroke-width: 2.6; stroke-linecap: round; }
+.d-flow        { fill: none; stroke: var(--c-white); stroke-width: 2.2; stroke-linecap: round; }
 .d-flow--thin  { stroke-width: 1.6; }
 .d-flow--fat   { stroke-width: 5; }
 .d-arrowhead   { fill: var(--c-white); }
@@ -176,7 +181,9 @@
   fill: var(--c-mute); font-family: var(--ff-mono); font-size: 12px;
   letter-spacing: 0.2em; text-transform: uppercase;
 }
-.d-tag--lg { font-size: 18px; fill: var(--c-white); letter-spacing: 0; }
+.d-tag--lg { font-size: 20px; fill: var(--c-white); letter-spacing: 0; }
+.dsvg--shift .d-tag { font-size: 9px; }
+.dsvg--tube  .d-tag { font-size: 11px; }
 
 /* hover link between the key list and the drawing */
 [data-hotspot] .d-disc,
@@ -242,12 +249,17 @@
 .dfig__key { display: flex; flex-direction: column; gap: var(--s-4); position: sticky; top: 96px; }
 .dfig__key-h { padding-bottom: var(--s-3); border-bottom: 1px solid var(--c-line); }
 .dfig__key .callouts { list-style: none; margin: 0; padding: 0; }
+.callouts .callout__d { color: var(--c-dim); }
 .dfig__cap {
   grid-column: 1 / -1;
   padding-top: var(--s-4);
   border-top: 1px solid var(--c-line-soft);
   line-height: 1.7;
-  max-width: 76ch;
+  max-width: 92ch;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  color: var(--c-dim);
+  text-transform: none;
 }
 @media (max-width: 980px) {
   .dfig { grid-template-columns: minmax(0, 1fr); }
@@ -373,7 +385,7 @@
   margin-block: var(--s-2);
 }
 .axis__step {
-  background: var(--c-void);
+  background: var(--c-carbon);
   padding: var(--s-5);
   display: flex; flex-direction: column; gap: var(--s-3);
 }
@@ -382,6 +394,7 @@
   text-transform: uppercase; color: var(--c-white); line-height: 1;
 }
 .axis__step .t-sm { color: var(--c-dim); }
+.axis__step .t-micro { color: var(--c-mute); }
 @media (max-width: 760px) { .axis__steps { grid-template-columns: minmax(0, 1fr); } }
 
 .shift { margin: var(--s-4) 0 0; display: flex; flex-direction: column; gap: var(--s-5); }
@@ -480,3 +493,8 @@
 
 /* Reduced motion / no JS: the counters and reveals already degrade globally.
    Nothing on this page depends on motion to be readable.                    */
+
+/* moving parts read brighter than the body they run inside */
+.d-partbg { fill: var(--c-iron); }
+.d-part   { stroke: var(--c-white); stroke-opacity: 0.55; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.d-detail { fill: none; stroke: var(--c-mute); stroke-width: 1; stroke-dasharray: 7 5; vector-effect: non-scaling-stroke; }

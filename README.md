@@ -85,6 +85,29 @@ and asset path so pages nested in `products/` resolve correctly.
    here as a product line; consolidating or clearly linking the two is a
    business decision, not a build one.
 
+## Content questions for ZerOne — please confirm before launch
+
+Copy was written only from what the live site and published specifications
+actually state. Where a figure was not published it reads "Confirm with
+dealer" rather than being guessed. Five points still need a real answer:
+
+1. **SSR700 vs SSR700 PLUS.** Published material treats them as one
+   specification. The site currently distinguishes them: the PLUS gets
+   separately adjusted compression and rebound, the SSR700 one 32-step
+   adjuster covering both. If that is wrong, both pages need the same wording.
+2. **Does the SSR700 PLUS have a remote reservoir?** Not published anywhere.
+   The placeholder illustration depicts one — that was an art-direction
+   assumption, and the SVG carries a comment saying so. Confirm or replace
+   the image.
+3. **SSR500 PLUS construction and adjustment steps.** Only "adjustable
+   rebound and compression" is published. Construction type, step count,
+   height adjustment and spring are all marked dealer-confirm.
+4. **Sport Absorber damping adjustment** — published material does not say
+   whether it is adjustable.
+5. **The Johor dealer address** reads "Jalan Bendehara 12", which looks like
+   a typo for *Bendahara* on the current site. Reproduced as published rather
+   than silently corrected.
+
 ## Known gaps
 
 - Copy is written from the live site's verified content plus published
