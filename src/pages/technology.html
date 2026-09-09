@@ -414,6 +414,9 @@
                 <pattern id="vlMetal" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
                   <rect class="d-metalbg" width="7" height="7"/><line class="d-hatch-m" x1="0" y1="0" x2="0" y2="7"/>
                 </pattern>
+                <pattern id="vlPart" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+                  <rect class="d-partbg" width="7" height="7"/><line class="d-hatch-m" x1="0" y1="0" x2="0" y2="7"/>
+                </pattern>
                 <radialGradient id="vlField" cx="50%" cy="45%" r="70%">
                   <stop offset="0%" class="d-field-a"/><stop offset="100%" class="d-field-b"/>
                 </radialGradient>
@@ -426,9 +429,9 @@
               <rect x="30" y="6" width="370" height="144" fill="url(#vlOil)"/>
               <rect x="30" y="230" width="370" height="84" fill="url(#vlOil)"/>
               <rect class="d-body" x="30" y="6" width="50" height="224" fill="url(#vlMetal)"/>
-              <rect class="d-body" x="80" y="150" width="320" height="80" fill="url(#vlMetal)"/>
+              <rect class="d-part" x="80" y="150" width="320" height="80" fill="url(#vlPart)"/>
               <rect x="230" y="150" width="50" height="80" fill="url(#vlOil)"/>
-              <rect class="d-thin" x="230" y="150" width="50" height="80"/>
+              <rect class="d-edge" x="230" y="150" width="50" height="80"/>
               <rect class="d-solid" x="390" y="158" width="10" height="64"/>
               <rect class="d-body" x="400" y="0" width="40" height="320" fill="url(#vlMetal)"/>
 
@@ -443,7 +446,7 @@
 
               <!-- flow -->
               <path class="d-flow d-flow--thin" marker-end="url(#vlHead)"
-                    d="M255 300 L255 156 C260 152 306 152 350 148 C366 146 378 136 386 118"/>
+                    d="M255 320 L255 156 C260 152 306 152 350 148 C366 146 378 136 386 116"/>
 
               <!-- flow-area dimension -->
               <g class="d-dim" aria-hidden="true">
@@ -459,10 +462,10 @@
                 <text class="d-disc-t" x="112" y="62">08</text>
               </g>
               <g id="hs-09" data-hotspot>
-                <line class="d-lead" x1="382" y1="132" x2="366" y2="76"/>
-                <circle class="d-leaddot" cx="382" cy="132" r="3"/>
-                <circle class="d-disc" cx="362" cy="62" r="18"/>
-                <text class="d-disc-t" x="362" y="62">09</text>
+                <line class="d-lead" x1="368" y1="134" x2="334" y2="78"/>
+                <circle class="d-leaddot" cx="368" cy="134" r="3"/>
+                <circle class="d-disc" cx="326" cy="62" r="18"/>
+                <text class="d-disc-t" x="326" y="62">09</text>
               </g>
 
               <text class="d-tag" x="14" y="308">DETAIL A · LOW</text>
@@ -492,6 +495,9 @@
                 <pattern id="vhMetal" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
                   <rect class="d-metalbg" width="7" height="7"/><line class="d-hatch-m" x1="0" y1="0" x2="0" y2="7"/>
                 </pattern>
+                <pattern id="vhPart" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+                  <rect class="d-partbg" width="7" height="7"/><line class="d-hatch-m" x1="0" y1="0" x2="0" y2="7"/>
+                </pattern>
                 <radialGradient id="vhField" cx="50%" cy="45%" r="70%">
                   <stop offset="0%" class="d-field-a"/><stop offset="100%" class="d-field-b"/>
                 </radialGradient>
@@ -504,9 +510,9 @@
               <rect x="30" y="6" width="370" height="144" fill="url(#vhOil)"/>
               <rect x="30" y="230" width="370" height="84" fill="url(#vhOil)"/>
               <rect class="d-body" x="30" y="6" width="50" height="224" fill="url(#vhMetal)"/>
-              <rect class="d-body" x="80" y="150" width="320" height="80" fill="url(#vhMetal)"/>
+              <rect class="d-part" x="80" y="150" width="320" height="80" fill="url(#vhPart)"/>
               <rect x="230" y="150" width="50" height="80" fill="url(#vhOil)"/>
-              <rect class="d-thin" x="230" y="150" width="50" height="80"/>
+              <rect class="d-edge" x="230" y="150" width="50" height="80"/>
               <rect class="d-solid" x="390" y="158" width="10" height="64"/>
               <rect class="d-body" x="400" y="0" width="40" height="320" fill="url(#vhMetal)"/>
 
@@ -520,7 +526,7 @@
               <path class="d-shim" d="M80 137 H196 C278 131 330 110 366 84 L374 96 C338 126 282 148 196 150 H80 Z"/>
 
               <path class="d-flow d-flow--fat" marker-end="url(#vhHead)"
-                    d="M255 302 L255 158 C262 150 306 144 340 128 C364 116 378 96 386 70"/>
+                    d="M255 320 L255 158 C262 150 306 144 340 128 C364 116 378 96 386 68"/>
 
               <g class="d-dim" aria-hidden="true">
                 <line x1="384" y1="150" x2="384" y2="96"/>

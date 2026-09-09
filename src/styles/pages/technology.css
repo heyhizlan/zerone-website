@@ -498,3 +498,11 @@
 .d-partbg { fill: var(--c-iron); }
 .d-part   { stroke: var(--c-white); stroke-opacity: 0.55; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
 .d-detail { fill: none; stroke: var(--c-mute); stroke-width: 1; stroke-dasharray: 7 5; vector-effect: non-scaling-stroke; }
+
+/* the detail views render smaller than the section, so their hatching is
+   drawn heavier to survive the reduction */
+.dsvg--valve .d-hatch   { stroke: rgba(255,255,255,0.26); stroke-width: 1.6; }
+.dsvg--valve .d-hatch-m { stroke: rgba(255,255,255,0.34); stroke-width: 1.7; }
+.dsvg--valve .d-flow    { stroke-width: 3; }
+.dsvg--valve .d-flow--thin { stroke-width: 2.2; }
+.dsvg--valve .d-flow--fat  { stroke-width: 6.5; }
