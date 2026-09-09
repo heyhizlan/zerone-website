@@ -403,11 +403,27 @@
   gap: clamp(1rem, 2.4vw, 2.5rem);
 }
 .shift__caps > div { display: flex; flex-direction: column; gap: var(--s-2); }
+.shift__note {
+  grid-column: 1 / -1;
+  color: var(--c-dim);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: none;
+  line-height: 1.7;
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--c-line-soft);
+}
 .shift__t {
   font-family: var(--ff-mono); font-size: var(--fs-label); font-weight: 500;
   letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--c-white);
 }
-@media (max-width: 620px) { .shift__caps { grid-template-columns: minmax(0, 1fr); gap: var(--s-5); } }
+@media (max-width: 620px) {
+  .shift__caps { grid-template-columns: minmax(0, 1fr); gap: var(--s-5); }
+  /* give the drawings the full column at phone width */
+  .axis { grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
+  .axis__n { padding-top: 0; }
+  .dfig__plate { padding: 0.4rem; }
+}
 
 /* ==========================================================================
    E · 04 MATERIALS
@@ -484,10 +500,10 @@
 }
 @media (max-width: 560px) {
   .dsvg--section .d-disc-t { font-size: 27px; }
-  .dsvg--section .d-tag    { font-size: 20px; }
+  .dsvg--section .d-tag    { font-size: 15px; }
   .dsvg--valve .d-disc-t   { font-size: 19px; }
   .dsvg--valve .d-tag      { font-size: 15px; }
-  .dsvg--shift .d-tag      { font-size: 17px; }
+  .dsvg--shift .d-tag      { font-size: 13px; }
   .th__meta { grid-template-columns: minmax(0, 1fr); }
 }
 
