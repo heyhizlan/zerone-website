@@ -45,6 +45,7 @@ if ('IntersectionObserver' in window) {
 const header = document.querySelector('[data-header]');
 const parallaxLayers = [...document.querySelectorAll('[data-parallax]')];
 const spread = document.querySelector('[data-spread]');
+const spreadDeck = spread?.querySelector('.deck');
 const hero = document.querySelector('.hero');
 const dealer = document.querySelector('#dealer');
 const dock = document.querySelector('[data-dock]');
@@ -76,9 +77,18 @@ function update() {
     if (motion && !stackedDeck.matches) {
       const box = spread.getBoundingClientRect();
       const travel = Math.max(1, box.height - viewportH);
-      progress = easeInOut(clamp((-box.top / travel - 0.04) / 0.7));
+      progress = easeInOut(clamp((-box.top / travel - 0.04) / 0.82));
     }
     spread.style.setProperty('--p', progress.toFixed(4));
+    if (spreadDeck) {
+      if (motion && !stackedDeck.matches) {
+        const viewport = spreadDeck.parentElement.clientWidth;
+        const maxShift = Math.max(0, spreadDeck.scrollWidth - viewport + 24);
+        spreadDeck.style.transform = `translate3d(${(-maxShift * progress).toFixed(1)}px, 0, 0)`;
+      } else {
+        spreadDeck.style.removeProperty('transform');
+      }
+    }
   }
 
   if (dock) {

@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/styles.css" />
     <script>
       // Hide reveal targets only when JS runs; fall back to fully visible content if the module never boots.
@@ -41,9 +41,8 @@
         <a class="elink" href="#road"><span class="elink__idx">03</span><span class="elink__txt">Road</span></a>
       </nav>
       <span class="locale" aria-label="Malaysia">MY</span>
-      <a class="rail rail--primary rail--compact site-header__cta" href="#dealer">
-        <span class="rail__label">Find a Dealer</span>
-        <span class="rail__track" aria-hidden="true"><span class="rail__sweep"></span><span class="rail__signal"></span></span>
+      <a class="button-link button-link--compact site-header__cta" href="#dealer">
+        <span>Find a Dealer</span><span class="button-link__arrow" aria-hidden="true">↗</span>
       </a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
         <span class="menu-btn__label" data-menu-label>Menu</span>
@@ -59,9 +58,8 @@
         <a class="menu__link" href="#dealer"><span class="menu__idx">04</span><span class="menu__txt">Dealers</span></a>
       </nav>
       <div class="menu__foot">
-        <a class="rail rail--primary rail--xl" href="#dealer">
-          <span class="rail__label">Find a Dealer</span>
-          <span class="rail__track" aria-hidden="true"><span class="rail__sweep"></span><span class="rail__signal"></span></span>
+        <a class="button-link button-link--large" href="#dealer">
+          <span>Find a Dealer</span><span class="button-link__arrow" aria-hidden="true">↗</span>
         </a>
         <p class="mono-xs menu__coords">3.1390° N&emsp;101.6869° E<br />Kuala Lumpur, Malaysia</p>
       </div>
@@ -71,7 +69,7 @@
       <!-- 01 — Opening sequence -->
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__content">
-          <p class="hero__meta mono-xs" data-load style="--d: 0.05s">Malaysia<br />Performance<br />Laboratory<span class="rule"></span></p>
+          <p class="hero__meta mono-xs" data-load style="--d: 0.05s">Malaysia Performance Laboratory</p>
 
           <div class="hero__main">
             <h1 id="hero-title" class="hero__title">
@@ -79,31 +77,24 @@
               <span class="line" style="--li: 1"><span>Beyond</span></span>
               <span class="line" style="--li: 2"><span>Standard</span></span>
             </h1>
-            <p class="hero__sub" data-load style="--d: 0.55s">Performance parts for a higher standard.</p>
+            <p class="hero__sub" data-load style="--d: 0.55s">Precision suspension systems engineered for Malaysian roads, combining considered ride height, measured damping response, and dependable control so every daily drive feels more composed, connected, and distinctly ZerOne by design.</p>
 
             <figure class="hero__plate" data-load="plate" data-tilt>
               <div class="plate">
                 <div class="plate__layer" data-parallax="0.07">
-                  <img class="plate__img" src="/images/crops/coilover-pair.jpg" width="930" height="295" alt="ZerOne SSR 550 adjustable coilover pair" fetchpriority="high" data-temp="Replace with a transparent coilover render on white" />
+                  <img class="plate__img" src="/images/chatgpt-source/suspension-vertical.png" width="1024" height="1536" alt="ZerOne performance coilover" fetchpriority="high" />
                 </div>
                 <span class="plate__word" aria-hidden="true"><svg viewBox="0 0 671.61 86.84" focusable="false"><use href="#zr-wordmark" /></svg></span>
-                <span class="plate__tag mono-xs" aria-hidden="true">SSR 550 · Fig. 001</span>
+                <span class="plate__tag mono-xs" aria-hidden="true">Performance platform · Fig. 001</span>
               </div>
-              <span class="plate__mark plate__mark--tl" aria-hidden="true"></span>
-              <span class="plate__mark plate__mark--br" aria-hidden="true"></span>
             </figure>
 
             <div class="hero__actions" data-load style="--d: 0.7s">
-              <a class="rail rail--primary" href="#dealer">
-                <span class="rail__label">Find a Dealer</span>
-                <span class="rail__track" aria-hidden="true"><span class="rail__sweep"></span><span class="rail__signal"></span></span>
+              <a class="button-link" href="#dealer">
+                <span>Find a Dealer</span><span class="button-link__arrow" aria-hidden="true">↗</span>
               </a>
-              <a class="dial" href="#system">
-                <span class="dial__ring" aria-hidden="true">
-                  <svg viewBox="0 0 44 44"><circle class="dial__base" cx="22" cy="22" r="17" /><circle class="dial__arc" cx="22" cy="22" r="17" pathLength="100" /><path class="dial__tick" d="M22 2.5v6" /></svg>
-                  <span class="dial__num">02</span>
-                </span>
-                <span class="dial__label">Discover the system</span>
+              <a class="text-link" href="#system">
+                <span>Discover the system</span><span class="text-link__arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -135,62 +126,37 @@
       <section class="study" id="study" aria-labelledby="study-title">
         <div class="study__head" data-reveal>
           <p class="kicker">Object study / 01</p>
-          <h2 id="study-title" class="h-section">Upper Mount</h2>
-          <p class="mono-xs study__sub">Control more possibilities<span class="rule"></span></p>
+          <h2 id="study-title" class="h-section">Suspension Control</h2>
+          <p class="mono-xs study__sub">One system. More control.</p>
         </div>
-        <p class="study__ref mono-xs" data-reveal style="--d: 0.15s">Section A-A<br />Front suspension<br />ZR-UM-001</p>
+        <p class="study__ref mono-xs" data-reveal style="--d: 0.15s">Object ZR-SS-001<br />Road + circuit<br />Malaysia set-up</p>
 
-        <div class="study__stage" data-reveal="stage">
-          <figure class="study__specimen" data-tilt>
-            <div class="study__layer" data-parallax="0.04">
-              <img src="/images/crops/upper-mount.jpg" width="655" height="570" alt="ZerOne pillow ball upper mount" loading="lazy" data-temp="Replace with an isolated upper-mount render" />
-            </div>
+        <div class="study__bento" data-reveal>
+          <figure class="bento-card bento-card--product" data-tilt>
+            <figcaption><span class="bento-card__index">01 / Complete system</span><strong>Coilover assembly</strong></figcaption>
+            <img src="/images/chatgpt-source/coilover-horizontal.png" width="1983" height="793" alt="ZerOne coilover assembly in horizontal side view" loading="lazy" />
+            <span class="bento-card__arrow" aria-hidden="true">↗</span>
           </figure>
-
-          <svg class="study__lines" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
-            <polyline points="270,302 180,386 30,386" pathLength="1" style="--d: 0.35s" />
-            <polyline points="350,146 580,45 780,45" pathLength="1" style="--d: 0.5s" />
-            <polyline points="360,250 720,202 940,202" pathLength="1" style="--d: 0.65s" />
-          </svg>
-          <span class="study__dot" style="--x: 27%; --y: 54%" aria-hidden="true"></span>
-          <span class="study__dot" style="--x: 35%; --y: 26%" aria-hidden="true"></span>
-          <span class="study__dot" style="--x: 36%; --y: 44.6%" aria-hidden="true"></span>
-
-          <ol class="callouts">
-            <li class="callout" style="--x: 3%; --y: 71%; --d: 0.75s">
-              <span class="callout__num">01</span>
-              <span class="callout__title">Solid 6061-T6 aluminium plate</span>
-              <span class="callout__text">Machined from a single piece.</span>
-            </li>
-            <li class="callout" style="--x: 58%; --y: 10%; --d: 0.9s">
-              <span class="callout__num">02</span>
-              <span class="callout__title">Camber adjustment slots</span>
-              <span class="callout__text">Set to the car, not the catalogue.</span>
-            </li>
-            <li class="callout" style="--x: 72%; --y: 38%; --d: 1.05s">
-              <span class="callout__num">03</span>
-              <span class="callout__title">Pillow ball pivot</span>
-              <span class="callout__text">A rigid pivot in place of rubber.</span>
-            </li>
-          </ol>
-        </div>
-
-        <div class="study__foot">
-          <figure class="blueprint" data-reveal>
-            <svg viewBox="0 0 260 120" aria-hidden="true">
-              <path class="bp-center" d="M110 12v104" />
-              <path d="M44 40h132v10H44zM64 40V22M156 40V22M92 50h36v20H92zM76 70h68v7H76zM110 77v34" />
-              <path class="bp-dim" d="M44 10h132M44 6v8M176 6v8M196 40v37M192 40h8M192 77h8" />
-              <text x="110" y="7">A</text>
-              <text x="204" y="62">B</text>
-            </svg>
-            <figcaption class="mono-xs">ZR-UM-001<br />Reference outline — not to scale</figcaption>
-          </figure>
-          <p class="study__statement" data-reveal style="--d: 0.1s">A higher<br />standard<br />feels different.</p>
-          <figure class="surface" data-reveal style="--d: 0.2s">
-            <div class="surface__img" role="img" aria-label="Close-up of the machined aluminium surface"></div>
-            <figcaption class="mono-xs">Surface study<br />6061-T6 aluminium<br />Detail ×4<span class="rule rule--short"></span></figcaption>
-          </figure>
+          <article class="bento-card bento-card--dark">
+            <span class="bento-card__index">02 / Purpose</span>
+            <h3>Control starts at the contact patch.</h3>
+            <p>Bring ride height, response and road feel into one coherent set-up.</p>
+          </article>
+          <article class="bento-card bento-card--spec">
+            <span class="bento-card__index">03 / Adjustment</span>
+            <strong>Set to the car.</strong>
+            <p>Dial the suspension for the platform, the road and the driver.</p>
+          </article>
+          <article class="bento-card bento-card--spec">
+            <span class="bento-card__index">04 / Construction</span>
+            <strong>Built as one system.</strong>
+            <p>Matched spring, damper and mount components work together.</p>
+          </article>
+          <article class="bento-card bento-card--signal">
+            <span class="bento-card__index">05 / Result</span>
+            <strong>A higher standard feels different.</strong>
+            <a class="text-link text-link--on-dark" href="#system"><span>Explore all four parts</span><span aria-hidden="true">→</span></a>
+          </article>
         </div>
       </section>
 
@@ -207,8 +173,8 @@
             <article class="card card--light" style="--i: 0; --sx: -16; --sy: 7; --sr: -12; --ex: -162; --ey: 0; --er: -1.5; --mr: -2" data-tilt>
               <div class="card__body">
                 <header class="card__head"><span class="card__num">01</span><h3 class="card__name">Upper Mount</h3></header>
-                <div class="card__media" style="--iw: 150%; --ir: -6deg">
-                  <img src="/images/crops/upper-mount.jpg" width="655" height="570" alt="" loading="lazy" data-temp />
+                <div class="card__media" style="--iw: 84%; --ir: 0deg">
+                  <img src="/images/chatgpt-source/suspension-vertical.png" width="1024" height="1536" alt="" loading="lazy" data-temp />
                 </div>
                 <footer class="card__foot"><p class="card__line">Precision<br />at the<br />top.</p><span class="card__rule"></span></footer>
               </div>
@@ -216,8 +182,8 @@
             <article class="card card--dark" style="--i: 1; --sx: -4; --sy: -5; --sr: 6; --ex: -54; --ey: 4; --er: 1; --mr: 1.5" data-tilt>
               <div class="card__body">
                 <header class="card__head"><span class="card__num">02</span><h3 class="card__name">SSR Coilover</h3></header>
-                <div class="card__media" style="--iw: 290%; --ir: -64deg">
-                  <img src="/images/crops/coilover-pair.jpg" width="930" height="295" alt="" loading="lazy" data-temp />
+                <div class="card__media" style="--iw: 126%; --ir: 0deg">
+                  <img src="/images/chatgpt-source/brake-system.png" width="1312" height="1199" alt="" loading="lazy" data-temp />
                 </div>
                 <footer class="card__foot"><p class="card__line">Control<br />the<br />road.</p><span class="card__rule"></span></footer>
               </div>
@@ -225,8 +191,8 @@
             <article class="card card--silver" style="--i: 2; --sx: 8; --sy: 3; --sr: -4; --ex: 54; --ey: -3; --er: -1; --mr: -1" data-tilt>
               <div class="card__body">
                 <header class="card__head"><span class="card__num">03</span><h3 class="card__name">Lowered Spring</h3></header>
-                <div class="card__media" style="--iw: 175%; --ir: -12deg">
-                  <img src="/images/crops/spring-type-s.jpg" width="460" height="380" alt="" loading="lazy" data-temp />
+                <div class="card__media" style="--iw: 128%; --ir: 0deg">
+                  <img src="/images/chatgpt-source/turbocharger.png" width="1312" height="1199" alt="" loading="lazy" data-temp />
                 </div>
                 <footer class="card__foot"><p class="card__line">Engineered<br />in<br />motion.</p><span class="card__rule"></span></footer>
               </div>
@@ -234,15 +200,15 @@
             <article class="card card--dark" style="--i: 3; --sx: 19; --sy: -2; --sr: 12; --ex: 162; --ey: 2; --er: 1.5; --mr: 2" data-tilt>
               <div class="card__body">
                 <header class="card__head"><span class="card__num">04</span><h3 class="card__name">Sport Absorber</h3></header>
-                <div class="card__media" style="--iw: 235%; --ir: 58deg">
-                  <img src="/images/crops/absorber.jpg" width="920" height="440" alt="" loading="lazy" data-temp />
+                <div class="card__media" style="--iw: 83%; --ir: 0deg">
+                  <img src="/images/chatgpt-source/drivetrain.png" width="1024" height="1536" alt="" loading="lazy" data-temp />
                 </div>
                 <footer class="card__foot"><p class="card__line">The road<br />responds.</p><span class="card__rule"></span></footer>
               </div>
             </article>
           </div>
 
-          <div class="system__progress mono-xs" aria-hidden="true"><span>Spread</span><span class="system__bar"></span></div>
+          <div class="system__progress mono-xs" aria-hidden="true"><span>Scroll to explore</span><span class="system__bar"></span></div>
         </div>
       </section>
 
@@ -250,8 +216,7 @@
       <section class="road" id="road" aria-labelledby="road-title">
         <div class="road__media" aria-hidden="true">
           <div class="road__layer" data-parallax="-0.12">
-            <img class="road__img" src="/images/crops/road-kl.jpg" width="460" height="391" alt="" loading="lazy" data-temp="Replace with a full-width Malaysian road photograph" />
-            <img class="road__img road__img--blur" src="/images/crops/road-kl.jpg" width="460" height="391" alt="" loading="lazy" />
+            <img class="road__img" src="/images/generated/showroom-car.png" width="1672" height="939" alt="" loading="lazy" />
           </div>
         </div>
         <p class="road__coords mono-xs" data-reveal>3.1390° N<br />101.6869° E<span class="rule"></span></p>
@@ -269,6 +234,35 @@
 
       <!-- 05 — Closing / dealer network -->
       <section class="closing" id="dealer" aria-labelledby="dealer-title">
+        <div class="brand-rail" aria-labelledby="brand-rail-title">
+          <div class="brand-rail__head">
+            <p class="kicker">Vehicle applications / 05</p>
+            <h2 id="brand-rail-title">Engineered for your platform.</h2>
+          </div>
+          <div class="brand-rail__viewport">
+            <div class="brand-rail__track">
+              <div class="brand-rail__group">
+                <a href="https://zerone.com.my/car-model/perodua-2/"><img src="/images/brands-mono/perodua.png" alt="Perodua" /></a>
+                <a href="https://zerone.com.my/car-model/nissan-2/"><img src="/images/brands-mono/nissan.png" alt="Nissan" /></a>
+                <a href="https://zerone.com.my/car-model/honda-2/"><img src="/images/brands-mono/honda.png" alt="Honda" /></a>
+                <a href="https://zerone.com.my/car-model/bmw-2/"><img src="/images/brands-mono/bmw.png" alt="BMW" /></a>
+                <a href="https://zerone.com.my/car-model/audi-2/"><img src="/images/brands-mono/audi.png" alt="Audi" /></a>
+                <a href="https://zerone.com.my/car-model/toyota-2/"><img src="/images/brands-mono/toyota.png" alt="Toyota" /></a>
+                <a href="https://zerone.com.my/car-model/proton-2/"><img src="/images/brands-mono/proton.png" alt="Proton" /></a>
+              </div>
+              <div class="brand-rail__group" aria-hidden="true">
+                <a tabindex="-1" href="https://zerone.com.my/car-model/perodua-2/"><img src="/images/brands-mono/perodua.png" alt="" /></a>
+                <a tabindex="-1" href="https://zerone.com.my/car-model/nissan-2/"><img src="/images/brands-mono/nissan.png" alt="" /></a>
+                <a tabindex="-1" href="https://zerone.com.my/car-model/honda-2/"><img src="/images/brands-mono/honda.png" alt="" /></a>
+                <a tabindex="-1" href="https://zerone.com.my/car-model/bmw-2/"><img src="/images/brands-mono/bmw.png" alt="" /></a>
+                <a tabindex="-1" href="https://zerone.com.my/car-model/audi-2/"><img src="/images/brands-mono/audi.png" alt="" /></a>
+                <a tabindex="-1" href="https://zerone.com.my/car-model/toyota-2/"><img src="/images/brands-mono/toyota.png" alt="" /></a>
+                <a tabindex="-1" href="https://zerone.com.my/car-model/proton-2/"><img src="/images/brands-mono/proton.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <p class="brand-rail__note mono-xs">Vehicle marks identify catalogue applications. All trademarks belong to their respective owners.</p>
+        </div>
         <div class="closing__grid">
           <div class="closing__lead">
             <p class="kicker" data-reveal>Dealer network / 04</p>
@@ -278,35 +272,30 @@
             </h2>
             <p class="closing__text" data-reveal style="--d: 0.2s">Find an authorised ZerOne workshop in your state for fitment and set-up.</p>
             <div class="closing__actions" data-reveal style="--d: 0.3s">
-              <a class="rail rail--primary rail--xl" href="https://zerone.com.my/dealer/">
-                <span class="rail__label">Find a Dealer</span>
-                <span class="rail__track" aria-hidden="true"><span class="rail__sweep"></span><span class="rail__signal"></span></span>
+              <a class="button-link button-link--large" href="https://zerone.com.my/dealer/">
+                <span>Find a Dealer</span><span class="button-link__arrow" aria-hidden="true">↗</span>
               </a>
-              <a class="dial" href="https://zerone.com.my/contact-us/">
-                <span class="dial__ring" aria-hidden="true">
-                  <svg viewBox="0 0 44 44"><circle class="dial__base" cx="22" cy="22" r="17" /><circle class="dial__arc" cx="22" cy="22" r="17" pathLength="100" /><path class="dial__tick" d="M22 2.5v6" /></svg>
-                  <span class="dial__num">05</span>
-                </span>
-                <span class="dial__label">Talk to ZerOne</span>
+              <a class="text-link" href="https://zerone.com.my/contact-us/">
+                <span>Talk to ZerOne</span><span class="text-link__arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </div>
 
           <nav class="states" aria-labelledby="states-title" data-reveal style="--d: 0.25s">
-            <p id="states-title" class="kicker">Authorised dealers by state</p>
+            <p id="states-title" class="kicker">Featured markets, then dealer count</p>
             <ul class="states__list">
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/johor/"><span class="elink__idx">01</span><span class="elink__txt">Johor</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/kedah/"><span class="elink__idx">02</span><span class="elink__txt">Kedah</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/kelantan/"><span class="elink__idx">03</span><span class="elink__txt">Kelantan</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/kuala-lumpur/"><span class="elink__idx">04</span><span class="elink__txt">Kuala Lumpur</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/melaka/"><span class="elink__idx">05</span><span class="elink__txt">Melaka</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/negeri-sembilan/"><span class="elink__idx">06</span><span class="elink__txt">Negeri Sembilan</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/pahang/"><span class="elink__idx">07</span><span class="elink__txt">Pahang</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/penang/"><span class="elink__idx">08</span><span class="elink__txt">Penang</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/perak/"><span class="elink__idx">09</span><span class="elink__txt">Perak</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/sarawak/"><span class="elink__idx">10</span><span class="elink__txt">Sarawak</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/selangor/"><span class="elink__idx">11</span><span class="elink__txt">Selangor</span></a></li>
-              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/terengganu/"><span class="elink__idx">12</span><span class="elink__txt">Terengganu</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/kuala-lumpur/"><span class="elink__idx">01</span><span class="elink__txt">Kuala Lumpur</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/selangor/"><span class="elink__idx">02</span><span class="elink__txt">Selangor</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/johor/"><span class="elink__idx">03</span><span class="elink__txt">Johor</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/negeri-sembilan/"><span class="elink__idx">04</span><span class="elink__txt">Negeri Sembilan</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/terengganu/"><span class="elink__idx">05</span><span class="elink__txt">Terengganu</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/kedah/"><span class="elink__idx">06</span><span class="elink__txt">Kedah</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/kelantan/"><span class="elink__idx">07</span><span class="elink__txt">Kelantan</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/melaka/"><span class="elink__idx">08</span><span class="elink__txt">Melaka</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/pahang/"><span class="elink__idx">09</span><span class="elink__txt">Pahang</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/penang/"><span class="elink__idx">10</span><span class="elink__txt">Penang</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/perak/"><span class="elink__idx">11</span><span class="elink__txt">Perak</span></a></li>
+              <li><a class="elink elink--row" href="https://zerone.com.my/dealer/sarawak/"><span class="elink__idx">12</span><span class="elink__txt">Sarawak</span></a></li>
             </ul>
           </nav>
         </div>
@@ -327,15 +316,13 @@
       </div>
       <div class="footer__row footer__row--small mono-xs">
         <p>© 2026 ZerOne Malaysia. All rights reserved.</p>
-        <p>Kuala Lumpur, Malaysia</p>
       </div>
     </footer>
 
     <div class="dock" data-dock inert>
       <span class="dock__meta mono-xs">Authorised<br />network</span>
-      <a class="rail rail--primary rail--on-dark" href="#dealer">
-        <span class="rail__label">Find a Dealer</span>
-        <span class="rail__track" aria-hidden="true"><span class="rail__sweep"></span><span class="rail__signal"></span></span>
+      <a class="button-link button-link--compact button-link--on-dark" href="#dealer">
+        <span>Find a Dealer</span><span class="button-link__arrow" aria-hidden="true">↗</span>
       </a>
     </div>
   </body>
