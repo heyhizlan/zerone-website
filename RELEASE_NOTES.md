@@ -1,5 +1,11 @@
 # ZerOne Website Release Notes
 
+## Version 1.2.1 — 4 October 2026
+
+- Reduced the Object Study coilover image and contained it within its card so neither end is clipped at full-screen widths.
+- Removed the product image's drop shadow while preserving its proportions.
+- Checked the updated card at desktop and mobile widths and verified the production build.
+
 ## Version 1.2 — 4 October 2026
 
 ### Product imagery

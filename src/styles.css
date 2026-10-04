@@ -285,12 +285,12 @@
 .bento-card--product img {
   position: absolute;
   left: 50%;
-  top: 57%;
-  width: 94%;
-  height: auto;
-  max-width: none;
+  top: 55%;
+  width: calc(100% - 64px);
+  height: calc(100% - 135px);
+  object-fit: contain;
   transform: translate(-50%, -50%) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  filter: drop-shadow(0 24px 18px rgba(0, 0, 0, 0.2));
+  filter: none;
   transition: transform 500ms var(--ease-out);
 }
 
