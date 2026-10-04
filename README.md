@@ -10,6 +10,7 @@ npm run build    # production build → dist/
 
 - `index.html` — page markup; brand logo symbols are inlined from `ZERONE 260909 Logo Masterfile/SVG`.
 - `src/styles.css`, `src/main.js` — styles and interactions (scroll reveals, card spread, Signal Rail / Index Dial controls).
-- `public/images/crops/` — **temporary** product imagery cropped from zerone.com.my banners (marked `data-temp` in the HTML). Replace with final renders.
+- `public/images/zerone/` — ZerOne product photographs used by the hero and suspension sections.
+- `public/images/road-bmw.webp` — monochrome road-section background; other served raster assets are WebP as well.
 - `public/brand/`, `public/favicon.svg` — optimised logo SVGs.
-- `assets-source/` — original downloads the crops were made from (not served).
+- `assets-source/` — retained source and reference downloads (not served).

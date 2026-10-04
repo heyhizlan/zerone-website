@@ -1,5 +1,26 @@
 # ZerOne Website Release Notes
 
+## Version 1.2 — 4 October 2026
+
+### Product imagery
+
+- Replaced the hero, Object Study, and suspension-system card imagery with supplied ZerOne product photographs.
+- Updated the four system cards to identify ZerOne SSR550, SSR700 Plus, SSR500 Plus, and Type S Spring.
+- Kept product proportions intact and reduced the Type S Spring image to half its previous displayed size.
+- Converted all served raster assets to WebP, including the vehicle-logo rail, preserving transparency where present. Existing source/reference assets in `assets-source/` were retained; vector logos remain SVG.
+
+### Road section
+
+- Replaced the coilover backdrop with the supplied BMW photograph.
+- Applied a monochrome black-and-white treatment, dark readability overlays, and a 40% grain layer.
+
+### Interaction and presentation
+
+- Removed pointer-driven 3D rotation, hover movement, parallax, and shadow from the hero product image.
+- Set all four product cards to white by default and black with light text on hover.
+- Adjusted mobile hero spacing to keep the full-size product clear of the copy.
+- Verified the production build and inspected the updated imagery and hover states in the browser.
+
 ## Version 1.1 — 19 September 2026
 
 ### Visual system
