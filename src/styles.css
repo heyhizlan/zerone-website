@@ -2534,9 +2534,6 @@ ul {
    ========================================================================== */
 
 @media (max-width: 760px) {
-  :root {
-    --header-h: 64px;
-  }
   .nav,
   .locale,
   .site-header__cta {
@@ -2545,11 +2542,21 @@ ul {
   .menu-btn {
     display: inline-flex;
   }
-  .site-header.is-compact {
-    height: calc(56px + var(--safe-top));
+  /* Floating header pill — matches the dealer dock, fixed, no scroll states. */
+  :root {
+    --header-h: 56px;
+    --header-gap: 10px;
+    --header-offset: calc(var(--safe-top) + var(--header-gap) * 2 + var(--header-h));
   }
-  .menu-open .site-header {
+  .site-header,
+  .site-header.is-compact {
+    inset: calc(var(--safe-top) + var(--header-gap)) 14px auto;
+    height: var(--header-h);
+    padding: 0 14px 0 18px;
+    border-radius: 16px;
     background: var(--paper);
+    box-shadow: 0 0 0 1px var(--line), 0 18px 40px -18px rgba(0, 0, 0, 0.45);
+    transition: none;
   }
 
   .hero {
