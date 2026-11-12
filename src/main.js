@@ -52,6 +52,11 @@ const dock = document.querySelector('[data-dock]');
 
 let viewportH = window.innerHeight;
 let queued = false;
+// Dock direction: hide while scrolling down, reveal on scroll up. A small
+// threshold keeps finger jitter and iOS bounce from flickering it.
+const DOCK_THRESHOLD = 8;
+let dockAnchorY = Math.max(0, window.scrollY);
+let scrollingUp = true;
 
 function update() {
   queued = false;
@@ -94,7 +99,13 @@ function update() {
   if (dock) {
     const pastHero = hero.getBoundingClientRect().bottom < viewportH * 0.3;
     const atDealer = dealer.getBoundingClientRect().top < viewportH * 0.92;
-    const on = pastHero && !atDealer && !root.classList.contains('menu-open');
+    const y = Math.max(0, window.scrollY);
+    const delta = y - dockAnchorY;
+    if (Math.abs(delta) >= DOCK_THRESHOLD) {
+      scrollingUp = delta < 0;
+      dockAnchorY = y;
+    }
+    const on = pastHero && !atDealer && scrollingUp && !root.classList.contains('menu-open');
     dock.classList.toggle('is-on', on);
     dock.inert = !on;
   }
