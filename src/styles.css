@@ -297,13 +297,6 @@
   transition: transform 500ms var(--ease-out);
 }
 
-.bento-card__arrow {
-  position: absolute;
-  right: 22px;
-  top: 18px;
-  font: 500 28px/1 var(--display);
-}
-
 .bento-card--dark {
   grid-column: 9 / 13;
   grid-row: span 2;
