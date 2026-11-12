@@ -1380,6 +1380,14 @@ ul {
 
 /* --- Mobile menu ------------------------------------------------------------ */
 
+/* While the menu is open, hide the page behind it so nothing shows through
+   the iOS status-bar strip or under Safari's floating toolbar. Visibility
+   keeps layout, so the scroll position is untouched. */
+.menu-open main,
+.menu-open .footer {
+  visibility: hidden;
+}
+
 .menu {
   position: fixed;
   inset: 0;
