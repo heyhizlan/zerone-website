@@ -1274,9 +1274,9 @@ ul {
 
 .brand__mark {
   display: block;
-  height: 19px;
-  width: auto;
-  aspect-ratio: 671.61 / 86.84;
+  width: 147px;
+  height: auto;
+  aspect-ratio: 1080 / 248.76;
   fill: currentColor;
   transform-origin: left center;
   transition: transform var(--t) var(--ease);
@@ -1611,7 +1611,7 @@ ul {
   right: 6%;
   top: 7%;
   width: clamp(34px, 3.6vw, 56px);
-  aspect-ratio: 86.84 / 671.61;
+  aspect-ratio: 248.76 / 1080;
   container-type: size;
 }
 
@@ -2254,7 +2254,7 @@ ul {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 671.61 / 126.68;
+  aspect-ratio: 1080 / 314.91;
   fill: currentColor;
 }
 
